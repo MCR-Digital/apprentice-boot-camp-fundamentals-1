@@ -1,11 +1,13 @@
 public class Encapsulation {
     public static void main(String[] args) {
-        for(String card: getDeckInOrder()){
+        Encapsulation encapsulation = new Encapsulation();
+        String[] deckInOrder = encapsulation.getDeckInOrder();
+        for(String card: deckInOrder){
             System.out.println(card);
         }
     }
 
-    static String[] getDeckInOrder() {
+    String[] getDeckInOrder() {
         String[] result = new String[52];
         int[][] deck = new int[52][2];
 
