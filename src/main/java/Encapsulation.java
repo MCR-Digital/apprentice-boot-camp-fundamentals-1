@@ -1,16 +1,22 @@
-public class Deck {
+public class Encapsulation {
     public static void main(String[] args) {
+        for(String card: getDeckInOrder()){
+            System.out.println(card);
+        }
+    }
 
+    static String[] getDeckInOrder() {
+        String[] result = new String[52];
         int[][] deck = new int[52][2];
 
-        for (int i = 0; i < 4; i++) {
+        for (int suit = 0; suit < 4; suit++) {
             for (int j = 0; j < 13; j++) {
-                deck[i*13+j] = new int[]{i, j};
+                deck[suit*13+j] = new int[]{suit, j};
             }
         }
 
+        int cardNumber = 0;
         for (int[] card : deck) {
-
             String faceValue;
             switch (card[1]){
                 case 0: faceValue = "ace"; break;
@@ -29,16 +35,19 @@ public class Deck {
                 default: throw new IllegalArgumentException("Something went wrong " + card[1] + "is not a valid faceValue!");
             }
 
-            String suit;
+            String suitName;
             switch (card[0]){
-                case 0: suit = "clubs"; break;
-                case 1: suit = "diamonds"; break;
-                case 2: suit = "hearts"; break;
-                case 3: suit = "spades"; break;
-                default: throw new IllegalArgumentException("Something went wrong " + card[0] + "is not a valid suit!");
+                case 0: suitName = "clubs"; break;
+                case 1: suitName = "diamonds"; break;
+                case 2: suitName = "hearts"; break;
+                case 3: suitName = "spades"; break;
+                default: throw new IllegalArgumentException("Something went wrong " + card[0] + "is not a valid suitName!");
             }
 
-            System.out.println(faceValue + " of " + suit);
+            result[cardNumber] = faceValue + " of " + suitName;
+            cardNumber++;
         }
+
+        return result;
     }
 }
