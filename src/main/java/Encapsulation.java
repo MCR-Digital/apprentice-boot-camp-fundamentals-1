@@ -1,25 +1,27 @@
 public class Encapsulation {
     public static void main(String[] args) {
-        for(String card: getDeckInOrder()){
+        Encapsulation encapsulation = new Encapsulation();
+        String[] deckInOrder = encapsulation.getDeckInOrder();
+        for(String card: deckInOrder){
             System.out.println(card);
         }
     }
 
-    static String[] getDeckInOrder() {
+    String[] getDeckInOrder() {
         String[] result = new String[52];
         int[][] deck = new int[52][2];
 
         for (int suit = 0; suit < 4; suit++) {
-            for (int j = 0; j < 13; j++) {
-                deck[suit*13+j] = new int[]{suit, j};
+            for (int faceValue = 0; faceValue < 13; faceValue++) {
+                deck[suit*13+faceValue] = new int[]{suit, faceValue};
             }
         }
 
         int cardNumber = 0;
         for (int[] card : deck) {
-            String faceValue;
+            String faceValueName;
             switch (card[1]){
-                case 0: faceValue = "ace"; break;
+                case 0: faceValueName = "ace"; break;
                 case 1:
                 case 2:
                 case 3:
@@ -28,10 +30,10 @@ public class Encapsulation {
                 case 6:
                 case 7:
                 case 8:
-                case 9: faceValue = Integer.toString(card[1]+1); break;
-                case 10: faceValue = "jack"; break;
-                case 11: faceValue = "queen"; break;
-                case 12: faceValue = "king"; break;
+                case 9: faceValueName = Integer.toString(card[1]+1); break;
+                case 10: faceValueName = "jack"; break;
+                case 11: faceValueName = "queen"; break;
+                case 12: faceValueName = "king"; break;
                 default: throw new IllegalArgumentException("Something went wrong " + card[1] + "is not a valid faceValue!");
             }
 
@@ -44,7 +46,7 @@ public class Encapsulation {
                 default: throw new IllegalArgumentException("Something went wrong " + card[0] + "is not a valid suitName!");
             }
 
-            result[cardNumber] = faceValue + " of " + suitName;
+            result[cardNumber] = faceValueName + " of " + suitName;
             cardNumber++;
         }
 
