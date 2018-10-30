@@ -1,6 +1,76 @@
+<!--- ORGANISER THINGS TO CONSIDER 
+- Which technical competencies, behaviours and knowledge module topics does the bootcamp cover/meet
+- Structuring retros so that they can inform thinking for individual's personal learning records (off the job training record tab in their learning logs)
+- Introducing some sort of test or quiz on basic concept learning points from the bootcamp to validate that they have taken stuff in, and provide organisation mentors with results to help them focus follow ups
+--->
+
+## Competencies, Behaviours and Knowledge units
+
+* TC1 Logic: writes good quality code (logic) with sound syntax in at least one language 
+* TC4 Test: can test code and analyse results to correct errors found using either V-model manual testing and/or using unit testing
+* TC10 Can apply good practice approaches according to the relevant paradigm (for example object oriented, event driven or procedural)
+
+## Resources 
+
+* Slides
+* Laptops
+* Internet access
+* post-its
+* pens
+* flips, index cards
+
+## Mentors / Languages
+ 
+Two–three mentors required in addition to leads. These should be able to cover support for the required languages.
+
+Several exercises (katas and code starters) will need to be ported to required languages.
+
+## Prep-work for apps
+
+None
+
+## Day 1—19th November
+
+**Main presenters:** Mark Crossfield & Alec Tunbridge
+
+**Groups / Pairs:** Presenters to send MD list of activities and what groups are needed
+MD to make lists / randomise
+
+### Follow-on tasks
+
+TBC
+
+## DAY 2 - 29th November
+
+**Main presenters:** Mark Crossfield & Alec Tunbridge
+
+**Groups / Pairs:** Presenters to send MD list of activities and what groups are needed
+MD to make lists / randomise
+
+### Follow-on tasks
+
+TBC
+
+## Further reading / learning resources
+
+<!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
+
+* [TBC]()
+* [TBC]()
+* [TBC]()
+ 
+## Slides
+
+The slides can be viewed [here](<!--- Link to slides used --->).
+
+## Exercises
+
+<!--- Link to details of / resources for exercises set during bootcamp --->
+
 # Day One
 
 ## OO
+
 (30 minutes)
 
 * Programming paradigms
@@ -20,7 +90,9 @@
 
 * Modelling some classic scenarios with objects (1 hour)
 
-(lunch)
+(Lunch)
+
+(Retro/stand-up)
 
 * Principles
   * Encapsulation (1 hour)
@@ -35,6 +107,8 @@
   * Polymorphism (30 minutes)
     * Apply to modelling
     * Give some examples
+
+## Day one quiz
 
 # Day Two
 
@@ -56,11 +130,14 @@
 * Discuss why duplication happens
 * Rewrite the thing they looked at before to remove duplication
 
+## Retro/stand-up
+
 ## Red Green Refactor
 (1 hour)
 
 * Why do we write tests
 * Why do we write tests first
+* Why people might not write tests first
 * Mention levels of testing (only covering unit testing in this boot camp)
 * Introduce red green refactor and discuss why
   * Short feedback loops
@@ -74,6 +151,10 @@
   * What was hard
 
 * Do the checkout kata with red green refactor (1 hour)
+
+## Retro/stand-up
+
+## Day two quiz
 
 # Briefing for organisation mentors
 
