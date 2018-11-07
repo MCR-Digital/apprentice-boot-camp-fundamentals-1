@@ -37,7 +37,7 @@ public class Abstraction {
         }
     }
 
-    public String[] getDeckInOrder() {
+    String[] getDeckInOrder() {
         Animal[] animals = Animal.values();
         String[] result = new String[52];
         for (int i = 0; i < animals.length; i++) {
@@ -46,6 +46,10 @@ public class Abstraction {
             result[i*2+1] = animalName;
         }
         return result;
+    }
+
+    boolean snap( Animal animal1, Animal animal2 ){
+        return animal1.equals(animal2);
     }
 
 }

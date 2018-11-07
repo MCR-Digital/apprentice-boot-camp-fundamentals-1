@@ -62,4 +62,16 @@ public class AbstractionTest {
                 "zebra"
         );
     }
+
+    @Test
+    public void snap_twoIdenticalAnimals_returnsTrue(){
+        Abstraction abstraction = new Abstraction();
+        assertThat(abstraction.snap(Animal.AARDVARK, Animal.AARDVARK )).isTrue();
+    }
+
+    @Test
+    public void snap_twoDifferentAnimals_returnsFalse(){
+        Abstraction abstraction = new Abstraction();
+        assertThat(abstraction.snap(Animal.HARE, Animal.ZEBRA)).isFalse();
+    }
 }
