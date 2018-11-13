@@ -25,7 +25,7 @@ Two–three mentors required in addition to leads. These should be able to cover
 
 Several exercises (katas and code starters) will need to be ported to required languages.
 
-## Prep-work for apps
+## Prep-work for apprentices
 
 None
 
