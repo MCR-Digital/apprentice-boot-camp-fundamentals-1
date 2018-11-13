@@ -1,13 +1,15 @@
+package bootcamp;
+
 public class Encapsulation {
     public static void main(String[] args) {
         Encapsulation encapsulation = new Encapsulation();
-        String[] deckInOrder = encapsulation.getDeckInOrder();
+        String[] deckInOrder = encapsulation.getCards();
         for(String card: deckInOrder){
             System.out.println(card);
         }
     }
 
-    String[] getDeckInOrder() {
+    String[] getCards() {
         String[] result = new String[52];
         int[][] deck = new int[52][2];
 

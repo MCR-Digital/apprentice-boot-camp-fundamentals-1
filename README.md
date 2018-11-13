@@ -96,7 +96,7 @@ The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentic
 (Retro/stand-up)
 
 * Principles
-  * Encapsulation (1 hour)
+  * bootcamp.Encapsulation (1 hour)
     * Apply to modelling
     * Rewrite some existing code to remove inappropriate intimacy and coupling
     * Code review some existing code

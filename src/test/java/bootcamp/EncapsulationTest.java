@@ -1,3 +1,4 @@
+package bootcamp;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,7 +8,7 @@ public class EncapsulationTest {
     @Test
     public void getDeckInOrder_return52CardsCorrectlyFormatted() {
         Encapsulation encapsulation = new Encapsulation();
-        assertThat(encapsulation.getDeckInOrder()).containsExactly(
+        assertThat(encapsulation.getCards()).containsExactly(
                 "ace of clubs",
                 "2 of clubs",
                 "3 of clubs",
