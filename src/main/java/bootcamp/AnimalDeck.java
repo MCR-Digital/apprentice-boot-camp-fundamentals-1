@@ -16,14 +16,8 @@ class AnimalDeck {
         }
     }
 
-    String[] shuffle() {
-        String[] result = new String[cards.size()];
+    void shuffle() {
         Collections.shuffle(cards);
-        for (int i = 0; i < cards.size(); i++) {
-            AnimalCard card = cards.get(i);
-            result[i] = card.toString();
-        }
-        return result;
     }
 
     String[] getCards() {

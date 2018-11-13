@@ -67,7 +67,8 @@ public class AnimalDeckTest {
     @Test
     public void shuffle_returnsAllCardsInAnyOrder(){
         AnimalDeck deck = new AnimalDeck();
-        assertThat(deck.shuffle()).containsExactlyInAnyOrder(
+        deck.shuffle();
+        assertThat(deck.getCards()).containsExactlyInAnyOrder(
                 "AARDVARK",
                 "AARDVARK",
                 "BABOON",
