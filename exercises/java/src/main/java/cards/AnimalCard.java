@@ -1,4 +1,4 @@
-package bootcamp;
+package cards;
 
 public class AnimalCard {
 
