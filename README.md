@@ -70,9 +70,9 @@ The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentic
 
 * Identify objects from business scenario (groups)
 * Model a pack of playing cards (groups)
-* Animal Snap (groups)
-* Adapt snap for normal cards (groups)
-* Apply inheritance to snap game
+* Use abstraction to make the _Snap!_ game work for normal cards (groups)
+* Refactor the card model using inheritance (groups)
+* Use polymorphism to implement _Super Snap!_ using a mixture of card types
 
 ## Day Two
 
