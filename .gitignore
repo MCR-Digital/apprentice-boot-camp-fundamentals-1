@@ -1,0 +1,4 @@
+# C-sharp/vscode ignores
+.vscode
+bin
+obj
