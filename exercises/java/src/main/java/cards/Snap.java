@@ -7,7 +7,7 @@ class Snap {
     private int player2Score;
     private AnimalDeck deck;
 
-    public Snap(AnimalDeck deck) {
+    Snap(AnimalDeck deck) {
         this.deck = deck;
         deck.shuffle();
     }
