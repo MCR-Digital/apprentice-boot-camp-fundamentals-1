@@ -66,7 +66,20 @@ The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentic
 
 ## Exercises
 
-<!--- Link to details of / resources for exercises set during bootcamp --->
+### Day One
+
+* Identify objects from business scenario (groups)
+* Model a pack of playing cards (groups)
+* Animal Snap (groups)
+* Adapt snap for normal cards (groups)
+* Apply inheritance to snap game
+
+## Day Two
+
+* Adapting Checkout Kata (pairs)
+* Separating responsibilities from Checkout Kata (pairs)
+* Receipt duplication (pairs)
+* TDD Bowling Kata (pairs)
 
 # Day One
 
