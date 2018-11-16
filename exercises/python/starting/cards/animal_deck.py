@@ -12,3 +12,6 @@ class AnimalDeck:
 
     def shuffle(self):
         return (self.cards)
+
+    def deal(self):
+        return self.cards.pop(0)
