@@ -68,9 +68,10 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 
 <!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
 
-* [TBC]()
-* [TBC]()
-* [TBC]()
+* [List of katas](http://codingdojo.org/kata/)
+* [Duplicate Code ‘Code Smell’](https://refactoring.guru/smells/duplicate-code)
+* [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
+* [The Secret behind the Single Responsibility Principle](https://hackernoon.com/the-secret-behind-the-single-responsibility-principle-e2f3692bae25) on Hacker Noon
  
 ## Slides
 
