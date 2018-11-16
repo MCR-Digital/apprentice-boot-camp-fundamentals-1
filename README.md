@@ -4,20 +4,22 @@
 - Introducing some sort of test or quiz on basic concept learning points from the bootcamp to validate that they have taken stuff in, and provide organisation mentors with results to help them focus follow ups
 --->
 
+# Fundamentals One Boot Camp
+
 ## Competencies, Behaviours and Knowledge units
 
 * TC1 Logic: writes good quality code (logic) with sound syntax in at least one language 
 * TC4 Test: can test code and analyse results to correct errors found using either V-model manual testing and/or using unit testing
 * TC10 Can apply good practice approaches according to the relevant paradigm (for example object oriented, event driven or procedural)
 
-## Resources 
+## Resources Required
 
 * Slides
 * Laptops
 * Internet access
 * post-its
 * pens
-* flips, index cards
+* flips
 
 ## Mentors / Languages
  
@@ -44,12 +46,23 @@ TBC
 
 **Main presenters:** Mark Crossfield & Alec Tunbridge
 
-**Groups / Pairs:** Presenters to send MD list of activities and what groups are needed
-MD to make lists / randomise
+**Groups / Pairs:** Some exercises will be done in groups based around the same language where possible. Some exercises will be done in pairs / triples.
 
 ### Follow-on tasks
 
-TBC
+Organisation mentors should look to exercise the knowledge we’ve covered in the boot camp. Below are suggestions for tasks that would do this, but please use your own judgement to work out what to do. There is no need for anything to be returned to MD or the presenters—it’s just a learning exercise.
+
+* Draw a diagram showing how the classes interact in some code you have been working on
+* We’d like them to recognise Encapsulation, Abstraction, Inheritance, Polymorphism
+* Take a look at one of your codebases and find examples of:
+  * Classes with multiple responsibilities
+  * Duplication
+* Do a kata using the red green refactor practice
+  * We will be doing the Bowling Kata as part of the boot camp
+* Spend a day doing red green refactor on your codebase with a pair, and leave some time at the end of the day to reflect / retrospect
+  * Did you enjoy it
+  * What made it difficult
+  * What made it easier
 
 ## Further reading / learning resources
 
@@ -81,105 +94,55 @@ The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentic
 * Receipt duplication (pairs)
 * TDD Bowling Kata (pairs)
 
-# Day One
+# Boot Camp Summary
 
-## OO
-
-(30 minutes)
+## Object Orientation
 
 * Programming paradigms
 * Why OO?
 * How to think about objects
 
 ## Source Control and Git Hub
-(30 minutes)
 
 * Why source control
-* Create repo
-* Clone repo
-* Commit
-* Push
+* Create, clone, commit, push
 
 ## OO Principles
 
-* Modelling some classic scenarios with objects (1 hour)
-
-(Lunch)
-
-(Retro/stand-up)
-
+* Modelling some classic scenarios with objects
 * Principles
-  * bootcamp.Encapsulation (1 hour)
+  * Encapsulation
     * Apply to modelling
     * Rewrite some existing code to remove inappropriate intimacy and coupling
     * Code review some existing code
-  * Abstraction (1 hour)
+  * Abstraction
     * Apply to modelling
     * Rewrite some existing code to abstract complexity
     * Explain difference between encapsulation and abstraction
     * Introduce to interfaces
-  * Polymorphism (30 minutes)
+  * Polymorphism
     * Apply to modelling
     * Give some examples
+  * Inheritance
 
-## Day one quiz
+## Single Responsibility Principle
 
-# Day Two
-
-## Single Responsibility
-(1 hour)
-
-* Critique poorly implemented checkout kata
-* Write their own <insert something moderately complex here>
-* Single constuctor
+* Cohesion
+* Functional Decomposition
+* Critiquing and adapting poorly implemented checkout kata
 
 ## DRY
-(1 hour)
 
 * Definition
-* Change something which has duplication to suffer the pain
-* Reflect on what we observed
-* Talk about why duplication is bad
-* Show examples of duplication
-* Discuss why duplication happens
-* Rewrite the thing they looked at before to remove duplication
-
-## Retro/stand-up
+* Adapting poorly implemented checkout kata with lots of duplication
+* How to fix
+* Why duplication happens
 
 ## Red Green Refactor
-(1 hour)
 
 * Why do we write tests
 * Why do we write tests first
 * Why people might not write tests first
-* Mention levels of testing (only covering unit testing in this boot camp)
-* Introduce red green refactor and discuss why
-  * Short feedback loops
-  * Reduced context
-  * Refactoring to make code betterer
-* Show them the process (find a video or create some slides or do it live)
-
-* Implement something like bowling kata or roman numerals kata (1 hour)
-* Reflect on exercise
-  * What did you like
-  * What was hard
-
-* Do the checkout kata with red green refactor (1 hour)
-
-## Retro/stand-up
-
-## Day two quiz
-
-# Briefing for organisation mentors
-
-* Draw a diagram showing how the classes interact in some code you have been working on
-* We’d like them to recognise Encapsulation, Abstraction, Inheritance, Polymorphism
-* Take a look at one of your codebases and find examples of:
-  * Classes with multiple responsibilities
-  * Duplication
-* Do a kata using the red green refactor practice
-  * We will be doing the Bowling Kata as part of the boot camp
-* Spend a day doing red green refactor on your codebase with a pair, and leave some time at the end of the day to reflect / retrospect
-  * Did you enjoy it
-  * What made it difficult
-  * What made it easier
+* Arrange, Act, Assert
+* Red, Green, Refactor
+* Bowling Kata with TDD
