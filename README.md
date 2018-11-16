@@ -173,11 +173,12 @@ The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentic
 # Briefing for organisation mentors
 
 * Draw a diagram showing how the classes interact in some code you have been working on
-* Find examples of:
-  * Multiple responsibilities
-  * duplication
-  * broken encapsulation
+* We’d like them to recognise Encapsulation, Abstraction, Inheritance, Polymorphism
+* Take a look at one of your codebases and find examples of:
+  * Classes with multiple responsibilities
+  * Duplication
 * Do a kata using the red green refactor practice
+  * We will be doing the Bowling Kata as part of the boot camp
 * Spend a day doing red green refactor on your codebase with a pair, and leave some time at the end of the day to reflect / retrospect
   * Did you enjoy it
   * What made it difficult
