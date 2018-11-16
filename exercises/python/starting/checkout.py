@@ -30,3 +30,6 @@ class Checkout:
             self.number_of_b += 1
             if self.number_of_b % 2 == 0:
                 self.total -= 15
+
+    def receipt_text(self):
+        return self.receipt.get_text()
