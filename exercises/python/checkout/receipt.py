@@ -7,8 +7,9 @@ class Receipt:
 
     def scanned_a(self):
         self.text += "A: 50"
-        if --self.a_countdown == 0:
-            self.text += "- 20 (3 for 130)"
+        self.a_countdown -= 1
+        if self.a_countdown == 0:
+            self.text += " - 20 (3 for 130)"
             self.total += 30
         else:
             self.total += 50
@@ -16,8 +17,9 @@ class Receipt:
 
     def scanned_b(self):
         self.text += "B: 30"
-        if --self.b_countdown == 0:
-            self.text += "- 15 (2 for 45)"
+        self.b_countdown -= 1
+        if self.b_countdown == 0:
+            self.text += " - 15 (2 for 45)"
             self.total += 15
         else:
             self.total += 30
