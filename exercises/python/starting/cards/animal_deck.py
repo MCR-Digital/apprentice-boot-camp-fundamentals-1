@@ -1,4 +1,5 @@
 from animal import Animal
+from animal_card import AnimalCard
 from random import shuffle
 
 
@@ -11,7 +12,9 @@ class AnimalDeck:
             self.cards.append(animal)
 
     def shuffle(self):
-        return (self.cards)
+        return shuffle(self.cards)
 
     def deal(self):
-        return self.cards.pop(0)
+        animal = self.cards.pop(0)
+        card = AnimalCard(animal)
+        return card
