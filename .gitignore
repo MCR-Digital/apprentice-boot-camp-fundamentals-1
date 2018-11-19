@@ -2,3 +2,7 @@
 .vscode
 bin
 obj
+.idea
+_site
+.gradle
+build

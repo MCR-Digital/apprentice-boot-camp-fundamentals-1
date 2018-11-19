@@ -46,6 +46,5 @@ class Encapsulation:
 
         return result
 
-
 encapsulation = Encapsulation()
 encapsulation.runner()
