@@ -1,21 +1,19 @@
-from deck import Deck
-from random import shuffle
+from animal_deck import AnimalDeck
 
 
 class Snap:
 
-    def __init__(self):
+    def __init__(self, deck):
         self.player_1_score = 0
         self.player_2_score = 0
-        self.deck = Deck()
-        self.deck.make_deck()
+        self.deck = deck
         self.deck.shuffle()
 
     def play(self):
         previous_card = None
         while len(self.deck.cards) > 0:
             current_card = self.deck.deal()
-            print(current_card.full_name)
+            print(current_card.animal)
             player_input = raw_input("Your turn: ")
             print("PLAYER INPUT: ", player_input)
             if len(player_input) > 0 and player_input[0] == 'a':
@@ -47,7 +45,7 @@ class Snap:
 
 
 def play_snap():
-    snap = Snap()
+    snap = Snap(AnimalDeck())
     snap.play()
 
 
