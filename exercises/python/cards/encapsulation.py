@@ -4,7 +4,7 @@ class Encapsulation:
 
     def runner(self):
         encapsulation = Encapsulation()
-        deck_in_order = encapsulation.getCards()
+        deck_in_order = encapsulation.get_cards()
         for card in deck_in_order:
             print(card)
 
@@ -45,3 +45,7 @@ class Encapsulation:
             card_number += 1
 
         return result
+
+
+encapsulation = Encapsulation()
+encapsulation.runner()
