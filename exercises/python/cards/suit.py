@@ -9,7 +9,7 @@ class Suit:
 
     def make_cards_for_suit(self):
         suit_of_cards = []
-        for card in self.card_types:
-            full_card_name = card + " of " + self.name
-            suit_of_cards.append(full_card_name)
+        for card_type in self.card_types:
+            card = Card(self.name, card_type)
+            suit_of_cards.append(card)
         return suit_of_cards
