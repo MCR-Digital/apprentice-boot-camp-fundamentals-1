@@ -1,4 +1,5 @@
 from animal_deck import AnimalDeck
+from deck import Deck
 
 
 class Snap:
@@ -13,7 +14,7 @@ class Snap:
         previous_card = None
         while len(self.deck.cards) > 0:
             current_card = self.deck.deal()
-            print(current_card.animal)
+            print(current_card)
             player_input = raw_input("Your turn: ")
             print("PLAYER INPUT: ", player_input)
             if len(player_input) > 0 and player_input[0] == 'a':
@@ -45,7 +46,7 @@ class Snap:
 
 
 def play_snap():
-    snap = Snap(AnimalDeck())
+    snap = Snap(Deck())
     snap.play()
 
 
