@@ -75,7 +75,7 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
  
 ## Slides
 
-The slides can be viewed [here](http://engineering.autotrader.co.uk/md-apprentice-boot-camp-fundamentals-1/)
+The slides can be viewed [here](https://mcr-digital.github.io/apprentice-bootcamp-fundamentals-1/)
 <!--- Link to slides used --->.
 
 ## Exercises
