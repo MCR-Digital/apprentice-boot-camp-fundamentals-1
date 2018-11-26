@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class AnimalDeck {
+class AnimalDeck implements Deck{
 
-    private List<AnimalCard> cards;
+    private List<Card> cards;
 
     AnimalDeck() {
         cards = new ArrayList<>();
@@ -16,20 +16,15 @@ class AnimalDeck {
         }
     }
 
-    void shuffle() {
+    public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    String[] getCards() {
-        String[] result = new String[cards.size()];
-        for (int i = 0; i < cards.size(); i++) {
-            AnimalCard card = cards.get(i);
-            result[i] = card.toString();
-        }
-        return result;
+    public List<Card> getCards() {
+        return cards;
     }
 
-    AnimalCard deal() {
+    public Card deal() {
         return cards.remove(0);
     }
 }

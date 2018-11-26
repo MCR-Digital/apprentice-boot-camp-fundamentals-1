@@ -1,14 +1,67 @@
 package cards;
+
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EncapsulationTest {
+public class SuperSnapDeckTest {
 
     @Test
-    public void getDeckInOrder_return52CardsCorrectlyFormatted() {
-        Encapsulation encapsulation = new Encapsulation();
-        assertThat(encapsulation.getCards()).containsExactly(
+    public void getDeckInOrder_return104CardsCorrectlyFormatted() {
+        SuperSnapDeck superSnapDeck = new SuperSnapDeck();
+        assertThat(superSnapDeck.getCards()).extracting(Object::toString).containsExactly(
+                "AARDVARK",
+                "AARDVARK",
+                "BABOON",
+                "BABOON",
+                "CAMEL",
+                "CAMEL",
+                "DEER",
+                "DEER",
+                "ELEPHANT",
+                "ELEPHANT",
+                "FROG",
+                "FROG",
+                "GORILLA",
+                "GORILLA",
+                "HARE",
+                "HARE",
+                "IMPALA",
+                "IMPALA",
+                "JAGUAR",
+                "JAGUAR",
+                "KANGAROO",
+                "KANGAROO",
+                "LION",
+                "LION",
+                "MOOSE",
+                "MOOSE",
+                "NEWT",
+                "NEWT",
+                "OCTOPUS",
+                "OCTOPUS",
+                "PENGUIN",
+                "PENGUIN",
+                "QUETZAL",
+                "QUETZAL",
+                "RABBIT",
+                "RABBIT",
+                "SALMON",
+                "SALMON",
+                "TORTOISE",
+                "TORTOISE",
+                "UAKARIS",
+                "UAKARIS",
+                "VAQUITA",
+                "VAQUITA",
+                "WHALE",
+                "WHALE",
+                "X_RAY_TETRA",
+                "X_RAY_TETRA",
+                "YAK",
+                "YAK",
+                "ZEBRA",
+                "ZEBRA",
                 "ace of clubs",
                 "2 of clubs",
                 "3 of clubs",

@@ -8,7 +8,7 @@ public class AnimalDeckTest {
     @Test
     public void getDeckInOrder_return52CardsCorrectlyFormatted() {
         AnimalDeck animalDeck = new AnimalDeck();
-        assertThat(animalDeck.getCards()).containsExactly(
+        assertThat(animalDeck.getCards()).extracting(Object::toString).containsExactly(
                 "AARDVARK",
                 "AARDVARK",
                 "BABOON",
@@ -68,7 +68,7 @@ public class AnimalDeckTest {
     public void shuffle_returnsAllCardsInAnyOrder(){
         AnimalDeck deck = new AnimalDeck();
         deck.shuffle();
-        assertThat(deck.getCards()).containsExactlyInAnyOrder(
+        assertThat(deck.getCards()).extracting(Object::toString).containsExactlyInAnyOrder(
                 "AARDVARK",
                 "AARDVARK",
                 "BABOON",
