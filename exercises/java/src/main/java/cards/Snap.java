@@ -25,6 +25,7 @@ class Snap {
             Card currentCard = deck.deal();
             System.out.println(currentCard);
             String input = scanner.nextLine();
+            //TODO this method is ripe for refactoring...
             if (input.length() > 0 && input.charAt(0) == 'a') {
                 if (currentCard.snap(previousCard)) {
                     System.out.println("SNAP! score Player 1");
