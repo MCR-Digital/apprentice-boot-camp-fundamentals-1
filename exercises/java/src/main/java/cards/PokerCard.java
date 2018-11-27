@@ -2,9 +2,9 @@ package cards;
 
 class PokerCard implements Card {
     private final Suit suit;
-    private final FaceValue faceValue;
+    private final String faceValue;
 
-    PokerCard(Suit suit, FaceValue faceValue) {
+    PokerCard(Suit suit, String faceValue) {
         this.suit = suit;
         this.faceValue = faceValue;
     }
