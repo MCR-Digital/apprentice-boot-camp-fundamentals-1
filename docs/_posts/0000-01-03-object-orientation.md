@@ -97,6 +97,10 @@ Identify the following:
     -[+] Inheritance
     -[+] Polymorphism
 
+Note: Ask whose design changed  
+  Paper designs easy to change, designs in code much harder.  
+  Good to do a little up front design.  
+
 ---
 
 ## Lunch?
