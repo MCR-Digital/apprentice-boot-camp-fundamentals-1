@@ -1,6 +1,6 @@
 package cards;
 
-class AnimalCard extends Card{
+class AnimalCard implements Card{
 
     private final Animal animal;
 

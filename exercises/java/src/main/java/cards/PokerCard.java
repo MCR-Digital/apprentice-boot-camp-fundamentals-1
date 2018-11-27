@@ -1,6 +1,6 @@
 package cards;
 
-class PokerCard extends Card {
+class PokerCard implements Card {
     private final Suit suit;
     private final FaceValue faceValue;
 
