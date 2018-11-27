@@ -5,10 +5,10 @@
 \*[Van Roy](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)
 
 Note:
-There are many different programming paradigms - take a moment to talk through the diagram.
-From imperative languages such as C through Java and object-orientation through to functional.
-Emphasise the distinction is fuzzy.
-**Mention the "Turing Completeness" line.**
+There are many different programming paradigms - take a moment to talk through the diagram.  
+From imperative languages such as C through Java and object-orientation through to functional.  
+Emphasise the distinction is fuzzy.  
+**Mention the "Turing Completeness" line.**  
 
 --
 
@@ -19,8 +19,8 @@ Emphasise the distinction is fuzzy.
 [Alan Turing: The Enigma](https://www.amazon.co.uk/dp/B009H4ZB3G) <!-- .element: class="fragment" -->
 
 Note:
-Alan Turing - who is he?
-The notion of Turing Completeness and the fact that all the languages below the line on the previous slide have the same programming power.
+Alan Turing - who is he?  
+The notion of Turing Completeness and the fact that all the languages below the line on the previous slide have the same programming power.  
 
 ---
 
@@ -97,7 +97,9 @@ Identify the following:
     -[+] Inheritance
     -[+] Polymorphism
 
-Note: Ask whose design changed  
+Note: Get them to describe their designs.  
+  Draw designs up at the front as they go.  
+  Ask whose design changed  
   Paper designs easy to change, designs in code much harder.  
   Good to do a little up front design.  
 
@@ -112,7 +114,7 @@ Note: Ask whose design changed
 <img src="{{ site.github.url }}/images/fourPillarsVenn.png" alt="Venn diagram of inheritance, encapsulation, polymorphism and abstraction">
 
 Note:
-Needs a better diagram, but the point is here that these concepts are not distinct, there is often quite a lot of overlap between these language features.
+Needs a better diagram, but the point is here that these concepts are not distinct, there is often quite a lot of overlap between these language features.  
 
 ---
 
@@ -130,9 +132,9 @@ by Alamfarial is licensed under
 </p>
 
 Note:
-Prompt them for suggestions - the answer we're looking for is "by using objects".
+Prompt them for suggestions - the answer we're looking for is "by using objects".  
 Naturally there are other language features which enable it but the concept of the
-object is the main one.
+object is the main one.  
 
 --
 
@@ -149,11 +151,11 @@ object is the main one.
 - Walk through the `Encapsulation` class...
 
 Note:
-The code is not nice.
-We've chosen to model a playing card by two int values, one representing suit, one value.
-Therefore a pack is made up of an array of 52 pairs of int values - making a 2D array.
-It's probably best to walk through the current version of the code and make sure it's understood.
-It may be necessary to explain `switch` statements for example.
+The code is not nice.  
+We've chosen to model a playing card by two int values, one representing suit, one value.  
+Therefore a pack is made up of an array of 52 pairs of int values - making a 2D array.  
+It's probably best to walk through the current version of the code and make sure it's understood.  
+It may be necessary to explain `switch` statements for example.  
 
 --
 
@@ -163,8 +165,8 @@ It may be necessary to explain `switch` statements for example.
 -[+] Everyone knows everybody else's business
 
 Note:
-Get them to critique the existing code, see what they come up with - write up their answers somewhere and discuss.
-Note the error prone use of ints, and the fact that the Encapsulation class knows how many cards are in a suit etc.
+Get them to critique the existing code, see what they come up with - write up their answers somewhere and discuss.  
+Note the error prone use of ints, and the fact that the Encapsulation class knows how many cards are in a suit etc.  
 
 --
 
@@ -173,7 +175,9 @@ Note the error prone use of ints, and the fact that the Encapsulation class know
 - What new classes would you introduce to better encapsulate the existing code? 
 
 Note:
-Get them to work in small groups and present back.
+Get them to work in small groups.  
+Once complete get them to describe their designs.  
+Draw designs up at the front as they describe.  
 
 --
 
@@ -182,10 +186,9 @@ Get them to work in small groups and present back.
 -[+] How many classes did you come up with?
 -[+] What were they?
 
-Note:
-Conduct a straw poll and see how many classes they came up with.
-See if there's any commonality, do they come up with the same names / concepts?
-Obviously there are many possible answers.
+Note: Conduct a straw poll and see how many classes they came up with.  
+  See if there's any commonality, do they come up with the same names / concepts?  
+  Obviously there are many possible answers.  
 
 --
 
@@ -233,7 +236,7 @@ class Deck {
 ```
 
 Note:
-Revisit this later - we can go even further if we bring in inheritance.
+Revisit this later - we can go even further if we bring in inheritance.  
 
 ---
 
@@ -254,11 +257,11 @@ Revisit this later - we can go even further if we bring in inheritance.
 <p style="float:bottom;font-size:15px">Background Copyright © 2011-Present www.Jackson-Pollock.org. All Rights Reserved.</p>
 
 Note:
-Get them to make suggestions, and write them up on the white-board, discuss their answers.
-Stress that many of the simple ways we structure our code in order to make it more legible are in fact abstractions.
-If it comes up, emphasise that abstraction is not just using the java _abstract_ keyword (although it is a valid example).
-Expect them to mention inheritance, which is fair enough as these distinctions all get a little fuzzy.
-In a Java context we could argue that using an interface would give us a similar effect, but is that just inheritance by the back door?
+Get them to make suggestions, and write them up on the white-board, discuss their answers.  
+Stress that many of the simple ways we structure our code in order to make it more legible are in fact abstractions.  
+If it comes up, emphasise that abstraction is not just using the java _abstract_ keyword (although it is a valid example).  
+Expect them to mention inheritance, which is fair enough as these distinctions all get a little fuzzy.  
+In a Java context we could argue that using an interface would give us a similar effect, but is that just inheritance by the back door?  
 
 --
 
@@ -288,7 +291,7 @@ Walk through the Snap example
 -[+] Cards with the same face-value are a valid _Snap!_
 
 Note:
-We're looking for them to use interfaces here to represent Cards and Decks
+We're looking for them to use interfaces here to represent Cards and Decks  
 
 --
 
@@ -299,7 +302,8 @@ We're looking for them to use interfaces here to represent Cards and Decks
 -[+] Is anything worse?
 
 Note:
-Whiteboard their answers to these questions, and see if there's a consensus, discuss differences.
+Whiteboard their answers to these questions.  
+See if there's a consensus, discuss differences.  
 
 ---
 
@@ -323,7 +327,7 @@ by <a href="https://www.flickr.com/photos/twintiger/">twintiger007</a> is licens
 </p>
 
 Note:
-Ask these questions to the group and whiteboard their answers.
+Ask these questions to the group and whiteboard their answers.  
 
 --
 
@@ -371,8 +375,8 @@ class Car extends Vehicle {
 ```
 
 Note:
-Ask what Car inherits from Vehicle - i.e. the fact that it can accelerate.
-Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.
+Ask what Car inherits from Vehicle - i.e. the fact that it can accelerate.  
+Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.  
 
 --
 
@@ -389,9 +393,9 @@ Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.
 -[+] What were they?
 
 Note:
-Poll them to see what classes they came up with.
-Maybe draw some class diagrams.
-Discuss commonalities / differences.
+Poll them to see what classes they came up with.  
+Maybe draw some class diagrams.  
+Discuss commonalities / differences.  
 
 --
 
@@ -431,7 +435,7 @@ by <a href="https://www.flickr.com/photos/hotelrealfini/">Hotel Real Fini</a> is
 </p>
 
 Note:
-Again prompt for suggestions and discuss.
+Again prompt for suggestions and discuss.  
 
 --
 
