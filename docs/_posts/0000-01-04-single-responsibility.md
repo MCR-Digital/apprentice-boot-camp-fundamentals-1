@@ -235,13 +235,14 @@ Visual signs that a class might have multiple responsibilities:
 + It’s massive
 + Multiple constructors
 + Name doesn’t match contents
-+ Name is confusing/too generic
++ Name is confusing/too generic/contains ‘And’
 + People are scared to change it
 
 Note: Generally classes grow as extra responsibility creeps in  
   Classes generally need one set of collaborators  
   Bad names are like a bad foundation  
   Multiple responsibilities can cause surprises when changing things  
+  Think at the method level too.  
 
 ---
 
