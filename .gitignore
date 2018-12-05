@@ -2,8 +2,12 @@
 .vscode
 bin
 obj
+
 .idea
-_site
+
+/docs/_site
+/docs/Gemfile.lock
+
 .gradle
 *.class
 build
