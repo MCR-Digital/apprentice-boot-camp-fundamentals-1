@@ -5,7 +5,7 @@
 <font size=3 align='left'>
 
 <p>
-AutoTrader is an organisation which advertises both new and used vehicles for sale.
+Auto Trader is an organisation which advertises both new and used vehicles for sale.
 Vehicles are advertised by both private individuals and dealers, and can be of many
 different types, including cars, motorbikes and vans.
 An advert, as displayed on the website, includes a price, a description, a make, a model and a registration.
