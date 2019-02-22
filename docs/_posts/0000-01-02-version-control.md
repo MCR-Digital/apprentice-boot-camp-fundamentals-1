@@ -28,10 +28,10 @@ If it's text check it in.
 
 + Git
 + Key features?
-+ Distributed
-+ Strong support for branching
-+ Fast
-+ Open
+    + Distributed
+    + Strong support for branching
+    + Fast
+    + Open
 
 Note:
 See how many people use Git
