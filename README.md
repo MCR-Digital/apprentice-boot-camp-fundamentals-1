@@ -51,8 +51,7 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
  
 ## Slides
 
-The slides can be viewed [here](https://mcr-digital.github.io/apprentice-bootcamp-fundamentals-1/).
-<!--- Link to slides used --->
+The slides can be viewed from the link at the top of the repository.
 
 ## Exercises
 
