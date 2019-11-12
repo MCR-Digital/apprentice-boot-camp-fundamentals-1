@@ -1,12 +1,12 @@
 ## Version Control
 
--[+] What is it?
-    -[+] A means of tracking changes to text
--[+] Why do we use it?
-    -[+] Audit trail
-    -[+] Archive
-    -[+] Versioning
-    -[+] Collaboration
++ What is it?
++ A means of tracking changes to text
++ Why do we use it?
++ Audit trail
++ Archive
++ Versioning
++ Collaboration
     
 Note:
 Ask these questions to the group, get them to suggest answers and whiteboard them.
@@ -26,12 +26,12 @@ If it's text check it in.
 
 ### Version Control an example
 
--[+] Git
--[+] Key features?
-    -[+] Distributed
-    -[+] Strong support for branching
-    -[+] Fast
-    -[+] Open
++ Git
++ Key features?
++ Distributed
++ Strong support for branching
++ Fast
++ Open
 
 Note:
 See how many people use Git

@@ -6,11 +6,11 @@
 
 # Quick Recap
 
--[+] Positioned OO alongside other programming styles
--[+] Encapsulation
--[+] Abstraction
--[+] Inheritance
--[+] Polymorphism
++ Positioned OO alongside other programming styles
++ Encapsulation
++ Abstraction
++ Inheritance
++ Polymorphism
 
 ---
 
@@ -106,17 +106,17 @@ Note: Cohesion is a good quality
 
 Shout them out
 
--[+] Gaffa tape: stops things moving
--[+] Hammer: hammers things
--[+] Mug: holds liquid
++ Gaffa tape: stops things moving
++ Hammer: hammers things
++ Mug: holds liquid
 
 ---
 
 # Classic Counter-Examples
 
--[+] Food processor: chops, mixes, whips, grates, slices
--[+] Swiss army knife: cuts, screws, unpicks, de-corks
--[+] Spork: cuts, spoons
++ Food processor: chops, mixes, whips, grates, slices
++ Swiss army knife: cuts, screws, unpicks, de-corks
++ Spork: cuts, spoons
 
 ---
 
@@ -145,14 +145,14 @@ Note: There’s more than one correct answer
 
 Is it one responsiblity or more?
 
--[+] Engine
--[+] Wheels
--[+] Indicators
--[+] Dashboard
--[+] Wipers
--[+] Radio
--[+] Seats
--[+] …
++ Engine
++ Wheels
++ Indicators
++ Dashboard
++ Wipers
++ Radio
++ Seats
++ …
 
 ---
 
@@ -232,11 +232,11 @@ Note: We want to make changes carefully
 
 Visual signs that a class might have multiple responsibilities:
 
--[+] It’s massive
--[+] Multiple constructors
--[+] Name doesn’t match contents
--[+] Name is confusing/too generic
--[+] People are scared to change it
++ It’s massive
++ Multiple constructors
++ Name doesn’t match contents
++ Name is confusing/too generic
++ People are scared to change it
 
 Note: Generally classes grow as extra responsibility creeps in  
   Classes generally need one set of collaborators  
@@ -268,9 +268,9 @@ Note: Kata requires code to handle running total and offers
 
 * Split into groups
 * Make some changes:
-  -[+] Change it so that you can have 4 ‘C’ for 70
-  -[+] Change it so that you can have 5 ‘D’ for 60
-  -[+] Change it so that you can have 4 ‘A’ for 180
+  + Change it so that you can have 4 ‘C’ for 70
+  + Change it so that you can have 5 ‘D’ for 60
+  + Change it so that you can have 4 ‘A’ for 180
 
 Note: Do changes one by one as you don't want them to know that ‘A’ will change
 
@@ -290,9 +290,9 @@ Note: Do changes one by one as you don't want them to know that ‘A’ will cha
 
 ## What responsibility does Checkout have?
 
--[+] Pricing
--[+] Tracking running total
--[+] Reductions
++ Pricing
++ Tracking running total
++ Reductions
 
 Note: Where would you add new functionality?  
 
