@@ -331,7 +331,7 @@ Ask these questions to the group and whiteboard their answers.
 
 --
 
-## Composition vs. Inheritance
+## Association vs. Inheritance
 
 <div align="left">
 <p>
@@ -346,7 +346,7 @@ kind of vehicle"_
 _"A car
 <span class="fragment highlight-green" data-fragment-index="4">**has a**</span>
 steering wheel"_
-<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **composition**</span>
+<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **association**</span>
 </span>
 </p>
 
@@ -396,6 +396,18 @@ Note:
 Poll them to see what classes they came up with.  
 Maybe draw some class diagrams.  
 Discuss commonalities / differences.  
+
+--
+
+## Class Diagrams
+
+* Useful to have a standard way of drawing designs
+* Unified Modelling Language
+* Simplified version
+
+--
+
+<img src="{{ site.github.url }}/images/class-diagrams.png" alt="Components of a class diagram">
 
 --
 
