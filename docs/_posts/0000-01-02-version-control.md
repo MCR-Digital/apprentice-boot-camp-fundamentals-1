@@ -76,11 +76,20 @@ Disadvantages - adds complexity.
 
 * These slides are in version control
 * If you don't have a GitHub account create one
-* Fork these slides into your own repository
+* _**Fork**_ these slides into your own repository
 https://github.com/MCR-Digital/apprentice-bootcamp-fundamentals-1
 * Install Git on your machine if you don't already have it
 https://git-scm.com/
 * Clone your newly created repository onto your local machine 
+
+--
+
+#### Extra notes for Java users
+
+* If you're using IntelliJ chose the _Open_ option and select the following file:
+`exercises/java/build.gradle`
+* Choose _Open As Project_
+* If given the option choose _Import From External Model_
 
 --
 
