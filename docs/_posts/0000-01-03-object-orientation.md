@@ -148,7 +148,7 @@ object is the main one.
 
 --
 
-- Walk through the `Encapsulation` class...
+- Walk through the `Cards` class...
 
 Note:
 The code is not nice.  
@@ -166,7 +166,7 @@ It may be necessary to explain `switch` statements for example.
 
 Note:
 Get them to critique the existing code, see what they come up with - write up their answers somewhere and discuss.  
-Note the error prone use of ints, and the fact that the Encapsulation class knows how many cards are in a suit etc.  
+Note the error prone use of ints, and the fact that the Cards class knows how many cards are in a suit etc.  
 
 --
 
