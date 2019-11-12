@@ -5,4 +5,7 @@ obj
 .idea
 _site
 .gradle
+*.class
 build
+node_modules
+package-lock.json
