@@ -12,20 +12,20 @@
 + Inheritance
 + Polymorphism
 
----
+--
 
 So… Object Orientation makes your code good?
 
 Note: Danger of thinking OO == good code
 
----
+--
 
 # Objects make sense in the real world
 
 Note: Think in terms of objects  
 Very natural
 
----
+--
 
 # Sometimes less so in software
 
@@ -34,7 +34,7 @@ Real life things
 OOP attempts to model the tangible real world  
 Technology (DB/events etc) often not tangible
 
----
+--
 
 ## There are some principles to help!
 
@@ -56,14 +56,14 @@ Note: Actually five principles:
   Interface Segregation  
   Dependency Injection
 
----
+--
 
 “every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.”  
 —[Wikipedia](https://en.wikipedia.org/wiki/Single_responsibility_principle) 
 
 Note: every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class
 
----
+--
 
 # Robert C Martin
 
@@ -75,12 +75,12 @@ Note:
   Also introduced ‘Clean Code’ term  
   Position these contributions  
 
----
+--
 
 “A class should have only one reason to change.”  
 —Robert C Martin in ‘Agile Software Development, Principles, Patterns, and Practices’
 
----
+--
 
 # Good code is organised
 
@@ -90,7 +90,7 @@ Note: Discuss importance with 50k+ LOC across thousands of classes
   Can’t have order if unclear where to put things  
   Broken window theory  
 
----
+--
 
 # Cohesion
 
@@ -100,7 +100,7 @@ Note: Discuss importance with 50k+ LOC across thousands of classes
 Note: Cohesion is a good quality  
   Code highly cohesive when single responsibility described in one place
 
----
+--
 
 # Classic Examples
 
@@ -110,7 +110,7 @@ Shout them out
 + Hammer: hammers things
 + Mug: holds liquid
 
----
+--
 
 # Classic Counter-Examples
 
@@ -118,7 +118,7 @@ Shout them out
 + Swiss army knife: cuts, screws, unpicks, de-corks
 + Spork: cuts, spoons
 
----
+--
 
 # Consider Fizz Buzz…
 
@@ -127,7 +127,7 @@ How many responsibilities?
 Note: Hard to say  
   Not cut and dry
 
----
+--
 
 # Responsibility is hard
 
@@ -135,7 +135,7 @@ It’s not always black and white
 
 Note: There’s more than one correct answer
 
----
+--
 
 <backgroundimage>{{ site.github.url }}/images/car-diagram.jpg</backgroundimage>
 <backgroundimageopacity>0.25</backgroundimageopacity>
@@ -165,7 +165,7 @@ Note: FD critical skill when designing systems
   Decisions about responsibility solidify  
   Microservices based around brave decisions about responsibility boundaries  
 
----
+--
 
 # How deep?
 
@@ -178,13 +178,13 @@ You can keep decomposing the functions into smaller components:
         - Magnet
           - Atoms
 
----
+--
 
 # Keep it sensible
 
 Don’t decompose too far.
 
----
+--
 
 # 🙅‍
 
@@ -193,7 +193,7 @@ Trading off cohesion and reduced responsibility
 Note: When responsibility too small you lose cohesion  
   May need to perform shotgun surgery across many components to make a single change
 
----
+--
 
 # Aim for sensible outcomes
 
@@ -203,7 +203,7 @@ Note: E.g. choice of using set or list
   Should be able to swap out in one place  
   This is the thing that is responsible for storing that thing  
 
----
+--
 
 # Abstraction
 
@@ -213,7 +213,7 @@ Stay at one level of abstraction within a component
 
 Note: Don’t describe a bathroom as a toilet, a bath and a flow control valve—you call it a tap. 
 
----
+--
 
 # General rules
 
@@ -226,7 +226,7 @@ Note: We want to make changes carefully
   Allows us to be more methodical and have less context  
   Two bits of code that change together, live together  
 
----
+--
 
 # Negative Indicators
 
@@ -262,7 +262,7 @@ Note: Generally classes grow as extra responsibility creeps in
 Note: Kata requires code to handle running total and offers  
   This is all done (badly)
 
----
+--
 
 # Coding Exercise (20 mins)
 
@@ -274,7 +274,7 @@ Note: Kata requires code to handle running total and offers
 
 Note: Do changes one by one as you don't want them to know that ‘A’ will change
 
----
+--
 
 # Reflection Exercise (10 mins)
 
@@ -284,7 +284,7 @@ Note: Do changes one by one as you don't want them to know that ‘A’ will cha
   - How could you split it up?
   - What problems does/will this design face?
 
----
+--
 
 # Review post-its
 
@@ -296,7 +296,7 @@ Note: Do changes one by one as you don't want them to know that ‘A’ will cha
 
 Note: Where would you add new functionality?  
 
----
+--
 
 # Review post-its
 
@@ -304,7 +304,7 @@ Note: Where would you add new functionality?
 
 Note: May need to prompt: Scanner, Item, Offer Rule  
 
----
+--
 
 # Review post-its
 
@@ -316,7 +316,7 @@ Note: Was it readable?
   Point out original tests still valid and shouldn’t have changed  
   Highlight that rules are a separate responsibility  
 
----
+--
 
 # Exercise (30 mins)
 
