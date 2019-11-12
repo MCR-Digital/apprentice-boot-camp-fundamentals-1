@@ -70,11 +70,11 @@ let createArray = function (a, b) {
   return x;
 };
 
-// let encapsulation = new Encapsulation();
-// let deckInOrder = encapsulation.getCards();
-// for (card of deckInOrder) {
-//   console.log(card);
-// }
+let encapsulation = new Encapsulation();
+let deckInOrder = encapsulation.getCards();
+for (const card of deckInOrder) {
+  console.log(card);
+}
 
 module.exports = {
   Encapsulation: Encapsulation
