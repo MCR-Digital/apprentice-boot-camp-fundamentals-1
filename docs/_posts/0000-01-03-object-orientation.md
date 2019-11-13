@@ -74,7 +74,7 @@ class Mat {
 
 ## Exercise (30mins)
 
-Here's a simple description of an online car advertising business <a href="#/4/1">Mini AT Scenario</a>
+Here's a simple description of an online car advertising business <a href="#/4/5">Mini AT Scenario</a>
 
 Identify the following:
 
@@ -90,12 +90,12 @@ Identify the following:
 
 ## Exercise review
 
--[+] What objects, attributes and methods did you come up with?
--[+] What object oriented principles did we use in our design?
-    -[+] Abstraction
-    -[+] Encapsulation
-    -[+] Inheritance
-    -[+] Polymorphism
++ What objects, attributes and methods did you come up with?
++ What object oriented principles did we use in our design?
++ Abstraction
++ Encapsulation
++ Inheritance
++ Polymorphism
 
 Note: Get them to describe their designs.  
   Draw designs up at the front as they go.  
@@ -120,9 +120,9 @@ Needs a better diagram, but the point is here that these concepts are not distin
 
 ## Encapsulation
 
--[+] Also known as data-hiding
--[+] How do we achieve it?
--[+] Why do we do it?
++ Also known as data-hiding
++ How do we achieve it?
++ Why do we do it?
 
 {% include background-image.html file="capsule.jpg" %}
 <p style="float:bottom;font-size:15px">
@@ -148,7 +148,7 @@ object is the main one.
 
 --
 
-- Walk through the `Encapsulation` class...
+- Walk through the `Cards` class...
 
 Note:
 The code is not nice.  
@@ -161,12 +161,12 @@ It may be necessary to explain `switch` statements for example.
 
 ### What's wrong with the current code?
 
--[+] There are numbers everywhere
--[+] Everyone knows everybody else's business
++ There are numbers everywhere
++ Everyone knows everybody else's business
 
 Note:
 Get them to critique the existing code, see what they come up with - write up their answers somewhere and discuss.  
-Note the error prone use of ints, and the fact that the Encapsulation class knows how many cards are in a suit etc.  
+Note the error prone use of ints, and the fact that the Cards class knows how many cards are in a suit etc.  
 
 --
 
@@ -183,8 +183,8 @@ Draw designs up at the front as they describe.
 
 ## Exercise Review
 
--[+] How many classes did you come up with?
--[+] What were they?
++ How many classes did you come up with?
++ What were they?
 
 Note: Conduct a straw poll and see how many classes they came up with.  
   See if there's any commonality, do they come up with the same names / concepts?  
@@ -244,15 +244,15 @@ Revisit this later - we can go even further if we bring in inheritance.
 
 {% include background-image.html file="jacksonPollock.jpg" %}
 
--[+] What is it?
-    -[+] Generalising
-    -[+] Taking a step-back
-    -[+] Hiding complexity
--[+] How do we achieve it?
-    -[+] Code structure - methods, objects
-    -[+] Inheritance?
-    -[+] Polymorphism?
-    -[+] Encapsulation?
++ What is it?
++ Generalising
++ Taking a step-back
++ Hiding complexity
++ How do we achieve it?
++ Code structure - methods, objects
++ Inheritance?
++ Polymorphism?
++ Encapsulation?
 
 <p style="float:bottom;font-size:15px">Background Copyright © 2011-Present www.Jackson-Pollock.org. All Rights Reserved.</p>
 
@@ -273,10 +273,10 @@ In a Java context we could argue that using an interface would give us a similar
 
 ### Rules
 
--[+] Deal cards from the deck
--[+] When two identical cards appear next to each other...
--[+] The first player to call _Snap!_ gains a point
--[+] If a player calls _Snap!_ incorrectly then they lose a point
++ Deal cards from the deck
++ When two identical cards appear next to each other...
++ The first player to call _Snap!_ gains a point
++ If a player calls _Snap!_ incorrectly then they lose a point
 
 --
 
@@ -286,9 +286,9 @@ Walk through the Snap example
 
 ### Exercise (30mins)
 
--[+] By abstracting away functionality 
--[+] Make the snap game work with the normal deck of cards from the previous exercise
--[+] Cards with the same face-value are a valid _Snap!_
++ By abstracting away functionality 
++ Make the snap game work with the normal deck of cards from the previous exercise
++ Cards with the same face-value are a valid _Snap!_
 
 Note:
 We're looking for them to use interfaces here to represent Cards and Decks  
@@ -297,9 +297,9 @@ We're looking for them to use interfaces here to represent Cards and Decks
 
 ### Exercise review
 
--[+] What did you do?
--[+] What's better about the new version?
--[+] Is anything worse?
++ What did you do?
++ What's better about the new version?
++ Is anything worse?
 
 Note:
 Whiteboard their answers to these questions.  
@@ -309,14 +309,14 @@ See if there's a consensus, discuss differences.
 
 ## Inheritance
 
--[+] What is it?
-    -[+] Sharing functionality
--[+] How do we achieve it?
-    -[+] Some notion of linking types together
-        -[+] Classes and subclasses
-        -[+] Proto-typical inheritance
--[+] Why do we do it?
-    -[+] Code reuse, save duplication
++ What is it?
++ Sharing functionality
++ How do we achieve it?
++ Some notion of linking types together
++ Classes and subclasses
++ Proto-typical inheritance
++ Why do we do it?
++ Code reuse, save duplication
 
 
 {% include background-image.html file="spoons.jpg" %}
@@ -331,7 +331,7 @@ Ask these questions to the group and whiteboard their answers.
 
 --
 
-## Composition vs. Inheritance
+## Association vs. Inheritance
 
 <div align="left">
 <p>
@@ -346,7 +346,7 @@ kind of vehicle"_
 _"A car
 <span class="fragment highlight-green" data-fragment-index="4">**has a**</span>
 steering wheel"_
-<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **composition**</span>
+<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **association**</span>
 </span>
 </p>
 
@@ -389,13 +389,25 @@ Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.
 
 ## Exercise review
 
--[+] How many classes did you come up with?
--[+] What were they?
++ How many classes did you come up with?
++ What were they?
 
 Note:
 Poll them to see what classes they came up with.  
 Maybe draw some class diagrams.  
 Discuss commonalities / differences.  
+
+--
+
+## Class Diagrams
+
+* Useful to have a standard way of drawing designs
+* Unified Modelling Language
+* Simplified version
+
+--
+
+<img src="{{ site.github.url }}/images/class-diagrams.png" alt="Components of a class diagram">
 
 --
 
@@ -421,11 +433,11 @@ Discuss commonalities / differences.
 
 ## Polymorphism
 
--[+] What is it?
--[+] How do we use it?
-    -[+] Mainly via inheritance mechanisms
--[+] Why is it useful?
-    -[+] Simplifies our code
++ What is it?
++ How do we use it?
++ Mainly via inheritance mechanisms
++ Why is it useful?
++ Simplifies our code
 
 {% include background-image.html file="pasta.jpg" %}
 <p style="float:bottom;font-size:15px">
@@ -441,12 +453,12 @@ Again prompt for suggestions and discuss.
 
 ### Example - Lights on a car
 
--[+] A car has many lights
-    -[+] Headlights
-    -[+] Side-lights
-    -[+] Indicators
-    -[+] Fog-lights
--[+] All lights can be turned on and off by controls on the dashboard
++ A car has many lights
++ Headlights
++ Side-lights
++ Indicators
++ Fog-lights
++ All lights can be turned on and off by controls on the dashboard
 
 --
 
@@ -482,15 +494,15 @@ class Car {
 * Make a game of _**Super-Snap!**_
 * The deck consists of a full set of playing cards and a full set of animal cards
 * The rules for calling _Snap!_ are the same as before
-    -[+] a playing card will only match a playing card of the same value
-    -[+] an animal card will never match a normal playing card
+    + a playing card will only match a playing card of the same value
+    + an animal card will never match a normal playing card
 
 --
 
 ### Exercise review
 
--[+] What did you do?
--[+] How did you find it?
++ What did you do?
++ How did you find it?
 
 --
 

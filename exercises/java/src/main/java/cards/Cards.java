@@ -1,9 +1,9 @@
 package cards;
 
-public class Encapsulation {
+public class Cards {
     public static void main(String[] args) {
-        Encapsulation encapsulation = new Encapsulation();
-        String[] deckInOrder = encapsulation.getCards();
+        Cards cards = new Cards();
+        String[] deckInOrder = cards.getCards();
         for(String card: deckInOrder){
             System.out.println(card);
         }
