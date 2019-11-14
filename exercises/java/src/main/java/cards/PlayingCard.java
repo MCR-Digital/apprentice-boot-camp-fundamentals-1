@@ -13,7 +13,6 @@ public class PlayingCard {
     }
 
     public PlayingCard(Suit suit, int faceValue) {
-
         this.suit = suit;
         this.faceValue = faceValue;
     }
