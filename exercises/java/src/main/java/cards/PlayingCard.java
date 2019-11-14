@@ -42,6 +42,6 @@ public class PlayingCard implements Card {
 
     @Override
     public boolean snap(Card otherCard) {
-        return getFaceValue() == ((PlayingCard)otherCard).getFaceValue();
+        return otherCard instanceof PlayingCard && getFaceValue() == ((PlayingCard)otherCard).getFaceValue();
     }
 }
