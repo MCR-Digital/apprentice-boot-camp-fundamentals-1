@@ -1,6 +1,6 @@
 package cards;
 
-public class PlayingCard {
+public class PlayingCard implements Card {
     private final Suit suit;
     private final int faceValue;
 
@@ -38,5 +38,10 @@ public class PlayingCard {
         }
 
         return faceValueName + " of " + getSuit();
+    }
+
+    @Override
+    public boolean snap(Card otherCard) {
+        return getFaceValue() == ((PlayingCard)otherCard).getFaceValue();
     }
 }
