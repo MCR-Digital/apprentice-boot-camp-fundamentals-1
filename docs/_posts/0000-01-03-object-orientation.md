@@ -105,10 +105,6 @@ Note: Get them to describe their designs.
 
 ---
 
-## Lunch?
-
----
-
 ## Object-Oriented Concepts
 
 <img src="{{ site.github.url }}/images/fourPillarsVenn.png" alt="Venn diagram of inheritance, encapsulation, polymorphism and abstraction">
@@ -237,6 +233,10 @@ class Deck {
 
 Note:
 Revisit this later - we can go even further if we bring in inheritance.  
+
+---
+
+## Lunch?
 
 ---
 
