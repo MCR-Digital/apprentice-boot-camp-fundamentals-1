@@ -1,10 +1,10 @@
 package cards;
 
 public class PlayingCard {
-    private final int suit;
+    private final Suit suit;
     private final int faceValue;
 
-    public int getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 
@@ -12,7 +12,7 @@ public class PlayingCard {
         return faceValue;
     }
 
-    public PlayingCard(int suit, int faceValue) {
+    public PlayingCard(Suit suit, int faceValue) {
 
         this.suit = suit;
         this.faceValue = faceValue;
@@ -38,15 +38,6 @@ public class PlayingCard {
             default: throw new IllegalArgumentException("Something went wrong " + getFaceValue() + "is not a valid faceValue!");
         }
 
-        String suitName;
-        switch (getSuit()){
-            case 0: suitName = "clubs"; break;
-            case 1: suitName = "diamonds"; break;
-            case 2: suitName = "hearts"; break;
-            case 3: suitName = "spades"; break;
-            default: throw new IllegalArgumentException("Something went wrong " + getSuit() + "is not a valid suitName!");
-        }
-
-        return faceValueName + " of " + suitName;
+        return faceValueName + " of " + getSuit();
     }
 }
