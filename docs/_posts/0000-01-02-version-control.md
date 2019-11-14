@@ -1,12 +1,12 @@
 ## Version Control
 
 + What is it?
-+ A means of tracking changes to text
+    + A means of tracking changes to text
 + Why do we use it?
-+ Audit trail
-+ Archive
-+ Versioning
-+ Collaboration
+    + Audit trail
+    + Archive
+    + Versioning
+    + Collaboration
     
 Note:
 Ask these questions to the group, get them to suggest answers and whiteboard them.

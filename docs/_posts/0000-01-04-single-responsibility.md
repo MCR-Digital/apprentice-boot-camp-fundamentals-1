@@ -16,7 +16,7 @@
 
 So… Object Orientation makes your code good?
 
-Note: Danger of thinking OO == good code
+Note: Danger of thinking OO == good code  
 
 --
 

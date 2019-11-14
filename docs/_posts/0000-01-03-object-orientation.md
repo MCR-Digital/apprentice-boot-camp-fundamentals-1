@@ -92,10 +92,10 @@ Identify the following:
 
 + What objects, attributes and methods did you come up with?
 + What object oriented principles did we use in our design?
-+ Abstraction
-+ Encapsulation
-+ Inheritance
-+ Polymorphism
+    + Abstraction
+    + Encapsulation
+    + Inheritance
+    + Polymorphism
 
 Note: Get them to describe their designs.  
   Draw designs up at the front as they go.  
@@ -245,14 +245,14 @@ Revisit this later - we can go even further if we bring in inheritance.
 {% include background-image.html file="jacksonPollock.jpg" %}
 
 + What is it?
-+ Generalising
-+ Taking a step-back
-+ Hiding complexity
+    + Generalising
+    + Taking a step-back
+    + Hiding complexity
 + How do we achieve it?
-+ Code structure - methods, objects
-+ Inheritance?
-+ Polymorphism?
-+ Encapsulation?
+    + Code structure - methods, objects
+    + Inheritance?
+    + Polymorphism?
+    + Encapsulation?
 
 <p style="float:bottom;font-size:15px">Background Copyright © 2011-Present www.Jackson-Pollock.org. All Rights Reserved.</p>
 
@@ -310,13 +310,13 @@ See if there's a consensus, discuss differences.
 ## Inheritance
 
 + What is it?
-+ Sharing functionality
+    + Sharing functionality
 + How do we achieve it?
-+ Some notion of linking types together
-+ Classes and subclasses
-+ Proto-typical inheritance
+    + Some notion of linking types together
+        + Classes and subclasses
+        + Proto-typical inheritance
 + Why do we do it?
-+ Code reuse, save duplication
+    + Code reuse, save duplication
 
 
 {% include background-image.html file="spoons.jpg" %}
@@ -435,9 +435,9 @@ Discuss commonalities / differences.
 
 + What is it?
 + How do we use it?
-+ Mainly via inheritance mechanisms
+    + Mainly via inheritance mechanisms
 + Why is it useful?
-+ Simplifies our code
+    + Simplifies our code
 
 {% include background-image.html file="pasta.jpg" %}
 <p style="float:bottom;font-size:15px">
@@ -454,10 +454,10 @@ Again prompt for suggestions and discuss.
 ### Example - Lights on a car
 
 + A car has many lights
-+ Headlights
-+ Side-lights
-+ Indicators
-+ Fog-lights
+    + Headlights
+    + Side-lights
+    + Indicators
+    + Fog-lights
 + All lights can be turned on and off by controls on the dashboard
 
 --
