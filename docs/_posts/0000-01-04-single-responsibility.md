@@ -1,16 +1,3 @@
-# Boot-camp
-## Fundamentals 1
-# Day Two
-
----
-
-## Quick Recap
-
-+ Positioned OO alongside other programming styles
-+ Encapsulation
-+ Abstraction
-+ Inheritance
-+ Polymorphism
 
 --
 
