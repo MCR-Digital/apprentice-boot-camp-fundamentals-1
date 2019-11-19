@@ -13,8 +13,9 @@ class Snap {
     }
 
     public static void main(String[] args) {
-        Snap snap = new Snap(new AnimalDeck());
+        //Snap snap = new Snap(new AnimalDeck());
         //Snap snap = new Snap(new PlayingCardDeck());
+        Snap snap = new Snap(new SuperDeck());
         snap.play();
     }
 
