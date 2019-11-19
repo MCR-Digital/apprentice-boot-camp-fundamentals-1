@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class AnimalDeck {
+class AnimalDeck implements Deck {
 
     private List<AnimalCard> cards;
 
@@ -16,11 +16,11 @@ class AnimalDeck {
         }
     }
 
-    void shuffle() {
+    public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    String[] getCards() {
+    public String[] getCards() {
         String[] result = new String[cards.size()];
         for (int i = 0; i < cards.size(); i++) {
             AnimalCard card = cards.get(i);
@@ -29,7 +29,7 @@ class AnimalDeck {
         return result;
     }
 
-    AnimalCard deal() {
+    public AnimalCard deal() {
         return cards.remove(0);
     }
 }
