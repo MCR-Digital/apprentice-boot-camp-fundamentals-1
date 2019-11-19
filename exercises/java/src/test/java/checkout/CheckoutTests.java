@@ -76,6 +76,59 @@ public class CheckoutTests {
     }
 
     @Test
+    public void oneC() {
+        Checkout checkout = new Checkout();
+
+        checkout.scan("C");
+        assertThat(checkout.total()).isEqualTo(20);
+    }
+
+    @Test
+    public void twoC() {
+        Checkout checkout = new Checkout();
+
+        checkout.scan("C");
+        checkout.scan("C");
+        assertThat(checkout.total()).isEqualTo(40);
+    }
+
+    @Test
+    public void threeC() {
+        Checkout checkout = new Checkout();
+
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        assertThat(checkout.total()).isEqualTo(60);
+    }
+
+    @Test
+    public void fourC() {
+        Checkout checkout = new Checkout();
+
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        assertThat(checkout.total()).isEqualTo(70);
+    }
+
+    @Test
+    public void eightC() {
+        Checkout checkout = new Checkout();
+
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        checkout.scan("C");
+        assertThat(checkout.total()).isEqualTo(140);
+    }
+
+    @Test
     public void simple() {
         Checkout checkout = new Checkout();
         

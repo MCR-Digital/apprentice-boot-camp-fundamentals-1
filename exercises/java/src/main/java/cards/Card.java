@@ -1,7 +1,11 @@
 package cards;
 
-public interface Card {
+abstract public class Card {
 
-    boolean snap( Card otherCard );
+    abstract boolean snap(Card otherCard);
 
+    @Override
+    public String toString() {
+        return "Card{}";
+    }
 }

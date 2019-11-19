@@ -1,6 +1,6 @@
 package cards;
 
-public class PokemonCard implements Card {
+public class PokemonCard extends Card {
 
     private final Pokemon pokemon;
 

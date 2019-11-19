@@ -1,6 +1,6 @@
 package cards;
 
-public class PlayingCard implements Card{
+public class PlayingCard extends Card{
 
     // Variables
     private int cardNumber;
