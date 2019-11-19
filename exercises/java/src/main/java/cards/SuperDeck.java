@@ -13,13 +13,29 @@ public class SuperDeck implements Deck {
     public SuperDeck() {
         cards = new ArrayList<>();
 
+        /*
         for (int i = 0; i < animalDeck.getCards().length; i++) {
             cards.add(animalDeck.deal());
+        }*/
+
+        int i = animalDeck.getCards().length;
+        while (i > 0) {
+            cards.add(animalDeck.deal());
+            i--;
         }
 
+        /*
         for (int i = 0; i < playingCardDeck.getCards().length; i++) {
             cards.add(playingCardDeck.deal());
+        }*/
+
+        int j = playingCardDeck.getCards().length;
+        while (j > 0) {
+            cards.add(playingCardDeck.deal());
+            j--;
         }
+
+
     }
 
     @Override
