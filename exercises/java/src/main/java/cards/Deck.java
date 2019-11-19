@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    public ArrayList<Card> cards = new ArrayList<>();
+    public ArrayList<PlayingCard> cards = new ArrayList<>();
 
-    public ArrayList<Card> getDeck() {
+    public ArrayList<PlayingCard> getDeck() {
 
         for (Suit suit : Suit.values()) {
 
@@ -41,7 +41,7 @@ public class Deck {
                         throw new IllegalArgumentException("Something went wrong " + faceValue + "is not a valid faceValue!");
                 }
 
-                cards.add(new Card(faceValue, faceValueName, suit));
+                cards.add(new PlayingCard(faceValue, faceValueName, suit));
             }
 
         }
