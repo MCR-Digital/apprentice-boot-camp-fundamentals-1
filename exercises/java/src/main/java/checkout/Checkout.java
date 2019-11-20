@@ -1,6 +1,10 @@
 package checkout;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Checkout {
+    private Stock stock;
     private int total;
     private int numberOfA = 0;
     private int numberOfB = 0;
@@ -8,23 +12,33 @@ class Checkout {
     private int numberOfD = 0;
     private Receipt receipt = new Receipt();
 
+
+    public Checkout() {
+        stock = new Stock();
+    }
+
     void scan(String sku) {
+
+        Product scannedProduct = stock.findProduct(sku);
+
+        total += scannedProduct.getPrice();
+
         if ("A".equals(sku)) {
-            total += 50;
+
             receipt.scannedA();
         } else if ("B".equals(sku)) {
-            total += 30;
+
             receipt.scannedB();
         } else if ("C".equals(sku)) {
-            total += 20;
+
             receipt.scannedC();
         } else if ("D".equals(sku)) {
-            total += 15;
+
             receipt.scannedD();
         }
         if ("A".equals(sku)) {
             numberOfA++;
-            if (numberOfA % 3 == 0) {
+            if (numberOfA % 4 == 0) {
                 total -= 20;
             }
         } else if ("B".equals(sku)) {

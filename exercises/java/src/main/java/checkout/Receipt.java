@@ -14,7 +14,7 @@ public class Receipt {
     void scannedA() {
         text += "A: 50";
         if (--aCountdown == 0) {
-            text += " - 20 (3 for 130)";
+            text += " - 20 (4 for 180)";
             total += 30;
         }
         else {
