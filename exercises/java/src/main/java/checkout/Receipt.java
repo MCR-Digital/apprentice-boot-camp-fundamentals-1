@@ -11,6 +11,22 @@ public class Receipt {
         return text + "Total: " + total;
     }
 
+    void printToReceipt(Product product) {
+
+        StringBuilder receiptText = new StringBuilder();
+        receiptText.append(product.getSku() + ": " + product.getPrice());
+        //text += "A: 50";
+        if (--aCountdown == 0) {
+            receiptText.append(" - 20 (4 for 180)");
+            total += 30;
+        }
+        else {
+            total += 50;
+        }
+        receiptText.append("\n");
+
+    }
+
     void scannedA() {
         text += "A: 50";
         if (--aCountdown == 0) {

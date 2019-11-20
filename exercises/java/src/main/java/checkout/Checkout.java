@@ -1,11 +1,13 @@
 package checkout;
 
-import java.util.HashMap;
-import java.util.Map;
-
 class Checkout {
+
     private Stock stock;
+
+
+
     private int total;
+
     private int numberOfA = 0;
     private int numberOfB = 0;
     private int numberOfC = 0;
@@ -21,11 +23,11 @@ class Checkout {
 
         Product scannedProduct = stock.findProduct(sku);
 
-        total += scannedProduct.getPrice();
+        adjustTotal(scannedProduct);
 
         if ("A".equals(sku)) {
 
-            receipt.scannedA();
+            receipt.printToReceipt(scannedProduct);
         } else if ("B".equals(sku)) {
 
             receipt.scannedB();
@@ -59,8 +61,21 @@ class Checkout {
         }
     }
 
+    void adjustTotal(Product product) {
+        total += product.getPrice();
+    }
+
     int total() {
         return total;
+    }
+
+    void applyDiscounts(Product scannedProduct) {
+
+        /*
+        if (--aCountdown == 0) {
+            receiptText.append(" - 20 (4 for 180)");
+            total += 30;
+        }*/
     }
 
     public String receipt() {
