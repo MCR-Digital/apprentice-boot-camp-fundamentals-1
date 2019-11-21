@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="iN0-l3-epB" customClass="EndGameView" customModule="SnapGameOOP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-kR-LUT">
+                    <rect key="frame" x="20" y="117" width="260" height="25"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzZ-cd-fRX">
+                    <rect key="frame" x="20" y="166" width="260" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="asD-K9-nyc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-TV-F1w">
+                    <rect key="frame" x="82" y="64" width="136.5" height="33"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aFL-TV-F1w" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AE9-Wx-xl2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kip-kR-LUT" secondAttribute="trailing" constant="20" id="AId-p9-6ik"/>
+                <constraint firstItem="aFL-TV-F1w" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="CVg-0w-UQy"/>
+                <constraint firstItem="uzZ-cd-fRX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Eta-v2-IT1"/>
+                <constraint firstItem="Kip-kR-LUT" firstAttribute="top" secondItem="aFL-TV-F1w" secondAttribute="bottom" constant="20" id="XpX-B8-YQ7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uzZ-cd-fRX" secondAttribute="trailing" constant="20" id="YeG-gw-Maz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aFL-TV-F1w" secondAttribute="trailing" constant="20" id="Yfh-SD-vqZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uzZ-cd-fRX" secondAttribute="bottom" constant="20" id="fTl-ML-2da"/>
+                <constraint firstItem="aFL-TV-F1w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="gGM-df-eDv"/>
+                <constraint firstItem="uzZ-cd-fRX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kip-kR-LUT" secondAttribute="bottom" constant="20" id="i6G-iU-0V8"/>
+                <constraint firstItem="Kip-kR-LUT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="imh-Sh-tHo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="gameOverLabel" destination="aFL-TV-F1w" id="kAm-tc-tR5"/>
+                <outlet property="restartButton" destination="uzZ-cd-fRX" id="U2M-A7-Y4L"/>
+                <outlet property="scoreLabel" destination="Kip-kR-LUT" id="tAg-ke-eaC"/>
+            </connections>
+            <point key="canvasLocation" x="33.333333333333336" y="231.02678571428569"/>
+        </view>
+    </objects>
+</document>

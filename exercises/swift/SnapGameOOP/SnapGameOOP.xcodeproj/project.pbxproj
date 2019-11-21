@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F9F454323845E0A0026D856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F454223845E0A0026D856 /* AppDelegate.swift */; };
+		6F9F454523845E0A0026D856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F454423845E0A0026D856 /* SceneDelegate.swift */; };
+		6F9F454A23845E0A0026D856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F454823845E0A0026D856 /* Main.storyboard */; };
+		6F9F454C23845E0B0026D856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F454B23845E0B0026D856 /* Assets.xcassets */; };
+		6F9F454F23845E0B0026D856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F454D23845E0B0026D856 /* LaunchScreen.storyboard */; };
+		6F9F455A23845E0B0026D856 /* SnapGameOOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F455923845E0B0026D856 /* SnapGameOOPTests.swift */; };
+		6F9F456523845E0B0026D856 /* SnapGameOOPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F456423845E0B0026D856 /* SnapGameOOPUITests.swift */; };
+		6F9F45A3238473390026D856 /* FaceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F4594238473390026D856 /* FaceValue.swift */; };
+		6F9F45A4238473390026D856 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F4595238473390026D856 /* PlayingCard.swift */; };
+		6F9F45A5238473390026D856 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F4596238473390026D856 /* Suit.swift */; };
+		6F9F45A6238473390026D856 /* PlayingDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F4597238473390026D856 /* PlayingDeck.swift */; };
+		6F9F45A7238473390026D856 /* SnapGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F4598238473390026D856 /* SnapGame.swift */; };
+		6F9F45A8238473390026D856 /* AnimalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F459A238473390026D856 /* AnimalCard.swift */; };
+		6F9F45A9238473390026D856 /* AnimalDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F459B238473390026D856 /* AnimalDeck.swift */; };
+		6F9F45AA238473390026D856 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F459C238473390026D856 /* Animal.swift */; };
+		6F9F45AB238473390026D856 /* CardConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F459D238473390026D856 /* CardConfig.swift */; };
+		6F9F45AC238473390026D856 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F459F238473390026D856 /* Card.swift */; };
+		6F9F45AD238473390026D856 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45A0238473390026D856 /* Deck.swift */; };
+		6F9F45AE238473390026D856 /* SuperDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45A2238473390026D856 /* SuperDeck.swift */; };
+		6F9F45B0238480DD0026D856 /* PlayableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45AF238480DD0026D856 /* PlayableDelegate.swift */; };
+		6F9F45B3238481350026D856 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45B2238481350026D856 /* Player.swift */; };
+		6F9F45B523848F020026D856 /* IncrementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45B423848F020026D856 /* IncrementType.swift */; };
+		6F9F45B72384930F0026D856 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45B62384930F0026D856 /* Result.swift */; };
+		6F9F45BB23849B560026D856 /* PlayerScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45BA23849B560026D856 /* PlayerScore.swift */; };
+		6F9F45BD23849F140026D856 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45BC23849F140026D856 /* CardType.swift */; };
+		6F9F45BF2384A11B0026D856 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F45BE2384A11B0026D856 /* GameViewController.swift */; };
+		6FBE58E52385696600DD8915 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58E42385696600DD8915 /* CardView.swift */; };
+		6FBE58E72385696D00DD8915 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBE58E62385696D00DD8915 /* CardView.xib */; };
+		6FBE58EA23856CFA00DD8915 /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58E923856CFA00DD8915 /* UIView+FromNib.swift */; };
+		6FBE58EC238578CF00DD8915 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58EB238578CF00DD8915 /* CALayer+Shadow.swift */; };
+		6FBE58EF23857FDD00DD8915 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58EE23857FDD00DD8915 /* Constants.swift */; };
+		6FBE58F123857FE500DD8915 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58F023857FE500DD8915 /* Colours.swift */; };
+		6FBE58F323858A2500DD8915 /* SnapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58F223858A2500DD8915 /* SnapType.swift */; };
+		6FBE58F523859AB200DD8915 /* UIView+SetBackgroundColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58F423859AB200DD8915 /* UIView+SetBackgroundColour.swift */; };
+		6FBE58F72385A02700DD8915 /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58F62385A02700DD8915 /* EndGameView.swift */; };
+		6FBE58F92385A03300DD8915 /* EndGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBE58F82385A03300DD8915 /* EndGameView.xib */; };
+		6FBE58FD2385D23500DD8915 /* UIView+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBE58FC2385D23500DD8915 /* UIView+Animate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F9F455623845E0B0026D856 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F9F453723845E090026D856 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F9F453E23845E0A0026D856;
+			remoteInfo = SnapGameOOP;
+		};
+		6F9F456123845E0B0026D856 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F9F453723845E090026D856 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F9F453E23845E0A0026D856;
+			remoteInfo = SnapGameOOP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6F9F453F23845E0A0026D856 /* SnapGameOOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGameOOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9F454223845E0A0026D856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F9F454423845E0A0026D856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6F9F454923845E0A0026D856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F9F454B23845E0B0026D856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F9F454E23845E0B0026D856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F9F455023845E0B0026D856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F9F455523845E0B0026D856 /* SnapGameOOPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapGameOOPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9F455923845E0B0026D856 /* SnapGameOOPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapGameOOPTests.swift; sourceTree = "<group>"; };
+		6F9F455B23845E0B0026D856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F9F456023845E0B0026D856 /* SnapGameOOPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapGameOOPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9F456423845E0B0026D856 /* SnapGameOOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapGameOOPUITests.swift; sourceTree = "<group>"; };
+		6F9F456623845E0B0026D856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F9F4594238473390026D856 /* FaceValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceValue.swift; sourceTree = "<group>"; };
+		6F9F4595238473390026D856 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		6F9F4596238473390026D856 /* Suit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+		6F9F4597238473390026D856 /* PlayingDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingDeck.swift; sourceTree = "<group>"; };
+		6F9F4598238473390026D856 /* SnapGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapGame.swift; sourceTree = "<group>"; };
+		6F9F459A238473390026D856 /* AnimalCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCard.swift; sourceTree = "<group>"; };
+		6F9F459B238473390026D856 /* AnimalDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDeck.swift; sourceTree = "<group>"; };
+		6F9F459C238473390026D856 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		6F9F459D238473390026D856 /* CardConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardConfig.swift; sourceTree = "<group>"; };
+		6F9F459F238473390026D856 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6F9F45A0238473390026D856 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		6F9F45A2238473390026D856 /* SuperDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperDeck.swift; sourceTree = "<group>"; };
+		6F9F45AF238480DD0026D856 /* PlayableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableDelegate.swift; sourceTree = "<group>"; };
+		6F9F45B2238481350026D856 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		6F9F45B423848F020026D856 /* IncrementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementType.swift; sourceTree = "<group>"; };
+		6F9F45B62384930F0026D856 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		6F9F45BA23849B560026D856 /* PlayerScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScore.swift; sourceTree = "<group>"; };
+		6F9F45BC23849F140026D856 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		6F9F45BE2384A11B0026D856 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		6FBE58E42385696600DD8915 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6FBE58E62385696D00DD8915 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		6FBE58E923856CFA00DD8915 /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
+		6FBE58EB238578CF00DD8915 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		6FBE58EE23857FDD00DD8915 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6FBE58F023857FE500DD8915 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		6FBE58F223858A2500DD8915 /* SnapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapType.swift; sourceTree = "<group>"; };
+		6FBE58F423859AB200DD8915 /* UIView+SetBackgroundColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SetBackgroundColour.swift"; sourceTree = "<group>"; };
+		6FBE58F62385A02700DD8915 /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
+		6FBE58F82385A03300DD8915 /* EndGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndGameView.xib; sourceTree = "<group>"; };
+		6FBE58FC2385D23500DD8915 /* UIView+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animate.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F9F453C23845E0A0026D856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455223845E0B0026D856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455D23845E0B0026D856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F9F453623845E090026D856 = {
+			isa = PBXGroup;
+			children = (
+				6F9F454123845E0A0026D856 /* SnapGameOOP */,
+				6F9F455823845E0B0026D856 /* SnapGameOOPTests */,
+				6F9F456323845E0B0026D856 /* SnapGameOOPUITests */,
+				6F9F454023845E0A0026D856 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F9F454023845E0A0026D856 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F453F23845E0A0026D856 /* SnapGameOOP.app */,
+				6F9F455523845E0B0026D856 /* SnapGameOOPTests.xctest */,
+				6F9F456023845E0B0026D856 /* SnapGameOOPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F9F454123845E0A0026D856 /* SnapGameOOP */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F45BE2384A11B0026D856 /* GameViewController.swift */,
+				6F9F457223845E290026D856 /* Delegates */,
+				6F9F457323845E410026D856 /* Storyboards */,
+				6FBE58E32385694C00DD8915 /* Views */,
+				6F9F457423845E730026D856 /* GameLogic */,
+				6FBE58E823856CE500DD8915 /* Extensions */,
+				6FBE58ED23857FD200DD8915 /* Helper */,
+				6F9F454B23845E0B0026D856 /* Assets.xcassets */,
+				6F9F455023845E0B0026D856 /* Info.plist */,
+			);
+			path = SnapGameOOP;
+			sourceTree = "<group>";
+		};
+		6F9F455823845E0B0026D856 /* SnapGameOOPTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F455923845E0B0026D856 /* SnapGameOOPTests.swift */,
+				6F9F455B23845E0B0026D856 /* Info.plist */,
+			);
+			path = SnapGameOOPTests;
+			sourceTree = "<group>";
+		};
+		6F9F456323845E0B0026D856 /* SnapGameOOPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F456423845E0B0026D856 /* SnapGameOOPUITests.swift */,
+				6F9F456623845E0B0026D856 /* Info.plist */,
+			);
+			path = SnapGameOOPUITests;
+			sourceTree = "<group>";
+		};
+		6F9F457223845E290026D856 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F454223845E0A0026D856 /* AppDelegate.swift */,
+				6F9F454423845E0A0026D856 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6F9F457323845E410026D856 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F454823845E0A0026D856 /* Main.storyboard */,
+				6F9F454D23845E0B0026D856 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6F9F457423845E730026D856 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F45B1238481160026D856 /* Player */,
+				6F9F4592238473390026D856 /* Cards */,
+			);
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
+		6F9F4592238473390026D856 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F4598238473390026D856 /* SnapGame.swift */,
+				6F9F459D238473390026D856 /* CardConfig.swift */,
+				6FBE58F223858A2500DD8915 /* SnapType.swift */,
+				6F9F45BC23849F140026D856 /* CardType.swift */,
+				6F9F4593238473390026D856 /* Playing */,
+				6F9F4599238473390026D856 /* Animal */,
+				6F9F459E238473390026D856 /* Protocols */,
+				6F9F45A1238473390026D856 /* SuperDeck */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		6F9F4593238473390026D856 /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F4597238473390026D856 /* PlayingDeck.swift */,
+				6F9F4595238473390026D856 /* PlayingCard.swift */,
+				6F9F4594238473390026D856 /* FaceValue.swift */,
+				6F9F4596238473390026D856 /* Suit.swift */,
+			);
+			path = Playing;
+			sourceTree = "<group>";
+		};
+		6F9F4599238473390026D856 /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F459B238473390026D856 /* AnimalDeck.swift */,
+				6F9F459A238473390026D856 /* AnimalCard.swift */,
+				6F9F459C238473390026D856 /* Animal.swift */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
+		6F9F459E238473390026D856 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F459F238473390026D856 /* Card.swift */,
+				6F9F45A0238473390026D856 /* Deck.swift */,
+				6F9F45AF238480DD0026D856 /* PlayableDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6F9F45A1238473390026D856 /* SuperDeck */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F45A2238473390026D856 /* SuperDeck.swift */,
+			);
+			path = SuperDeck;
+			sourceTree = "<group>";
+		};
+		6F9F45B1238481160026D856 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F45B423848F020026D856 /* IncrementType.swift */,
+				6F9F45B2238481350026D856 /* Player.swift */,
+				6F9F45B62384930F0026D856 /* Result.swift */,
+				6F9F45BA23849B560026D856 /* PlayerScore.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		6FBE58E32385694C00DD8915 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FBE58FE2385DFAB00DD8915 /* Card */,
+				6FBE58FF2385DFB300DD8915 /* End Game */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6FBE58E823856CE500DD8915 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FBE58E923856CFA00DD8915 /* UIView+FromNib.swift */,
+				6FBE58EB238578CF00DD8915 /* CALayer+Shadow.swift */,
+				6FBE58F423859AB200DD8915 /* UIView+SetBackgroundColour.swift */,
+				6FBE58FC2385D23500DD8915 /* UIView+Animate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6FBE58ED23857FD200DD8915 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6FBE58EE23857FDD00DD8915 /* Constants.swift */,
+				6FBE58F023857FE500DD8915 /* Colours.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6FBE58FE2385DFAB00DD8915 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				6FBE58E42385696600DD8915 /* CardView.swift */,
+				6FBE58E62385696D00DD8915 /* CardView.xib */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		6FBE58FF2385DFB300DD8915 /* End Game */ = {
+			isa = PBXGroup;
+			children = (
+				6FBE58F62385A02700DD8915 /* EndGameView.swift */,
+				6FBE58F82385A03300DD8915 /* EndGameView.xib */,
+			);
+			path = "End Game";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F9F453E23845E0A0026D856 /* SnapGameOOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F9F456923845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOP" */;
+			buildPhases = (
+				6F9F453B23845E0A0026D856 /* Sources */,
+				6F9F453C23845E0A0026D856 /* Frameworks */,
+				6F9F453D23845E0A0026D856 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapGameOOP;
+			productName = SnapGameOOP;
+			productReference = 6F9F453F23845E0A0026D856 /* SnapGameOOP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F9F455423845E0B0026D856 /* SnapGameOOPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F9F456C23845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOPTests" */;
+			buildPhases = (
+				6F9F455123845E0B0026D856 /* Sources */,
+				6F9F455223845E0B0026D856 /* Frameworks */,
+				6F9F455323845E0B0026D856 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F9F455723845E0B0026D856 /* PBXTargetDependency */,
+			);
+			name = SnapGameOOPTests;
+			productName = SnapGameOOPTests;
+			productReference = 6F9F455523845E0B0026D856 /* SnapGameOOPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6F9F455F23845E0B0026D856 /* SnapGameOOPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F9F456F23845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOPUITests" */;
+			buildPhases = (
+				6F9F455C23845E0B0026D856 /* Sources */,
+				6F9F455D23845E0B0026D856 /* Frameworks */,
+				6F9F455E23845E0B0026D856 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F9F456223845E0B0026D856 /* PBXTargetDependency */,
+			);
+			name = SnapGameOOPUITests;
+			productName = SnapGameOOPUITests;
+			productReference = 6F9F456023845E0B0026D856 /* SnapGameOOPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F9F453723845E090026D856 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Andrew Harris";
+				TargetAttributes = {
+					6F9F453E23845E0A0026D856 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					6F9F455423845E0B0026D856 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 6F9F453E23845E0A0026D856;
+					};
+					6F9F455F23845E0B0026D856 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 6F9F453E23845E0A0026D856;
+					};
+				};
+			};
+			buildConfigurationList = 6F9F453A23845E090026D856 /* Build configuration list for PBXProject "SnapGameOOP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F9F453623845E090026D856;
+			productRefGroup = 6F9F454023845E0A0026D856 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F9F453E23845E0A0026D856 /* SnapGameOOP */,
+				6F9F455423845E0B0026D856 /* SnapGameOOPTests */,
+				6F9F455F23845E0B0026D856 /* SnapGameOOPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F9F453D23845E0A0026D856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F9F454F23845E0B0026D856 /* LaunchScreen.storyboard in Resources */,
+				6F9F454C23845E0B0026D856 /* Assets.xcassets in Resources */,
+				6FBE58F92385A03300DD8915 /* EndGameView.xib in Resources */,
+				6FBE58E72385696D00DD8915 /* CardView.xib in Resources */,
+				6F9F454A23845E0A0026D856 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455323845E0B0026D856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455E23845E0B0026D856 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F9F453B23845E0A0026D856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBE58EF23857FDD00DD8915 /* Constants.swift in Sources */,
+				6F9F45B72384930F0026D856 /* Result.swift in Sources */,
+				6F9F454323845E0A0026D856 /* AppDelegate.swift in Sources */,
+				6FBE58F123857FE500DD8915 /* Colours.swift in Sources */,
+				6FBE58F523859AB200DD8915 /* UIView+SetBackgroundColour.swift in Sources */,
+				6FBE58EA23856CFA00DD8915 /* UIView+FromNib.swift in Sources */,
+				6F9F45BB23849B560026D856 /* PlayerScore.swift in Sources */,
+				6F9F45A6238473390026D856 /* PlayingDeck.swift in Sources */,
+				6F9F45A9238473390026D856 /* AnimalDeck.swift in Sources */,
+				6F9F45A5238473390026D856 /* Suit.swift in Sources */,
+				6FBE58FD2385D23500DD8915 /* UIView+Animate.swift in Sources */,
+				6F9F45B3238481350026D856 /* Player.swift in Sources */,
+				6FBE58F323858A2500DD8915 /* SnapType.swift in Sources */,
+				6F9F45BF2384A11B0026D856 /* GameViewController.swift in Sources */,
+				6F9F454523845E0A0026D856 /* SceneDelegate.swift in Sources */,
+				6F9F45A4238473390026D856 /* PlayingCard.swift in Sources */,
+				6F9F45A7238473390026D856 /* SnapGame.swift in Sources */,
+				6F9F45B0238480DD0026D856 /* PlayableDelegate.swift in Sources */,
+				6F9F45AC238473390026D856 /* Card.swift in Sources */,
+				6F9F45A3238473390026D856 /* FaceValue.swift in Sources */,
+				6F9F45BD23849F140026D856 /* CardType.swift in Sources */,
+				6F9F45AD238473390026D856 /* Deck.swift in Sources */,
+				6FBE58EC238578CF00DD8915 /* CALayer+Shadow.swift in Sources */,
+				6FBE58F72385A02700DD8915 /* EndGameView.swift in Sources */,
+				6F9F45A8238473390026D856 /* AnimalCard.swift in Sources */,
+				6F9F45B523848F020026D856 /* IncrementType.swift in Sources */,
+				6F9F45AA238473390026D856 /* Animal.swift in Sources */,
+				6F9F45AE238473390026D856 /* SuperDeck.swift in Sources */,
+				6FBE58E52385696600DD8915 /* CardView.swift in Sources */,
+				6F9F45AB238473390026D856 /* CardConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455123845E0B0026D856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F9F455A23845E0B0026D856 /* SnapGameOOPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F9F455C23845E0B0026D856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F9F456523845E0B0026D856 /* SnapGameOOPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F9F455723845E0B0026D856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F9F453E23845E0A0026D856 /* SnapGameOOP */;
+			targetProxy = 6F9F455623845E0B0026D856 /* PBXContainerItemProxy */;
+		};
+		6F9F456223845E0B0026D856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F9F453E23845E0A0026D856 /* SnapGameOOP */;
+			targetProxy = 6F9F456123845E0B0026D856 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F9F454823845E0A0026D856 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F9F454923845E0A0026D856 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F9F454D23845E0B0026D856 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F9F454E23845E0B0026D856 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F9F456723845E0B0026D856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F9F456823845E0B0026D856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F9F456A23845E0B0026D856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SnapGameOOP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F9F456B23845E0B0026D856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SnapGameOOP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6F9F456D23845E0B0026D856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapGameOOPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapGameOOP.app/SnapGameOOP";
+			};
+			name = Debug;
+		};
+		6F9F456E23845E0B0026D856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapGameOOPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapGameOOP.app/SnapGameOOP";
+			};
+			name = Release;
+		};
+		6F9F457023845E0B0026D856 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapGameOOPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapGameOOP;
+			};
+			name = Debug;
+		};
+		6F9F457123845E0B0026D856 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapGameOOPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewharris.SnapGameOOPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapGameOOP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F9F453A23845E090026D856 /* Build configuration list for PBXProject "SnapGameOOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9F456723845E0B0026D856 /* Debug */,
+				6F9F456823845E0B0026D856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F9F456923845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9F456A23845E0B0026D856 /* Debug */,
+				6F9F456B23845E0B0026D856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F9F456C23845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9F456D23845E0B0026D856 /* Debug */,
+				6F9F456E23845E0B0026D856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F9F456F23845E0B0026D856 /* Build configuration list for PBXNativeTarget "SnapGameOOPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9F457023845E0B0026D856 /* Debug */,
+				6F9F457123845E0B0026D856 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F9F453723845E090026D856 /* Project object */;
+}
