@@ -1,84 +1,87 @@
 package checkout;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Checkout {
 
-    private Stock stock;
-
-
+    private ProductLookup productLookup;
+    private SpecialOffersLookup specialOffers;
+    private Map<String, Integer> scannedItems;
 
     private int total;
 
-    private int numberOfA = 0;
-    private int numberOfB = 0;
-    private int numberOfC = 0;
-    private int numberOfD = 0;
     private Receipt receipt = new Receipt();
 
 
     public Checkout() {
-        stock = new Stock();
+        productLookup = new ProductLookup();
+        specialOffers = new SpecialOffersLookup();
+        scannedItems = new HashMap<>();
+    }
+
+    public Map<String, Integer> getScannedItems() {
+        return scannedItems;
     }
 
     void scan(String sku) {
 
-        Product scannedProduct = stock.findProduct(sku);
+        // How much does this product cost?
+        Product scannedProduct = productLookup.findProduct(sku);
 
-        adjustTotal(scannedProduct);
+        // Increase the quantity of products purchased
+        if(scannedItems.containsKey(sku) == false) {
+            scannedItems.put(sku, 1);
+        } else {
+            int existingProductQuantity = scannedItems.get(sku);
+            existingProductQuantity++;
 
-        if ("A".equals(sku)) {
-
-            receipt.printToReceipt(scannedProduct);
-        } else if ("B".equals(sku)) {
-
-            receipt.scannedB();
-        } else if ("C".equals(sku)) {
-
-            receipt.scannedC();
-        } else if ("D".equals(sku)) {
-
-            receipt.scannedD();
+            scannedItems.replace(sku, existingProductQuantity);
         }
-        if ("A".equals(sku)) {
-            numberOfA++;
-            if (numberOfA % 4 == 0) {
-                total -= 20;
-            }
-        } else if ("B".equals(sku)) {
-            numberOfB++;
-            if (numberOfB % 2 == 0) {
-                total -= 15;
-            }
-        } else if ("C".equals(sku)) {
-            numberOfC++;
-            if (numberOfC % 4 == 0) {
-                total -= 10;
-            }
-        } else if ("D".equals(sku)) {
-            numberOfD++;
-            if (numberOfD % 5 == 0) {
-                total -= 15;
-            }
-        }
+
+        // How much discount should be deducted from the total?
+        Discount qualifyingDiscount = applyDiscounts1(scannedProduct);
+
+        // Adjust the running total
+        adjustTotal(scannedProduct.getPrice(), qualifyingDiscount);
+
+
+        // Add the product to the receipt
+        receipt.receiptHandler(scannedProduct, qualifyingDiscount, total);
+
     }
 
-    void adjustTotal(Product product) {
-        total += product.getPrice();
+    private Discount applyDiscounts1(Product scannedProduct) {
+
+        Discount qualifyingDiscount = null;
+
+        for (Discount discount : specialOffers.getSpecialOffersLookup()) {
+            if (scannedProduct.getSku() == discount.getSku()) {
+                if(scannedItems.get(scannedProduct.getSku()) % discount.getQualifyingQuantity() == 0) {
+                    qualifyingDiscount = discount;
+                }
+            }
+        }
+
+        return qualifyingDiscount;
+
+    }
+
+    void adjustTotal(int productAmount, Discount qualifyingDiscount) {
+
+        if(qualifyingDiscount != null) {
+            total += (productAmount - qualifyingDiscount.getAmountToDeduct());
+        } else {
+            total += productAmount;
+        }
+
     }
 
     int total() {
         return total;
     }
 
-    void applyDiscounts(Product scannedProduct) {
-
-        /*
-        if (--aCountdown == 0) {
-            receiptText.append(" - 20 (4 for 180)");
-            total += 30;
-        }*/
-    }
-
     public String receipt() {
-        return receipt.text();
+        return receipt.printReceipt();
     }
 }

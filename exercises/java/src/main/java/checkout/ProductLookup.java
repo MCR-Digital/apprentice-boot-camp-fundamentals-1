@@ -3,15 +3,15 @@ package checkout;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Stock {
+public class ProductLookup {
 
     private Map<String, Integer> productLookup;
 
-    public Stock() {
+    public ProductLookup() {
         populateProductLookup();
     }
 
-    private void populateProductLookup() {
+    public void populateProductLookup() {
 
         productLookup = new HashMap<>();
 
@@ -21,18 +21,11 @@ public class Stock {
         productLookup.put("D", 15);
     }
 
-    private Product createStockItem(String sku, int price) {
-
-        return new Product(sku, price);
-    }
-
     public Product findProduct(String sku) {
 
-        int scannedProductPrice = scannedProductPrice = productLookup.get(sku);
+        int scannedProductPrice  = productLookup.get(sku);
 
-        Product stockItem = createStockItem(sku, scannedProductPrice);
-
-        return stockItem;
+        return new Product(sku, scannedProductPrice);
     }
 
 }

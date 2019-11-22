@@ -2,62 +2,63 @@ package checkout;
 
 public class Receipt {
 
-    private String text = "";
-    private int aCountdown = 3;
+    private String lineItem;
+    private String receiptBody;
+
     private int total;
-    private int bCountdown = 2;
 
-    String text() {
-        return text + "Total: " + total;
+    private String receipt;
+
+    public void receiptHandler(Product scannedProduct, Discount qualifyingDiscount, int incomingTotal) {
+
+        StringBuilder lineItemBuilder = new StringBuilder();
+
+        if (qualifyingDiscount != null) {
+
+            lineItemBuilder.append(scannedProduct.getSku());
+            lineItemBuilder.append(": ");
+            lineItemBuilder.append(scannedProduct.getPrice());
+            lineItemBuilder.append(qualifyingDiscount.getReceiptText());
+
+        } else {
+            lineItemBuilder.append(scannedProduct.getSku());
+            lineItemBuilder.append(": ");
+            lineItemBuilder.append(scannedProduct.getPrice());
+        }
+
+        lineItem = lineItemBuilder.toString();
+
+        total = incomingTotal;
+
+        printLineItem();
     }
 
-    void printToReceipt(Product product) {
+    private void printLineItem() {
 
-        StringBuilder receiptText = new StringBuilder();
-        receiptText.append(product.getSku() + ": " + product.getPrice());
-        //text += "A: 50";
-        if (--aCountdown == 0) {
-            receiptText.append(" - 20 (4 for 180)");
-            total += 30;
-        }
-        else {
-            total += 50;
-        }
-        receiptText.append("\n");
+        StringBuilder receiptBodyBuilder = new StringBuilder();
 
+        receiptBodyBuilder.append(lineItem);
+        receiptBodyBuilder.append("\n");
+
+        if(receiptBody != null){
+            receiptBody += receiptBodyBuilder.toString();
+        } else {
+         receiptBody = receiptBodyBuilder.toString();
+        }
     }
 
-    void scannedA() {
-        text += "A: 50";
-        if (--aCountdown == 0) {
-            text += " - 20 (4 for 180)";
-            total += 30;
-        }
-        else {
-            total += 50;
-        }
-        text += "\n";
+    public String printReceipt() {
+
+        StringBuilder finalReceiptBuilder = new StringBuilder();
+
+        finalReceiptBuilder.append(receiptBody);
+        finalReceiptBuilder.append("Total: " + total);
+
+        receipt = finalReceiptBuilder.toString();
+
+        System.out.println(receipt);
+
+        return receipt;
     }
 
-    void scannedB() {
-        text += "B: 30";
-        if (--bCountdown == 0) {
-            text += " - 15 (2 for 45)";
-            total += 15;
-        }
-        else {
-            total += 30;
-        }
-        text += "\n";
-    }
-
-    void scannedC() {
-        text += "C: 20\n";
-        total += 20;
-    }
-
-    void scannedD() {
-        text += "D: 15\n";
-        total += 15;
-    }
 }
