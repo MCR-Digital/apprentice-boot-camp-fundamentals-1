@@ -43,6 +43,20 @@ For a given scenario:
 
 --
 
+<backgroundimage>https://live.staticflickr.com/3097/2522175629_39cd59a95c_b.jpg</backgroundimage>
+<backgroundimageopacity>0.25</backgroundimageopacity>
+
+## Nouns and Verbs?
+
+* Basis of Object Orientated languages
+* Apollo astronauts used noun & verb combinations to interact with the Apollo Guidance Computer
+
+<p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/7153479@N07/2522175629">"Apollo guidance computer UI"</a><span> by <a href="https://www.flickr.com/photos/7153479@N07">csixty4</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"></a></p>
+
+Notes: Although Apollo is an early example of this way of passing commands, this was not an example of an OO language  
+
+--
+
 ## Example
 
 _The
