@@ -30,33 +30,31 @@ class Checkout {
         Product scannedProduct = productLookup.findProduct(sku);
 
         // Increase the quantity of products purchased
-        if(scannedItems.containsKey(sku) == false) {
-            scannedItems.put(sku, 1);
-        } else {
+        if(scannedItems.containsKey(sku)) {
             int existingProductQuantity = scannedItems.get(sku);
             existingProductQuantity++;
 
             scannedItems.replace(sku, existingProductQuantity);
+        } else {
+
+            scannedItems.put(sku, 1);
         }
 
         // How much discount should be deducted from the total?
-        Discount qualifyingDiscount = applyDiscounts1(scannedProduct);
+        Discount qualifyingDiscount = applyDiscounts(scannedProduct);
 
-        // Adjust the running total
         adjustTotal(scannedProduct.getPrice(), qualifyingDiscount);
 
-
-        // Add the product to the receipt
-        receipt.receiptHandler(scannedProduct, qualifyingDiscount, total);
+        receipt.addProduct(scannedProduct, qualifyingDiscount, total);
 
     }
 
-    private Discount applyDiscounts1(Product scannedProduct) {
+    private Discount applyDiscounts(Product scannedProduct) {
 
         Discount qualifyingDiscount = null;
 
         for (Discount discount : specialOffers.getSpecialOffersLookup()) {
-            if (scannedProduct.getSku() == discount.getSku()) {
+            if (scannedProduct.getSku().equals(discount.getSku())) {
                 if(scannedItems.get(scannedProduct.getSku()) % discount.getQualifyingQuantity() == 0) {
                     qualifyingDiscount = discount;
                 }
@@ -82,6 +80,6 @@ class Checkout {
     }
 
     public String receipt() {
-        return receipt.printReceipt();
+        return receipt.printReceipt(total);
     }
 }

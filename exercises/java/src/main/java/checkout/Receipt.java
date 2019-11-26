@@ -5,11 +5,7 @@ public class Receipt {
     private String lineItem;
     private String receiptBody;
 
-    private int total;
-
-    private String receipt;
-
-    public void receiptHandler(Product scannedProduct, Discount qualifyingDiscount, int incomingTotal) {
+    public void addProduct(Product scannedProduct, Discount qualifyingDiscount, int incomingTotal) {
 
         StringBuilder lineItemBuilder = new StringBuilder();
 
@@ -28,8 +24,6 @@ public class Receipt {
 
         lineItem = lineItemBuilder.toString();
 
-        total = incomingTotal;
-
         printLineItem();
     }
 
@@ -47,18 +41,16 @@ public class Receipt {
         }
     }
 
-    public String printReceipt() {
+    public String printReceipt(int incomingTotal) {
 
         StringBuilder finalReceiptBuilder = new StringBuilder();
 
         finalReceiptBuilder.append(receiptBody);
-        finalReceiptBuilder.append("Total: " + total);
+        finalReceiptBuilder.append("Total: " + incomingTotal);
 
-        receipt = finalReceiptBuilder.toString();
+        //System.out.println(finalReceiptBuilder.toString());
 
-        System.out.println(receipt);
-
-        return receipt;
+        return finalReceiptBuilder.toString();
     }
 
 }
