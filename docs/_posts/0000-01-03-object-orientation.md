@@ -12,6 +12,9 @@ Emphasise the distinction is fuzzy.
 
 --
 
+<backgroundimage>{{ site.github.url }}/images/manchester-baby.jpg</backgroundimage>
+<backgroundimageopacity>0.25</backgroundimageopacity>
+
 <img src="{{ site.github.url }}/images/alanTuring.jpg" style="height: 400px;" alt="Alan Turing aged 16">
 
 1912-1954
