@@ -166,6 +166,18 @@ Note the error prone use of ints, and the fact that the Cards class knows how ma
 
 --
 
+## Exercise incoming…
+
+Throughout the boot camp, we have some good practices we want you to follow:
+
++ 🏃‍♀️ Run all of the tests when you start and after each change
++ 💥 If you introduce a compilation failure, fix it before moving on
++ ✅ When the tests pass, commit and say where you are up to in the message
+
+Note: This will help you avoid getting into a mess and having to throw away lots of progress  
+
+--
+
 ## Exercise (30 mins)
 
 - What new classes would you introduce to better encapsulate the existing code? 
