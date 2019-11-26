@@ -250,9 +250,7 @@ Note: Generally classes grow as extra responsibility creeps in
 
 ---
 
-## Checkout Kata
-
-[Checkout kata](http://codekata.com/kata/kata09-back-to-the-checkout/)
+### Exercise: [Checkout Kata](http://codekata.com/kata/kata09-back-to-the-checkout/) (80 mins)
 
 ```plain
   Item   Unit      Special
@@ -264,20 +262,14 @@ Note: Generally classes grow as extra responsibility creeps in
     D     15
 ```
 
-Note: Kata requires code to handle running total and offers  
-  This is all done (badly)
-
---
-
-## Coding Exercise (20 mins)
-
-* Split into groups
 * Make some changes:
   + Change it so that you can have 4 ‘C’ for 70
   + Change it so that you can have 5 ‘D’ for 60
   + Change it so that you can have 4 ‘A’ for 180
 
-Note: Do changes one by one as you don't want them to know that ‘A’ will change
+Note: Kata requires code to handle running total and offers  
+  This is all done (badly)
+  Do changes one by one as you don't want them to know that ‘A’ will change
 
 --
 
