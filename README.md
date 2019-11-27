@@ -24,9 +24,9 @@
 
 ## Mentors / Languages
  
-Two–three mentors required in addition to leads. These should be able to cover support for the required languages.
+One mentor required per three apprentices (leads can act as mentors). These should be able to cover support for the required languages.
 
-Several exercises (katas and code starters) will need to be ported to required languages.
+Several exercises (katas and code starters) will need to be ported to required languages if not already done.
 
 ## Prep-work for apprentices
 
@@ -37,17 +37,19 @@ None
 Organisation mentors should look to exercise the knowledge we’ve covered in the boot camp. Below are suggestions for tasks that would do this, but please use your own judgement to work out what to do. There is no need for anything to be returned to MD or the presenters—it’s just a learning exercise.
 
 * Draw a diagram showing how the classes interact in some code you have been working on
-* We’d like them to recognise Encapsulation, Abstraction, Inheritance, Polymorphism
+* They should identify Encapsulation, Abstraction, Inheritance, Polymorphism (this might require some discussion)
 * Take a look at one of your codebases and find examples of classes with multiple responsibilities
+* Try to improve some existing classes or methods with multiple responsibilities by using some of the OO principals
+* Finish off the exercises started at the boot camp (checkout kata for example)
 
 ## Further reading / learning resources
 
 <!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
 
 * [Supermarket Kata](http://codekata.com/kata/kata09-back-to-the-checkout/)
-* [Duplicate Code ‘Code Smell’](https://refactoring.guru/smells/duplicate-code)
 * [The Secret behind the Single Responsibility Principle](https://hackernoon.com/the-secret-behind-the-single-responsibility-principle-e2f3692bae25) on Hacker Noon
 * [Clean Code](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C Martin
+* [Duplicate Code ‘Code Smell’](https://refactoring.guru/smells/duplicate-code)
  
 ## Slides
 
