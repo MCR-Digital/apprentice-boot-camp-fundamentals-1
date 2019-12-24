@@ -48,8 +48,6 @@ public class Receipt {
         finalReceiptBuilder.append(receiptBody);
         finalReceiptBuilder.append("Total: " + incomingTotal);
 
-        //System.out.println(finalReceiptBuilder.toString());
-
         return finalReceiptBuilder.toString();
     }
 
