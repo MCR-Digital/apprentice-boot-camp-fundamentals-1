@@ -13,8 +13,21 @@ class Snap {
     }
 
     public static void main(String[] args) {
+        printUsageInformation();
         Snap snap = new Snap(new AnimalDeck());
         snap.play();
+    }
+
+    private static void printUsageInformation() {
+        System.out.println();
+        System.out.println("Welcome to the game of snap.");
+        System.out.println("The game will display a card.");
+        System.out.println("Pressing ENTER will display the next card.");
+        System.out.println("If the new card matches the previous one then it's a snap.");
+        System.out.println("To call a snap, player 1 presses the 'a' key,");
+        System.out.println("player 2 presses the 'l' key.");
+        System.out.println("Hope that's clear, good luck!");
+        System.out.println();
     }
 
     void play() {

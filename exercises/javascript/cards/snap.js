@@ -14,6 +14,18 @@ class Snap {
   }
 }
 
+Snap.prototype.printUsageInformation = function () {
+  console.log();
+  console.log("Welcome to the game of snap.");
+  console.log("The game will display a card.");
+  console.log("Pressing ENTER will display the next card.");
+  console.log("If the new card matches the previous one then it's a snap.");
+  console.log("To call a snap, player 1 presses the 'a' key,");
+  console.log("player 2 presses the 'l' key.");
+  console.log("Hope that's clear, good luck!");
+  console.log();
+}
+
 Snap.prototype.play = async function () {
   let currentCard = null;
   let previousCard = null;
@@ -65,4 +77,5 @@ Snap.prototype.play = async function () {
 
 let animalDeck = new AnimalDeck();
 let snap = new Snap(animalDeck);
+snap.printUsageInformation();
 snap.play();
