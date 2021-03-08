@@ -140,7 +140,7 @@ Note: There’s more than one correct answer
 
 --
 
-<backgroundimage>{{ site.github.url }}/images/car-diagram.jpg</backgroundimage>
+<backgroundimage>{{ "/images/car-diagram.jpg" | absolute_url }}</backgroundimage>
 <backgroundimageopacity>0.25</backgroundimageopacity>
 
 ## What about a car?

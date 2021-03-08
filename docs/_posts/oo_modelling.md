@@ -1,6 +1,6 @@
 ### Mini-Auto Trader Scenario
 
-<img src="{{ site.github.url }}/images/2cv.png" style="height: 200px;" alt="picture of a 2CV advert">
+<img src="{{ "/images/2cv.png" | absolute_url }}" style="height: 200px;" alt="picture of a 2CV advert">
 
 <font size=3 align='left'>
 

@@ -1,6 +1,6 @@
 ## Object Orientation
 
-<img src="{{ site.github.url }}/images/programmingParadigms.png" style="height: 450px;" alt="diagram of different programming paradigms">
+<img src="{{ "/images/programmingParadigms.png" | absolute_url }}" style="height: 450px;" alt="diagram of different programming paradigms">
 
 \*[Van Roy](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)
 
@@ -12,10 +12,10 @@ Emphasise the distinction is fuzzy.
 
 --
 
-<backgroundimage>{{ site.github.url }}/images/manchester-baby.jpg</backgroundimage>
+<backgroundimage>{{ "/images/manchester-baby.jpg" | absolute_url }}</backgroundimage>
 <backgroundimageopacity>0.25</backgroundimageopacity>
 
-<img src="{{ site.github.url }}/images/alanTuring.jpg" style="height: 400px;" alt="Alan Turing aged 16">
+<img src="{{ "/images/alanTuring.jpg" | absolute_url }}" style="height: 400px;" alt="Alan Turing aged 16">
 
 1912-1954
 
@@ -124,7 +124,7 @@ Note: Get them to describe their designs.
 
 ## Object-Oriented Concepts
 
-<img src="{{ site.github.url }}/images/fourPillarsVenn.png" alt="Venn diagram of inheritance, encapsulation, polymorphism and abstraction">
+<img src="{{ "/images/fourPillarsVenn.png" | absolute_url }}" alt="Venn diagram of inheritance, encapsulation, polymorphism and abstraction">
 
 Note:
 Needs a better diagram, but the point is here that these concepts are not distinct, there is often quite a lot of overlap between these language features.  
