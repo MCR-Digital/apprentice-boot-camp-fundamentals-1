@@ -98,23 +98,23 @@ Discuss commonalities / differences.
 
 --
 
-<img src="{{ site.github.url }}/images/class-diagrams.png" alt="Components of a class diagram">
+<img src="{{ "/images/class-diagrams.png" | absolute_url }}" alt="Components of a class diagram">
 
 --
 
 ### Possible solutions - 3+ Classes
 
-<img src="{{ site.github.url }}/images/Cards1.png" alt="Class diagram showing a PlayingCard and an AnimalCard extending a Card class">
+<img src="{{ "/images/Cards1.png" | absolute_url }}" alt="Class diagram showing a PlayingCard and an AnimalCard extending a Card class">
 
 --
 
 ### Possible solutions - 6+ Classes
 
-<img src="{{ site.github.url }}/images/Cards2.png" alt="Class diagram which introduces the notion of a Deck extended by AnimalDeck and PlayingCardDeck">
+<img src="{{ "/images/Cards2.png" | absolute_url }}" alt="Class diagram which introduces the notion of a Deck extended by AnimalDeck and PlayingCardDeck">
 
 
 --
 
 ### Possible solutions - 20+ Classes
 
-<img src="{{ site.github.url }}/images/Cards3.png" alt="Class diagram where every Suit and every FaceValue is a class in its own right">
+<img src="{{ "/images/Cards3.png" | absolute_url }}" alt="Class diagram where every Suit and every FaceValue is a class in its own right">

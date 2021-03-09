@@ -41,7 +41,7 @@ Explain why we're using it as an example; widely used, modern.
 
 ### Centralized Version Control
 
-<img src="{{ site.github.url }}/images/centralized.png" style="height: 500px;" alt="A diagram showing a centralized version system">
+<img src="{{ "/images/centralized.png" | absolute_url }}" style="height: 500px;" alt="A diagram showing a centralized version system">
 
 <p style="float:bottom;font-size:15px">
 <a href="https://git-scm.com/book/en/v2">Pro Git</a>
@@ -57,7 +57,7 @@ Disadvantages, single point of failure.
 
 ### Distributed Version Control
 
-<img src="{{ site.github.url }}/images/distributed.png" style="height: 500px;" alt="A diagram showing a centralized version system">
+<img src="{{ "/images/distributed.png" | absolute_url }}" style="height: 500px;" alt="A diagram showing a centralized version system">
 
 <p style="float:bottom;font-size:15px">
 <a href="https://git-scm.com/book/en/v2">Pro Git</a>
@@ -72,7 +72,7 @@ Disadvantages - adds complexity.
 
 --
 
-### Exercise (20mins) - Clone the slides
+### Exercise (20mins) - Fork the slides
 
 * These slides are in version control
 * If you don't have a GitHub account create one

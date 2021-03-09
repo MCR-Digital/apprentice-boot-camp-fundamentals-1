@@ -25,7 +25,7 @@ In a Java context we could argue that using an interface would give us a similar
 
 ### Animal Snap!
 
-<img src="{{ site.github.url }}/images/animalSnap.jpg" alt="animal snap cards">
+<img src="{{ "/images/animalSnap.jpg" | absolute_url }}" alt="animal snap cards">
 
 --
 

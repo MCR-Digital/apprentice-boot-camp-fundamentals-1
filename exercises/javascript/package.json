@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript equivalent of the apprentice boot camp fundamentals 1",
   "main": "cards/encapsulation.js",
+  "engines": {
+    "node": ">=11.14"
+  },
   "directories": {
     "test": "test"
   },
