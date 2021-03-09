@@ -72,7 +72,7 @@ Disadvantages - adds complexity.
 
 --
 
-### Exercise (20mins) - Clone the slides
+### Exercise (20mins) - Fork the slides
 
 * These slides are in version control
 * If you don't have a GitHub account create one
