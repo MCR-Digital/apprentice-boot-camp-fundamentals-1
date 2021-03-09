@@ -73,6 +73,8 @@ on the
 
 ## Enterprise Cat Application Using Blockchain Technology
 
+#### Java
+
 ```java
 class Cat {
     void sit(){
@@ -86,6 +88,25 @@ class Mat {
     double height;
 }
 ```
+
+--
+
+#### Javascript
+
+```javascript
+function Cat() {
+    this.sit = function(){
+        console.log("I'll sit when I'm good and ready.");
+    }
+}
+
+function Mat() {
+    this.width;
+    this.length;
+    this.height;
+}
+```
+
 
 --
 

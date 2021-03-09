@@ -86,6 +86,7 @@ Note: Conduct a straw poll and see how many classes they came up with.
 
 ### Possible solutions - 1
 
+#### Java
 ```java
 class Card {
     private int suit;
@@ -95,8 +96,21 @@ class Card {
 
 --
 
+### Possible solutions - 1
+
+#### Javascript
+```javascript
+function Card(suit, value) {
+  this.suit = suit;
+  this.value = value;
+}
+```
+
+--
+
 ### Possible solutions - 2
 
+#### Java
 ```java
 class Card {
     private Suit suit;
@@ -110,8 +124,25 @@ class Suit {
 
 --
 
+### Possible solutions - 2
+
+#### Javascript
+```javascript
+function Card(suit, value) {
+    this.suit = suit;
+    this.value = value;
+}
+
+function Suit(name) {
+    this.name = name;
+}
+```
+
+--
+
 ### Possible solutions - 3
 
+#### Java
 ```java
 class Card {
     private Suit suit;
@@ -129,6 +160,26 @@ class Deck {
 
 Note:
 Revisit this later - we can go even further if we bring in inheritance.  
+
+--
+
+### Possible solutions - 3
+
+#### Javascript
+```javascript
+function Card(suit, value) {
+    this.suit = suit;
+    this.value = value;
+}
+
+function Suit(name) {
+    this.name = name;
+}
+
+function Deck() {
+    this.cards = [];
+}
+```
 
 ---
 
