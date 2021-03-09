@@ -25,6 +25,18 @@ Note:
 Alan Turing - who is he?  
 The notion of Turing Completeness and the fact that all the languages below the line on the previous slide have the same programming power.  
 
+--
+
+## Alan Kay and Smalltalk
+
++ [Coined the term](https://wiki.c2.com/?HeInventedTheTerm) ‘Object Orientated Programming’ around 1967
+  + [May not have invented Objects](https://wiki.c2.com/?HeDidntInventTheTerm)
++ Led research at Xerox PARC which resulted in the Smalltalk language
++ [Said this great thing](https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f):
+> I’m sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea. The big idea is messaging.  
+
+Note: Origin is disputed. Small talk was an early OO language, but Simula was earlier, credited to Kristen Nygaard and Ole Johan Dahl.
+
 ---
 
 ## What are objects
@@ -150,3 +162,38 @@ Note: Get them to describe their designs.
 
 Note:
 Needs a better diagram, but the point is here that these concepts are not distinct, there is often quite a lot of overlap between these language features.  
+
+--
+
+## Discussion: What is Object Orientation trying to achieve?
+
+* What is hard to do without OOP?
+* What are the potential benefits?
+* If we didn’t use OOP, what might happen to our code?
+* In short: what is the point?
+
+Note: Could use Miro or Slido for this, and could be in breakout rooms if we want discussion or just solo if they add stickies to Miro 
+
+--
+
+## Language support
+
++ Different languages have different approaches
++ Best to stick with what is idiomatic to your language & community
++ Concepts are relevant on some level to all code
++ If your approach has the same outcome, it’s all good
+
+Note: Explain idiomatic: using, containing, or denoting expressions that are natural to a native speaker.  
+
+--
+
+## OO in JavaScript
+
++ Seen as a little different to Java and C# (for example)
++ Supports (at least) three ways to do the same thing:
+  + Prototypical inheritance (inheriting from another object)
+  + Class based inheritance
+  + Module based composition
+  
+Note: this may be one more than most languages  
+  This means there is confusion about what is idiomatic in JS, but class based and prototypical inheritance may be rarer
