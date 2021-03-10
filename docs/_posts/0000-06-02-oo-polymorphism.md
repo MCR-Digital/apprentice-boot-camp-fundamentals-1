@@ -3,8 +3,10 @@
 + What is it?
 + How do we use it?
     + Mainly via inheritance mechanisms
+    + Also available (where required) via interfaces
 + Why is it useful?
     + Simplifies our code
+    + Makes our code more re-usable
 
 {% include background-image.html file="pasta.jpg" %}
 <p style="float:bottom;font-size:15px">
@@ -15,6 +17,7 @@ by <a href="https://www.flickr.com/photos/hotelrealfini/">Hotel Real Fini</a> is
 
 Note:
 Again prompt for suggestions and discuss.  
+Interfaces not really required in JS, but there are mechanisms.  
 
 --
 
