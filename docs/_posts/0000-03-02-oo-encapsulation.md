@@ -86,6 +86,8 @@ Note: Conduct a straw poll and see how many classes they came up with.
 
 ### Possible solutions - 1
 
+#### Java
+
 ```java
 class Card {
     private int suit;
@@ -95,8 +97,24 @@ class Card {
 
 --
 
+### Possible solutions - 1
+
+#### Javascript
+```javascript
+class Card {
+    constructor(suit, value) {
+        this.suit = suit;
+        this.value = value;
+    }
+}
+```
+
+--
+
+
 ### Possible solutions - 2
 
+#### Java
 ```java
 class Card {
     private Suit suit;
@@ -109,8 +127,31 @@ class Suit {
 ```
 
 --
+### Possible solutions - 2
+
+#### Javascript
+
+```javascript
+class Card {
+    constructor(suit, value) {
+        this.suit = suit;
+        this.value = value;
+    }
+}
+
+class Suit {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+```
+
+--
 
 ### Possible solutions - 3
+
+#### Java
 
 ```java
 class Card {
@@ -129,6 +170,34 @@ class Deck {
 
 Note:
 Revisit this later - we can go even further if we bring in inheritance.  
+
+--
+
+### Possible solutions - 3
+
+#### Javascript
+
+```javascript
+class Card {
+    constructor(suit, value) {
+        this.suit = suit;
+        this.value = value;
+    }
+}
+
+class Suit {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+class Deck {
+    constructor() {
+        this.cards = [];
+    }
+}
+```
+
 
 ---
 
