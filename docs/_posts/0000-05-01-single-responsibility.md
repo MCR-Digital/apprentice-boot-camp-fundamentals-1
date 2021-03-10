@@ -70,7 +70,7 @@ Note: every module or class should have responsibility over a single part of the
 (Uncle Bob)
 
 + Co-author of the Agile Manifesto
-+ Also introduced ‘Clean Code’ term
++ Also introduced ‘Clean Code’ term
 + Done some good stuff…
 
 Note:
@@ -273,7 +273,7 @@ Note: Kata requires code to handle running total and offers
 
 --
 
-## Reflection Exercise (10 mins)
+## Reflection Exercise (10 mins)
 
 * Discuss our crude Checkout implementation
 * Write three sets of post-its:
@@ -315,7 +315,7 @@ Note: Was it readable?
 
 --
 
-## Exercise (30 mins)
+## Exercise (30 mins)
 
 Improve the design by separating responsibility
 
