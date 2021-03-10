@@ -32,10 +32,14 @@ The notion of Turing Completeness and the fact that all the languages below the 
 + [Coined the term](https://wiki.c2.com/?HeInventedTheTerm) ‘Object Orientated Programming’ around 1967
   + [May not have invented Objects](https://wiki.c2.com/?HeDidntInventTheTerm)
 + Led research at Xerox PARC which resulted in the Smalltalk language
-+ [Said this great thing](https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f):
-> I’m sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea. The big idea is messaging.  
 
 Note: Origin is disputed. Small talk was an early OO language, but Simula was earlier, credited to Kristen Nygaard and Ole Johan Dahl.
+
+--
+
+Alan Kay also [said this great thing](https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f):
+
+> I’m sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea. The big idea is messaging.  
 
 ---
 
