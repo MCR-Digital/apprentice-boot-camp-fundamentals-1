@@ -184,10 +184,12 @@ Note: Explain idiomatic: using, containing, or denoting expressions that are nat
 ## OO in JavaScript
 
 + Seen as a little different to Java and C# (for example)
-+ Supports (at least) three ways to do the same thing:
++ Supports multiple ways to do the same thing:
   + Prototypical inheritance (inheriting from another object)
-  + Class based inheritance
+    + Create objects using the new keyword and modify the constructor function’s ‘prototype’ property
+  + ES6 provides class/extends keywords
   + Module based composition
   
-Note: this may be one more than most languages  
-  This means there is confusion about what is idiomatic in JS, but class based and prototypical inheritance may be rarer
+Note: Different because most languages only have one way to do this  
+  Class based mechanism may use prototypical inheritance behind the scenes  
+  This means there is confusion about what is idiomatic in JS, but class based / prototypical inheritance may be rarer than module based composition  
