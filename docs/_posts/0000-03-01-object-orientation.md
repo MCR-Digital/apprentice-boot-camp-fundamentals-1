@@ -149,12 +149,24 @@ Needs a better diagram, but the point is here that these concepts are not distin
 
 ## Discussion: What is Object Orientation trying to achieve?
 
+Add stickies to Miro to give us your thoughts, and we will summarise people’s thoughts
+
 * What is hard to do without OOP?
 * What are the potential benefits?
 * If we didn’t use OOP, what might happen to our code?
 * In short: what is the point?
 
-Note: Could use Miro or Slido for this, and could be in breakout rooms if we want discussion or just solo if they add stickies to Miro 
+Note: Using Miro for this (need to set up worksheet) where they can add stickies 
+
+--
+
+## What is the point of OOP?
+
++ Programs are like plants
+  + Need a structure to grow around
+  + Prone to weeds
++ OOP provides a way to know where to put stuff
++ Using relatable structures (classes) helps people navigate the program
 
 --
 
