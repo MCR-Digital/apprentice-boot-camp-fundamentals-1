@@ -6,6 +6,7 @@
     + Some notion of linking types together
         + Classes and subclasses
         + Proto-typical inheritance
+    + Composition (sharing functionality without inheritance)
 + Why do we do it?
     + Code reuse, save duplication
 
@@ -118,3 +119,42 @@ Discuss commonalities / differences.
 ### Possible solutions - 20+ Classes
 
 <img src="{{ "/images/Cards3.png" | absolute_url }}" alt="Class diagram where every Suit and every FaceValue is a class in its own right">
+
+--
+
+### Composition: the other way
+
++ Another way to achieve code-reuse
++ Classes are compose of (contain instances of) other classes
++ These instances implement the desired reusable functionality
++ Composition avoids brittle inheritance trees
++ Another way to achieve the same thing—composition is still OO
+
+--
+
+### Our Vehicle example
+
+```java
+class Vehicle {
+    void accelerate(){
+        System.out.println("Getting faster");
+    }
+}
+
+class Car extends Vehicle {
+    private SteeringWheel steeringWheel;
+}
+```
+
+Note: Car contains a steering wheel  
+  Go karts and boats also require a steering wheel  
+  Car doesn’t attempt to inherit the steering wheel behaviour by inheriting it from some AbstractSteerableVehicle
+
+--
+
+## Composition powers OO-CSS
+
++ Caution: CSS
++ OO-CSS splits structure and skin into separate CSS blocks
++ Skin can be reused, being applied to all sorts of different elements
++ Classes are applied to elements to ‘import’ the bits of reusable style
