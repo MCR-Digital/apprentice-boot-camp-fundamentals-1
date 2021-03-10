@@ -191,5 +191,5 @@ Note: Explain idiomatic: using, containing, or denoting expressions that are nat
   + Module based composition
   
 Note: Different because most languages only have one way to do this  
-  Class based mechanism may use prototypical inheritance behind the scenes  
+  Class based mechanism uses prototypical inheritance behind the scenes, but adds additional features  
   This means there is confusion about what is idiomatic in JS, but class based / prototypical inheritance may be rarer than module based composition  
