@@ -266,6 +266,8 @@ Note: Generally classes grow as extra responsibility creeps in
   + Change it so that you can have 4 ‘C’ for 70
   + Change it so that you can have 5 ‘D’ for 60
   + Change it so that you can have 4 ‘A’ for 180
+    * Existing tests must pass with the same scenarios
+    * Your code will need to pass the discounts into the Checkout object to achieve this
 
 Note: Kata requires code to handle running total and offers  
   This is all done (badly)
