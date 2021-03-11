@@ -210,8 +210,6 @@ Note: E.g. choice of using set or list
 
 ## Abstraction
 
-(not the OO principle)
-
 Stay at one level of abstraction within a component
 
 Note: Don’t describe a bathroom as a toilet, a bath and a flow control valve—you call it a tap.  

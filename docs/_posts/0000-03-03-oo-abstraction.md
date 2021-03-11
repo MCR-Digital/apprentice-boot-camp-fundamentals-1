@@ -23,6 +23,45 @@ In a Java context we could argue that using an interface would give us a similar
 
 --
 
+abstract (*adjective*)
+
+1. existing in thought or as an idea but not having a physical or concrete existence.
+1. disassociated from any specific instance.
+
+abstract (*verb*)
+
+1. to consider apart from application to or association with a particular instance
+
+Note: These definitions are not complete, but are dictionary definitions and have been hand picked to position this concept.  
+  abstract classes, interfaces
+
+--
+
+### Abstraction vs Encapsulation
+
++ How does Abstraction differ from Encapsulation
++ Can you see an overlap?
++ Encapsulation relates to hiding data
++ Abstraction relates to hiding knowledge/implementation
+
+--
+
+### Tenuous example: How do you make a cup of tea?
+
+<backgroundimage>https://live.staticflickr.com/352/19746179658_cd852be093_b.jpg</backgroundimage>
+<backgroundimageopacity>0.5</backgroundimageopacity>
+
+
+
+<p style="float:bottom;font-size:15px"><a href="https://www.flickr.com/photos/49694447@N00/19746179658">Bed of Tea Plant</a> by <a href="https://www.flickr.com/photos/49694447@N00">Kumaravel</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a></p>
+
+Note: Ask one or more people  
+  Question them further on details they missed  
+  Ask them how various parts of the process work  
+  Highlight that their language changes as they become more detailed  
+
+--
+
 ### Animal Snap!
 
 <img src="{{ "/images/animalSnap.jpg" | absolute_url }}" alt="animal snap cards">
