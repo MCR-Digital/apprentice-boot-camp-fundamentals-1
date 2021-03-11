@@ -34,7 +34,7 @@ Several exercises (katas and code starters) will need to be ported to required l
 * Make sure you can sign in to github.com with you own account
 * If you use Java, have least JDK 8 or later and a working IDE
 * If you use JavaScript, have Node.js v14.15.0 or later installed
-* 
+* If you use C#, have Visual Studio installed
 
 ## Follow-on tasks
 
