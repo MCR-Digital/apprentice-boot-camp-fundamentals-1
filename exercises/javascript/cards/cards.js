@@ -1,11 +1,11 @@
 // to execute the runnable code in this file, use the command
-// `node cards/encapsulation.js` from the command line positioned at
+// `node cards/cards.js` from the command line positioned at
 // the project's root directory.
 
-let Encapsulation = class Encapsulation {
+let Cards = class Cards {
 };
 
-Encapsulation.prototype.getCards = function getCards() {
+Cards.prototype.getCards = function getCards() {
   let result = new Array(52);
   let deck = createArray(52, 2); // There is no multidimensional array constructor in JavaScript, this creates an a
 
@@ -70,12 +70,12 @@ let createArray = function (a, b) {
   return x;
 };
 
-let encapsulation = new Encapsulation();
-let deckInOrder = encapsulation.getCards();
+let cards = new Cards();
+let deckInOrder = cards.getCards();
 for (const card of deckInOrder) {
   console.log(card);
 }
 
 module.exports = {
-  Encapsulation: Encapsulation
+  Cards: Cards
 };
