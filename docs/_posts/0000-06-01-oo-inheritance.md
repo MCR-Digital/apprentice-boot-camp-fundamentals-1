@@ -152,6 +152,17 @@ Note: Car contains a steering wheel
 
 --
 
+## Another example: Pizza
+
+<img src="{{ "images/pizza-inheritance-composition.webp" | absolute_url }}">
+
+Note: Who likes pineapple on a pizza?  
+  Inheritance approach left, composition right  
+  Discuss pros/cons  
+  What if you want to stop serving margherita?  
+
+--
+
 ## Composition powers OO-CSS
 
 + Caution: CSS
