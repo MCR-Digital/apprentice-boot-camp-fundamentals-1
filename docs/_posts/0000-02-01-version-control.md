@@ -89,7 +89,7 @@ https://git-scm.com/
 * If you're using IntelliJ chose the _Open_ option and select the following file:
 `exercises/java/build.gradle`
 * Choose _Open As Project_
-* If given the option choose _Import From External Model_
+* Choose ‘Load Gradle Project’ from prompt
 
 --
 
