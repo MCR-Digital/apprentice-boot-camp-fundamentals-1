@@ -127,6 +127,7 @@ class Suit {
 ```
 
 --
+
 ### Possible solutions - 2
 
 #### Javascript
