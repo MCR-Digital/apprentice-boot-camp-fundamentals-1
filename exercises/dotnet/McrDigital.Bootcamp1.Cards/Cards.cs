@@ -2,11 +2,11 @@ namespace McrDigital.Bootcamp1.Cards
 {
     using System;
 
-    public class Encapsulation
+    public class Cards
     {
         static void Main(string[] args)
         {
-            var encapsulation = new Encapsulation();
+            var encapsulation = new Cards();
             var deckInOrder = encapsulation.GetCards();
             foreach (var card in deckInOrder)
             {
