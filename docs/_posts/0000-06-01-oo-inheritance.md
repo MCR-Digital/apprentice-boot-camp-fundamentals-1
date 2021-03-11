@@ -77,6 +77,9 @@ Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.
 * Re-write your card classes to use inheritance.
 * How many classes can you come up with?
 
+Note: Might be worth discussing a solution here  
+  If necessary can skip two slides to the diagrams of potential inheritance models
+
 --
 
 ## Exercise review
