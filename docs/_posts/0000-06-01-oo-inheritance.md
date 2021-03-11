@@ -160,6 +160,7 @@ Note: Who likes pineapple on a pizza?
   Inheritance approach left, composition right  
   Discuss pros/cons  
   What if you want to stop serving margherita?  
+  Source: https://miro.com/app/board/o9J_lPn0KGo=/
 
 --
 
