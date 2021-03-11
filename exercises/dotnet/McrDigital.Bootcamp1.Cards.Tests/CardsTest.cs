@@ -3,12 +3,12 @@ namespace McrDigital.Bootcamp1.Cards.Tests
     using Xunit;
     using McrDigital.Bootcamp1.Cards;
 
-    public class EncapsulationTest
+    public class CardsTest
     {
         [Fact]
         public void ShouldGetDeckInOrderAndReturn52CardsCorrectlyFormatted()
         {
-            var encapsulation = new Encapsulation();
+            var encapsulation = new Cards();
             Assert.Equal(
                 new string[]
                 {
