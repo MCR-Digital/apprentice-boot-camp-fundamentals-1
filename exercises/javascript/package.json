@@ -2,7 +2,7 @@
   "name": "js-fundamentals-1",
   "version": "1.0.0",
   "description": "JavaScript equivalent of the apprentice boot camp fundamentals 1",
-  "main": "cards/encapsulation.js",
+  "main": "cards/cards.js",
   "engines": {
     "node": ">=11.14"
   },
