@@ -104,47 +104,5 @@ namespace McrDigital.Bootcamp1.Checkout.Tests
             checkout.Scan("D");
             Assert.Equal(115, checkout.Total);
         }
-
-        [Fact]
-        public void Incremental()
-        {
-            var checkout = new Checkout();
-
-            checkout.Scan("A");
-            Assert.Equal(50, checkout.Total);
-
-            checkout.Scan("B");
-            Assert.Equal(80, checkout.Total);
-
-            checkout.Scan("A");
-            Assert.Equal(130, checkout.Total);
-
-            checkout.Scan("A");
-            Assert.Equal(160, checkout.Total);
-
-            checkout.Scan("B");
-            Assert.Equal(175, checkout.Total);
-
-            checkout.Scan("C");
-            Assert.Equal(195, checkout.Total);
-
-            checkout.Scan("B");
-            Assert.Equal(225, checkout.Total);
-
-            checkout.Scan("C");
-            Assert.Equal(245, checkout.Total);
-
-            checkout.Scan("D");
-            Assert.Equal(260, checkout.Total);
-
-            checkout.Scan("D");
-            Assert.Equal(275, checkout.Total);
-
-            checkout.Scan("D");
-            Assert.Equal(290, checkout.Total);
-
-            checkout.Scan("C");
-            Assert.Equal(310, checkout.Total);
-        }
     }
 }

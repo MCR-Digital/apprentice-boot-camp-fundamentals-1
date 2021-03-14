@@ -70,43 +70,4 @@ describe('Checkout', function () {
     checkout.scan('D');
     expect(checkout.getTotal()).toBe(115);
   });
-
-  test('incremental, scans A, B, A, A, B C, B, C, D, D, D, and C', function () {
-    let checkout = new Checkout();
-    checkout.scan('A');
-    expect(checkout.getTotal()).toBe(50);
-
-    checkout.scan('B');
-    expect(checkout.getTotal()).toBe(80);
-
-    checkout.scan('A');
-    expect(checkout.getTotal()).toBe(130);
-
-    checkout.scan('A');
-    expect(checkout.getTotal()).toBe(160);
-
-    checkout.scan('B');
-    expect(checkout.getTotal()).toBe(175);
-
-    checkout.scan('C');
-    expect(checkout.getTotal()).toBe(195);
-
-    checkout.scan('B');
-    expect(checkout.getTotal()).toBe(225);
-
-    checkout.scan('C');
-    expect(checkout.getTotal()).toBe(245);
-
-    checkout.scan('D');
-    expect(checkout.getTotal()).toBe(260);
-
-    checkout.scan('D');
-    expect(checkout.getTotal()).toBe(275);
-
-    checkout.scan('D');
-    expect(checkout.getTotal()).toBe(290);
-
-    checkout.scan('C');
-    expect(checkout.getTotal()).toBe(310);
-  });
 });

@@ -66,45 +66,5 @@ class CheckoutTest(unittest.TestCase):
         checkout.scan("D")
         self.assertEqual(115, checkout.total)
 
-    def test_incremental(self):
-        checkout = Checkout()
-
-        checkout.scan("A")
-        self.assertEqual(50, checkout.total)
-
-        checkout.scan("B")
-        self.assertEqual(80, checkout.total)
-
-        checkout.scan("A")
-        self.assertEqual(130, checkout.total)
-
-        checkout.scan("A")
-        self.assertEqual(160, checkout.total)
-
-        checkout.scan("B")
-        self.assertEqual(175, checkout.total)
-
-        checkout.scan("C")
-        self.assertEqual(195, checkout.total)
-
-        checkout.scan("B")
-        self.assertEqual(225, checkout.total)
-
-        checkout.scan("C")
-        self.assertEqual(245, checkout.total)
-
-        checkout.scan("D")
-        self.assertEqual(260, checkout.total)
-
-        checkout.scan("D")
-        self.assertEqual(275, checkout.total)
-
-        checkout.scan("D")
-        self.assertEqual(290, checkout.total)
-
-        checkout.scan("C")
-        self.assertEqual(310, checkout.total)
-
-
 if __name__ == "__main__":
     unittest.main()
