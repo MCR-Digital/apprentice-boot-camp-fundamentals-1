@@ -8,6 +8,5 @@ If you've already installed visual studio then make sure it is added through thi
 
 __Running the tests__
 
-Open a project in visual studio and navigate to wherever this is checked out. 
-
-Open the appropiate solution file for each exercise.
+Open this project in visual studio and then open the appropiate solution file for each exercise.
+There is a test solution for each exercise, right click and `Run Tests`
