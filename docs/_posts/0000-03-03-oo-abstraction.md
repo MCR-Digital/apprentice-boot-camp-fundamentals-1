@@ -84,14 +84,14 @@ Walk through the Snap example
 ### Exercise (1hr)
 
 + Abstract away functionality 
-+ Make the snap game work with both decks of cards from the previous exercise
++ Make the snap game work with either deck of cards (one at a time) from the previous exercise
 + Decks should be interchangable
 + Cards with the same face-value are a valid _Snap!_
 + Let’s discuss the change first as a group
 
 Note:
 Use interfaces (in dotnet and Java) to represent Cards and Decks  
-ES6 doesn’t support interfaces natively, but they should make the snap game take multiple decks. They’ll need to make decks have the same functions so that they are interchangeable.  
+ES6 doesn’t support interfaces natively, but they should make sure the snap game will work with either deck. They’ll need to make decks have the same functions so that they are interchangeable.  
 Increased time. Took 1hr45m last time, but hopefully less this time.
 
 --
