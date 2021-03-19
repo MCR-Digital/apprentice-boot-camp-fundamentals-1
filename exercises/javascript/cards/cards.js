@@ -6,7 +6,7 @@
 //command D +-
 
 class Card {
-  constructor(suit, faceValue) {
+  constructor(faceValue, suit) {
     this.faceValue = faceValue; //0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
     this.suit = suit; //0 (clubs), 1 (diamonds), 2 (hearts), 3 (spades)
   }
@@ -69,6 +69,15 @@ class Card {
 
     return faceValueName + " of " + suitName;
   }
+
+  
+  snap(previousCard) {
+    console.log(previousCard);
+    console.log(this.faceValue)
+    return (  previousCard.faceValue === this.faceValue)   
+
+  }
+  
 }
 
 class Deck {
@@ -77,7 +86,7 @@ class Deck {
     // this.suits = [0, 1, 2, 3];
     for (let suit = 0; suit < 4; suit++) {
       for (let faceValue = 0; faceValue < 13; faceValue++) {
-        const newCard = new Card(suit, faceValue);
+        const newCard = new Card(faceValue, suit);
         //  this.cards[suit * 13 + faceValue] = newCard;
         //or
         this.cards.push(newCard.getFormattedCard());
@@ -116,7 +125,7 @@ class Deck {
 const exampleShuffledDeck = new Deck();
 // console.log(exampleShuffledDeck.shuffle());
 exampleShuffledDeck.shuffle();
-console.log(exampleShuffledDeck.deal());
+// console.log(exampleShuffledDeck.deal());
 
 // const exampleCard = new Card("hearts", 6);
 
