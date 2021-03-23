@@ -4,7 +4,7 @@ using System.Text;
 
 namespace McrDigital.Bootcamp1.Cards
 {
-    class PlayingCard
+    public class PlayingCard: Card
     {
         private int SuitValue { get; }
         private int CardValue { get; }
@@ -67,15 +67,9 @@ namespace McrDigital.Bootcamp1.Cards
             return $"{faceValueName} of {suitName}";
         }
 
-        static void Main(string[] args)
+        public bool Snap(Card other)
         {
-            var deck = new PlayingCardDeck();
-            var stringDeck = deck.GetCards();
-
-            foreach (string card in stringDeck)
-            {
-                Console.WriteLine(card);
-            }
+            return CardValue == ((PlayingCard)other).CardValue;
         }
     }
 }

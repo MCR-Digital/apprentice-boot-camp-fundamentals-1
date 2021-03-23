@@ -6,15 +6,15 @@ namespace McrDigital.Bootcamp1.Cards
     {
         static void Main(string[] args)
         {
-            var snap = new Snap(new AnimalDeck());
+            var snap = new Snap(new PlayingCardDeck());
             snap.Play();
         }
 
         private int _player1Score;
         private int _player2Score;
-        private readonly AnimalDeck _deck;
+        private readonly Deck _deck;
 
-        public Snap(AnimalDeck deck)
+        public Snap(Deck deck)
         {
             _deck = deck;
             _deck.Shuffle();
@@ -22,7 +22,7 @@ namespace McrDigital.Bootcamp1.Cards
 
         public void Play()
         {
-            AnimalCard previousCard = null;
+            Card previousCard = null;
             while (_deck.GetCards().Length > 0)
             {
                 var currentCard = _deck.Deal();
