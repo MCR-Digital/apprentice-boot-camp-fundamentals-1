@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <ApplicationIcon />
-    <StartupObject>McrDigital.Bootcamp1.Cards.Snap</StartupObject>
+    <StartupObject>McrDigital.Bootcamp1.Cards.PlayingCard</StartupObject>
   </PropertyGroup>
 
 </Project>
