@@ -6,19 +6,19 @@ namespace McrDigital.Bootcamp1.Cards
 {
     class PlayingCard
     {
-        private int suitValue { get; }
-        private int cardValue { get; }
+        private int SuitValue { get; }
+        private int CardValue { get; }
 
        public PlayingCard(int suitValue, int cardValue)
         {
-            this.suitValue = suitValue;
-            this.cardValue = cardValue;  
+            this.SuitValue = suitValue;
+            this.CardValue = cardValue;  
         }
 
         override public string ToString() {
 
             var suitName = string.Empty;
-            switch (suitValue)
+            switch (SuitValue)
             {
                 case 0:
                     suitName = "clubs";
@@ -32,11 +32,11 @@ namespace McrDigital.Bootcamp1.Cards
                 case 3:
                     suitName = "spades";
                     break;
-                default: throw new ArgumentException($"Something went wrong {suitValue} is not a valid suitName!");
+                default: throw new ArgumentException($"Something went wrong {SuitValue} is not a valid suitName!");
             }
 
             var faceValueName = string.Empty;
-            switch (cardValue)
+            switch (CardValue)
             {
                 case 0:
                     faceValueName = "ace";
@@ -50,7 +50,7 @@ namespace McrDigital.Bootcamp1.Cards
                 case 7:
                 case 8:
                 case 9:
-                    faceValueName = (cardValue + 1).ToString();
+                    faceValueName = (CardValue + 1).ToString();
                     break;
                 case 10:
                     faceValueName = "jack";
@@ -61,7 +61,7 @@ namespace McrDigital.Bootcamp1.Cards
                 case 12:
                     faceValueName = "king";
                     break;
-                default: throw new ArgumentException($"Something went wrong {cardValue} is not a valid faceValue!");
+                default: throw new ArgumentException($"Something went wrong {CardValue} is not a valid faceValue!");
             }
 
             return $"{faceValueName} of {suitName}";
@@ -69,8 +69,13 @@ namespace McrDigital.Bootcamp1.Cards
 
         static void Main(string[] args)
         {
-            var card = new PlayingCard(1, 2);
-            Console.WriteLine(card);
+            var deck = new PlayingCardDeck();
+            var stringDeck = deck.GetCards();
+
+            foreach (string card in stringDeck)
+            {
+                Console.WriteLine(card);
+            }
         }
     }
 }
