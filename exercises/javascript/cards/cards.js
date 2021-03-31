@@ -4,12 +4,12 @@
 
 class Cards {
   getCards() {
-    let result = new Array(52);
-    let deck = createArray(52, 2); // There is no multidimensional array constructor in JavaScript, this creates an a
+    const result = []
+    const deck = []
   
     for (let suit = 0; suit < 4; suit++) {
       for (let faceValue = 0; faceValue < 13; faceValue++) {
-        deck[suit * 13 + faceValue] = [suit, faceValue];
+        deck.push([suit, faceValue]);
       }
     }
   
@@ -59,14 +59,6 @@ class Cards {
   
     return result;
   };
-};
-
-const createArray = function (a, b) {
-  const x = new Array(a);
-  for (let i = 0; i < x.length; i++) {
-    x[i] = new Array(b);
-  }
-  return x;
 };
 
 const cards = new Cards();

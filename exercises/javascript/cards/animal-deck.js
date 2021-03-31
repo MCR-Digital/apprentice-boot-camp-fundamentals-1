@@ -11,10 +11,10 @@ class AnimalDeck {
   }
 
   getCards() {
-    const result = new Array(this.cards.length);
+    const result = [];    
     for (let i = 0; i < this.cards.length; i++) {
-      let card = this.cards[i];
-      result[i] = card.toString();
+      const card = this.cards[i];
+      result.push(card.toString());
     }
     return result;
   };
