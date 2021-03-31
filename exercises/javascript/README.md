@@ -8,4 +8,6 @@ __Running tests__
 
 Navigate to the root project directory.
 
-Run `npm install` followed by `npm test`
+Run `npm install` followed by `npm test`.
+
+If you would like the tests to run in watch mode, run `npm run test:watch`. To cancel watch mode, press `q` to quit.

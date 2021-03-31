@@ -10,7 +10,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest test --notify"
+    "test": "jest test --notify",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
