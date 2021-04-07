@@ -6,7 +6,7 @@ namespace McrDigital.Bootcamp1.Cards
     {
         static void Main(string[] args)
         {
-            var snap = new Snap(new PlayingCardDeck());
+            var snap = new Snap(new SuperDeck());
             snap.Play();
         }
 

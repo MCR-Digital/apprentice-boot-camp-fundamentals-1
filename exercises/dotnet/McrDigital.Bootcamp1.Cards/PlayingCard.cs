@@ -8,8 +8,9 @@ namespace McrDigital.Bootcamp1.Cards
     {
         private int SuitValue { get; }
         private int CardValue { get; }
+        public string Value { get { return CardValue.ToString(); } }
 
-       public PlayingCard(int suitValue, int cardValue)
+        public PlayingCard(int suitValue, int cardValue)
         {
             this.SuitValue = suitValue;
             this.CardValue = cardValue;  
@@ -69,7 +70,7 @@ namespace McrDigital.Bootcamp1.Cards
 
         public bool Snap(Card other)
         {
-            return CardValue == ((PlayingCard)other).CardValue;
+            return CardValue.ToString() == other.Value;
         }
     }
 }
