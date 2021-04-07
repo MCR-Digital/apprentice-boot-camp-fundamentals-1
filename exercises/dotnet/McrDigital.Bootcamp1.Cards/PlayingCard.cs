@@ -22,16 +22,16 @@ namespace McrDigital.Bootcamp1.Cards
             switch (SuitValue)
             {
                 case 0:
-                    suitName = "clubs";
+                    suitName = "Clubs";
                     break;
                 case 1:
-                    suitName = "diamonds";
+                    suitName = "Ciamonds";
                     break;
                 case 2:
-                    suitName = "hearts";
+                    suitName = "Hearts";
                     break;
                 case 3:
-                    suitName = "spades";
+                    suitName = "Spades";
                     break;
                 default: throw new ArgumentException($"Something went wrong {SuitValue} is not a valid suitName!");
             }
@@ -40,7 +40,7 @@ namespace McrDigital.Bootcamp1.Cards
             switch (CardValue)
             {
                 case 0:
-                    faceValueName = "ace";
+                    faceValueName = "Ace";
                     break;
                 case 1:
                 case 2:
@@ -54,13 +54,13 @@ namespace McrDigital.Bootcamp1.Cards
                     faceValueName = (CardValue + 1).ToString();
                     break;
                 case 10:
-                    faceValueName = "jack";
+                    faceValueName = "Jack";
                     break;
                 case 11:
-                    faceValueName = "queen";
+                    faceValueName = "Queen";
                     break;
                 case 12:
-                    faceValueName = "king";
+                    faceValueName = "King";
                     break;
                 default: throw new ArgumentException($"Something went wrong {CardValue} is not a valid faceValue!");
             }
