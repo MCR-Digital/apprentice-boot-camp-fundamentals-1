@@ -2,7 +2,7 @@ namespace McrDigital.Bootcamp1.Cards
 {
     public class AnimalCard: Card
     {
-        private Animal _animal;
+        private readonly Animal _animal;
         public string Value { get { return _animal.ToString(); } }
 
         public AnimalCard(Animal animal)
