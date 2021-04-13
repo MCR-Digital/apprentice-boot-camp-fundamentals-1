@@ -22,6 +22,10 @@ namespace McrDigital.Bootcamp1.Cards
 
         public Card Deal()
         {
+            if (CardDeck.Count <= 0)
+            {
+                throw new Exception("Deck is empty");
+            }
             var card = CardDeck[0];
             CardDeck.RemoveAt(0);
             return card;
