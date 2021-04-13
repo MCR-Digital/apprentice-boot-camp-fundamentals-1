@@ -6,7 +6,7 @@ namespace McrDigital.Bootcamp1.Cards
 {
     public class Deck
     {
-        public List<Card> CardDeck;
+        protected List<Card> CardDeck;
 
         public string[] GetCards()
         {
@@ -24,7 +24,7 @@ namespace McrDigital.Bootcamp1.Cards
         {
             var card = CardDeck[0];
             CardDeck.RemoveAt(0);
-            return (Card)card;
+            return card;
         }
 
         public void Shuffle()

@@ -25,7 +25,7 @@ namespace McrDigital.Bootcamp1.Cards
                     suitName = "Clubs";
                     break;
                 case 1:
-                    suitName = "Ciamonds";
+                    suitName = "Diamonds";
                     break;
                 case 2:
                     suitName = "Hearts";
@@ -70,7 +70,7 @@ namespace McrDigital.Bootcamp1.Cards
 
         public bool Snap(Card other)
         {
-            return CardValue.ToString() == other.Value;
+            return CardValue.ToString().Equals(other.Value);
         }
     }
 }

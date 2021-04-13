@@ -17,7 +17,7 @@ namespace McrDigital.Bootcamp1.Cards
 
         public bool Snap(Card other)
         {
-            return _animal.ToString() == other.Value;
+            return _animal.ToString().Equals(other.Value);
         }
 
         public override string ToString()
