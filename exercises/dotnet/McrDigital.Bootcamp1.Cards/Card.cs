@@ -4,9 +4,12 @@ using System.Text;
 
 namespace McrDigital.Bootcamp1.Cards
 {
-    public interface Card
+    public abstract class Card
     {
-        string Value { get; }
-        bool Snap(Card other);
+        protected abstract string Value { get; }
+        public bool Snap(Card previous, Card next)
+        {
+            return previous.Value.ToString().Equals(next.Value);
+        }
     }
 }

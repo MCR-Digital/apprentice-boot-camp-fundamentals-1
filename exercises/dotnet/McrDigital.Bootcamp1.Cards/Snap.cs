@@ -31,7 +31,7 @@ namespace McrDigital.Bootcamp1.Cards
                 var input = Console.ReadLine();
                 if (input.Length > 0 && input[0] == 'a')
                 {
-                    if (currentCard.Snap(previousCard))
+                    if (currentCard.Snap(previousCard, currentCard))
                     {
                         Console.WriteLine("SNAP! score Player 1");
                         _player1Score++;
@@ -44,7 +44,7 @@ namespace McrDigital.Bootcamp1.Cards
                 }
                 else if (input.Length > 0 && input[0] == 'l')
                 {
-                    if (currentCard.Snap(previousCard))
+                    if (currentCard.Snap(previousCard, currentCard))
                     {
                         Console.WriteLine("SNAP! score Player 2");
                         _player2Score++;

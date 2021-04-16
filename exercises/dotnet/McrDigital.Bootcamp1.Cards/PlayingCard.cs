@@ -8,7 +8,7 @@ namespace McrDigital.Bootcamp1.Cards
     {
         private int SuitValue { get; }
         private int CardValue { get; }
-        public string Value { get { return CardValue.ToString(); } }
+        protected override string Value { get { return CardValue.ToString(); } }
 
         public PlayingCard(int suitValue, int cardValue)
         {
@@ -66,11 +66,6 @@ namespace McrDigital.Bootcamp1.Cards
             }
 
             return $"{faceValueName} of {suitName}";
-        }
-
-        public bool Snap(Card other)
-        {
-            return CardValue.ToString().Equals(other.Value);
         }
     }
 }
