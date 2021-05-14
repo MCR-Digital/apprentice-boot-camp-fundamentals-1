@@ -26,6 +26,7 @@ reveal_notes_server: false
 # Additional reveal.js options
 reveal_options:
   slideNumber: 'c/t'
+  fragmentInURL: true
 
 # Additional reveal.js dependencies
 reveal_dependencies: 
