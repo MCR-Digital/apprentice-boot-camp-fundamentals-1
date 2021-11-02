@@ -13,18 +13,61 @@ by Alamfarial is licensed under
 
 Note:
 Prompt them for suggestions - the answer we're looking for is "by using objects".  
+
 Naturally there are other language features which enable it but the concept of the
-object is the main one.  
+object is the main one.
+
+--
+
+We achieve ***encapsulation*** by wrapping
+***state*** and ***behaviour*** inside objects
+
+```text
+
+                          ____Object____
+                         |              |
+          state ---------------->       |
+          behaviour ------------>       |
+                         |              |
+                          -------------- 
+                
+```
+
+--
+
+### Why do we encapsulate things?
+
++ Organisation
++ Maintainability
++ Safety
++ Reuse
+
+
+Note:
+
+* Organisation of our code, smaller chunks are easier to understand - legibility
+* Maintainability - we can change the internals without anyone else needing to know
+* Safety - protecting access to data and behaviour - fewer bugs
+* Reuse - our nicely packaged code is easier to use elsewhere
 
 --
 
 ## Playing Card Example
+
+<backgroundimage>{{ "/images/playing_cards.jpeg" | absolute_url }}</backgroundimage>
+<backgroundimageopacity>0.20</backgroundimageopacity>
 
 - Say we want to model a pack of playing cards
 - And print them out in order
 - There are four suits
 - Cards have a value of ace through to king
 - There are 4 * 13 = 52 cards in a pack
+
+
+
+
+
+<small><a href="https://commons.wikimedia.org/wiki/File:AcetoFive.JPG">Ron Maijen</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</small>
 
 --
 
@@ -62,7 +105,7 @@ Note: This will help you avoid getting into a mess and having to throw away lots
 
 --
 
-## Exercise (30 mins)
+## Exercise (15 mins)
 
 - What new classes would you introduce to better encapsulate the existing code? 
 
@@ -199,8 +242,23 @@ class Deck {
 }
 ```
 
+--
 
----
+## Proposed solution - moving state
 
-## Lunch?
+```text
+
+                       ___PlayingCard___
+                      | suit : Suit     |
+                      | faceValue : int | 
+                      |_________________|
+                      
+                       ______Suit_______
+                      | name : String   |
+                      |_________________|
+                      
+                       _PlayingCardDeck_
+                      | cards : Card[]  |
+                      |_________________|
+```
 
