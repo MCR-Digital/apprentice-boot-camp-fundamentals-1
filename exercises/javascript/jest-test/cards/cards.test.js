@@ -1,9 +1,9 @@
 const { Cards } = require('../../cards/cards.js');
 
-describe('getCards', function () {
+describe('printCardNames', function () {
   test('get deck in order, return 52 cards correctly formatted', function () {
     let cards = new Cards();
-    expect(cards.getCards()).toStrictEqual([
+    expect(cards.printCardNames()).toStrictEqual([
       "ace of clubs",
       "2 of clubs",
       "3 of clubs",
