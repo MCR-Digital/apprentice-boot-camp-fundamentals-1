@@ -30,11 +30,14 @@ Several exercises (katas and code starters) will need to be ported to required l
 
 ## Prep-work for apprentices
 
-* Make sure you can sign in to miro.com with your own account
-* Make sure you can sign in to github.com with you own account
-* If you use Java, have least JDK 8 or later and a working IDE
-* If you use JavaScript, have Node.js v14.15.0 or later installed
-* If you use C#, have Visual Studio installed
+* Make sure you can sign in to github.com with your own account
+* **Fork** this repo (so you can push your changes later)
+* Clone your fork: `git clone https://github.com/[your-username]/apprentice-boot-camp-fundamentals-1.git`
+* Follow the instructions in the README for your language under the `exercises` directory, **making sure you can run the tests**
+  * [Java](exercises/java/README.md)
+  * [JavaScript](exercises/javascript/README.md)
+  * [C#](exercises/dotnet/README.md)
+* It’s normal to have problems with this, so just let us know! :) 
 
 ## Follow-on tasks
 
