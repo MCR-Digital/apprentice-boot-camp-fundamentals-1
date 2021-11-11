@@ -8,10 +8,6 @@ targetCompatibility = 1.8
 apply plugin: 'idea'
 
 dependencies {
-    testCompile 'junit:junit:4.11'
-    testCompile 'org.assertj:assertj-core:3.9.1'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
+    testImplementation 'junit:junit:4.11'
+    testImplementation 'org.assertj:assertj-core:3.9.1'
 }
