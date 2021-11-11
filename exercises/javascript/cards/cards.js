@@ -57,6 +57,12 @@ class Cards {
   }
 };
 
+const cards = new Cards();
+const deckInOrder = cards.getCards();
+for (const card of deckInOrder) {
+  console.log(card);
+}
+
 module.exports = {
   Cards
 };
