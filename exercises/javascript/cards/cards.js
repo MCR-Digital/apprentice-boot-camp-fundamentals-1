@@ -3,18 +3,19 @@
 // the project's root directory.
 const Card = require('./card.js').Card;
 
+const suits = ["clubs", "diamonds", "hearts", "spades"];
+
 class Cards {
   constructor() {
-    this.suits = ["clubs", "diamonds", "hearts", "spades"];
-    this.cards = this.getCards();
+    this.cards = this.setCards();
   }
 
-  getCards() {
+  setCards() {
     var cards = [];
 
-    for (var i = 0; i < this.suits.length; i++) {
+    for (var i = 0; i < suits.length; i++) {
       for (var j = 1; j < 14; j++) {
-        var card = new Card(this.suits[i], j);
+        var card = new Card(suits[i], j);
         cards.push(card);
       }
     }
@@ -22,7 +23,7 @@ class Cards {
     return cards;
   }
 
-  printCardNames() {
+  getCards() {
     var result = [];
 
     for (var i = 0; i < this.cards.length; i++) {
