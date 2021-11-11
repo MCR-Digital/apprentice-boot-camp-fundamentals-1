@@ -75,7 +75,6 @@ Disadvantages - adds complexity.
 ### Exercise (20mins) - Fork the slides
 
 * These slides are in version control
-* If you don't have a GitHub account create one
 * _**Fork**_ these slides into your own repository
 https://github.com/MCR-Digital/apprentice-bootcamp-fundamentals-1
 * Install Git on your machine if you don't already have it
