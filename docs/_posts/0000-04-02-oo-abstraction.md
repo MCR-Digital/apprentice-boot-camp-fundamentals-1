@@ -37,6 +37,42 @@ Note: These definitions are not complete, but are dictionary definitions and hav
 
 --
 
+We achieve ***abstraction*** by hiding
+***implementation*** behind interfaces
+
+```text
+ ┌──────────┐ Must not know  ┌──────────────────┐
+ │  Client  ├───────/────────►  Implementation  │
+ └─────┬────┘                └───────┬──────────┘
+       │                             │  Implements
+       │ Calls functions in  ┌───────▼──────────┐
+       └─────────────────────►   «Interface»    │
+                             └──────────────────┘
+```
+
+--
+
+### Example
+
+People who know how to write can write with any number of instruments.
+
+```text
+ ┌──────────┐ Writes with    ┌──────────────────────┐
+ │  Person  ├────────────────► «Writing Instrument» │
+ └──────────┘                └──────────▲───────────┘
+                                        │
+                                        │Implements
+                             ┌───────┐  │  ┌─────────┐
+                             │  Pen  ├──┼──┤  Quill  │
+                             └───────┘  │  └─────────┘
+                                        │
+                          ┌──────────┐  │  ┌─────────┐
+                          │  Pencil  ├──┴──┤  Chalk  │
+                          └──────────┘     └─────────┘
+```
+
+--
+
 ### Abstraction vs Encapsulation
 
 + How does Abstraction differ from Encapsulation
@@ -78,6 +114,40 @@ Note: Ask one or more people
 --
 
 Walk through the Snap example
+
+--
+
+## How it is
+
+```text
+  ┌─────────┐ getCards() ┌──────────────┐
+  │  Snap   ├────────────►  AnimalDeck  │
+  └────┬────┘ deal()     └──────────────┘
+       │
+       │                 ┌──────────────┐
+       └─────────────────►  AnimalCard  │
+              snap()     └──────────────┘
+
+```
+
+--
+
+## How it should be
+
+```text
+ ┌─────────┐ getCards() ┌────────┐Implements┌──────────────┐
+ │  Snap   ├────────────► «Deck» ◄──────────┤  AnimalDeck  │
+ └────┬────┘ deal()     └────▲───┘          └──────────────┘
+      │                      │    Implements┌──────────────────┐
+      │                      └──────────────┤  PlayingCardDeck │
+      │                                     └──────────────────┘
+      │                 ┌────────┐Implements┌──────────────┐
+      └─────────────────► «Card» ◄──────────┤  AnimalCard  │
+             snap()     └────▲───┘          └──────────────┘
+                             │    Implements┌────────────────┐
+                             └──────────────┤  PlayingCard   │
+                                            └────────────────┘
+```
 
 --
 
