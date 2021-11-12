@@ -244,48 +244,29 @@ class Deck {
 
 --
 
-## Exercise - moving state (30mins)
+## Exercise - moving state (60mins)
 
 * Create the following classes one by one
+* The test should still pass
 
-* _(don't create any new methods for now)_
 ```text
 
-                 ___PlayingCard___
-                | suit : int     |
-                | faceValue : int | 
-                |_________________|
-                
-                 ______Suit_______
-                | name : String   |
-                |_________________|
-                
-                 _PlayingCardDeck_
-                | cards : Card[]  |
-                |_________________|
+                      ___PlayingCard___
+                     | suit : int      |
+                     | faceValue : int | 
+                     |_________________|
+                     
+                      ______Suit_______
+                     | name : String   |
+                     |_________________|
+                     
+ *Once you've introduced Suit you'll need to change PlayingCard
+                     
+                      _PlayingCardDeck_
+                     | cards : Card[]  |
+                     |_________________|
 ```
 
---
-
-## Exercise - moving behaviour (30mins)
-
-* Create or move the following methods one by one
-//TODO update this diagram
-```text
-
-                     ___PlayingCard___
-                    | suit : int      |
-                    | faceValue : int | 
-                    |_________________|
-                    
-                     ______Suit_______
-                    | name : String   |
-                    |_________________|
-                    
-                     _PlayingCardDeck_
-                    | cards : Card[]  |
-                    |_________________|
-```
 
 
 
