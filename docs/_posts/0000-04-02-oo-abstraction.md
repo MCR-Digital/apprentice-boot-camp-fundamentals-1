@@ -37,6 +37,42 @@ Note: These definitions are not complete, but are dictionary definitions and hav
 
 --
 
+We achieve ***abstraction*** by hiding
+***implementation*** behind interfaces
+
+```text
+ ┌──────────┐ Must not know  ┌──────────────────┐
+ │  Client  ├───────/────────►  Implementation  │
+ └─────┬────┘                └───────┬──────────┘
+       │                             │  Implements
+       │ Calls functions in  ┌───────▼──────────┐
+       └─────────────────────►   «Interface»    │
+                             └──────────────────┘
+```
+
+--
+
+### Example
+
+Once you learn to write, you can write with any number of instruments.
+
+```text
+ ┌──────────┐ Writes with    ┌──────────────────────┐
+ │  Person  ├────────────────► «Writing Instrument» │
+ └──────────┘                └──────────▲───────────┘
+                                        │
+                                        │Implements
+                             ┌───────┐  │  ┌─────────┐
+                             │  Pen  ├──┼──┤  Quill  │
+                             └───────┘  │  └─────────┘
+                                        │
+                          ┌──────────┐  │  ┌─────────┐
+                          │  Pencil  ├──┴──┤  Chalk  │
+                          └──────────┘     └─────────┘
+```
+
+--
+
 ### Abstraction vs Encapsulation
 
 + How does Abstraction differ from Encapsulation
@@ -85,7 +121,7 @@ Walk through the Snap example
 
 + Abstract away functionality 
 + Make the snap game work with either deck of cards (one at a time) from the previous exercise
-+ Decks should be interchangable
++ Decks should be interchangeable (by changing one line of code)
 + Cards with the same face-value are a valid _Snap!_
 + Let’s discuss the change first as a group
 
@@ -96,9 +132,43 @@ Increased time. Took 1hr45m last time, but hopefully less this time.
 
 --
 
+## How it is
+
+```text
+  ┌─────────┐ getCards() ┌──────────────┐
+  │  Snap   ├────────────►  AnimalDeck  │
+  └────┬────┘ deal()     └──────┬───────┘
+       │                        │
+       │                 ┌──────▼───────┐
+       └─────────────────►  AnimalCard  │
+              snap()     └──────────────┘
+
+```
+
+--
+
+## Abstracting cards and decks
+
+```text
+        getCards(), deal()
+    ┌──────────────────────────────┐
+    │    ┌─────────────────┐Impl┌──▼───┐Impl┌────────────┐
+    │    │ PlayingCardDeck ├────► Deck ◄────┤ AnimalDeck │
+┌───┴──┐ └────────┬────────┘    └──────┘    └─────┬──────┘
+│ Snap │          │                               │
+└───┬──┘          │                               │
+    │             │Contains                       │Contains
+    │      ┌──────▼────────┐Impl┌──────┐Impl┌─────▼──────┐
+    │      │ PlayingCard   ├────► Card ◄────┤ AnimalCard │
+    │      └───────────────┘    └──▲───┘    └────────────┘
+    └──────────────────────────────┘
+       snap()
+```
+
+--
+
 ### Exercise review
 
-+ What did you do?
 + What's better about the new version?
 + Is anything worse?
 

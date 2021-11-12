@@ -1,21 +1,18 @@
-__Setting up__
+## Setting up
 
-Install Intellij IDEA. https://www.jetbrains.com/idea/download/#section=windows (community is fine, if you don't have a work license)
+We’re anticipating you using [Intellij IDEA](https://www.jetbrains.com/idea). You can downloading it [here](https://www.jetbrains.com/idea/download/). The ‘Community’ version is fine, if you don't have a license for ‘Ultimate’.
 
-You then have two options either install java yourself or let the IDE manage it.
+You’ll need Java 8 or later. If for some reason you don’t already have it, you can either:
+- `brew install java` (if you are on macOS and use `brew`)
+- `sdk install java` (if you use [sdkman](https://sdkman.io/))
+- install it yourself from [here](https://aws.amazon.com/corretto/)
 
-To install it yourself just grab it from here : https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/windows-7-install.html
+## Running the tests
 
-To let the IDE manage it, you will have to import the project first (see below).
+Open the `build.gradle` file in IntelliJ using `File --> Open…`. It should detect gradle automatically and start downloading dependencies.
 
+If you don't have Java at this point then IntelliJ will complain and walk you through installing it. If for some reason it doesn’t, use `File -> Project structure -> Project SDK --> Add SDK --> Download SDK` default values are fine.
 
-__Running the tests__
+When the IDE opens, expand the `src/test` directory. Right click it, and half way down choose `Run 'tests in '…'`. The tests should run, and they should all pass (green ticks).
 
-Open the project root in IntelliJ using `File --> New --> Project from existing sources` it *should* pick up gradle
-automatically, if not then you will have to select it in the import settings.
-
-If you don't have java at this point then your IDE will complain and walk you through installing it.
-Otherwise `File -> Project structure -> Project SDK --> Add SDK --> Download SDK` default values are fine.
-
-When the IDE opens, there is a gradle tab on the right hand side. Open the and click on `verification --> test`.
-If the right hand side is not there then a pop should appear at the bottom asking to import the gradle project.
+If you have any problems, let one of the people running the boot camp know and we will happily help! :) 

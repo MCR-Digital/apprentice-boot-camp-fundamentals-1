@@ -5,6 +5,8 @@ remote_theme: autotraderuk/jekyll-revealjs
 plugins:
   - jekyll-remote-theme
 
+remote_delivery: false
+
 # The Reveal theme
 reveal_theme: league.css
 
