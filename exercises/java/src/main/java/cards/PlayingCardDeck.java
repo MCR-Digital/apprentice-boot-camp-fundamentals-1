@@ -5,13 +5,14 @@ import java.util.Collections;
 
 public class PlayingCardDeck implements Deck {
 
-    private PlayingCard[] cards = new PlayingCard[52];
+    private AbstractPlayingCard[] cards = new AbstractPlayingCard[52];
 
     public PlayingCardDeck() {
-        for (Suit suit:Suit.values()) {
-            for (int faceValue = 0; faceValue < 13; faceValue++) {
-                cards[suit.ordinal()*13 + faceValue] = new PlayingCard(suit, faceValue);
-            }
+        for (int faceValue = 0; faceValue < 13; faceValue++) {
+            cards[0*13 + faceValue] = new ClubPlayingCard(faceValue);
+            cards[1*13 + faceValue] = new DiamondPlayingCard(faceValue);
+            cards[2*13 + faceValue] = new HeartPlayingCard(faceValue);
+            cards[3*13 + faceValue] = new SpadePlayingCard(faceValue);
         }
     }
 
@@ -23,7 +24,7 @@ public class PlayingCardDeck implements Deck {
     public String[] getCards() {
         String[] result = new String[cards.length];
         int cardNumber = 0;
-        for (PlayingCard card : cards) {
+        for (AbstractPlayingCard card : cards) {
             result[cardNumber] = card.toString();
             cardNumber++;
         }

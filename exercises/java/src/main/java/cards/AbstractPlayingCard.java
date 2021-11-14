@@ -1,19 +1,15 @@
 package cards;
 
-public class PlayingCard extends Card {
-    private final Suit suit;
+public abstract class AbstractPlayingCard extends Card {
     private final int faceValue;
 
-    public Suit getSuit() {
-        return suit;
-    }
+    abstract Suit getSuit();
 
     public int getFaceValue() {
         return faceValue;
     }
 
-    public PlayingCard(Suit suit, int faceValue) {
-        this.suit = suit;
+    protected AbstractPlayingCard(int faceValue) {
         this.faceValue = faceValue;
     }
 
@@ -42,6 +38,6 @@ public class PlayingCard extends Card {
 
     @Override
     public boolean snap(Card otherCard) {
-        return getFaceValue() == ((PlayingCard)otherCard).getFaceValue();
+        return getFaceValue() == ((AbstractPlayingCard)otherCard).getFaceValue();
     }
 }
