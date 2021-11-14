@@ -72,6 +72,27 @@ Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.
 
 --
 
+### Suggested approach
+
+```text
+                          ┌────────┐
+                          │  Card  │
+                          └────▲───┘
+                               │ Extends
+                    ┌──────────┴──────────┐
+                    │ AbstractPlayingCard │
+                    └──────────▲──────────┘
+                               │ Extends
+         ┌──────────────────┐  │  ┌─────────────────┐
+         │ HeartPlayingCard ├──┼──┤ ClubPlayingCard │
+         └──────────────────┘  │  └─────────────────┘
+        ┌───────────────────┐  │  ┌────────────────────┐
+        │ SpadePlayingCard  ├──┴──┤ DiamondPlayingCard │
+        └───────────────────┘     └────────────────────┘
+```
+
+--
+
 ## Exercise (30mins)
 
 * Re-write your card classes to use inheritance.
