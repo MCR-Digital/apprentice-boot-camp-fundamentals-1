@@ -132,14 +132,14 @@ Increased time. Took 1hr45m last time, but hopefully less this time.
 
 --
 
-## How it is
+## Snap coupled to deck and card implementations
 
 ```text
   ┌─────────┐ getCards() ┌──────────────┐
   │  Snap   ├────────────►  AnimalDeck  │
-  └────┬────┘ deal()     └──────────────┘
-       │                         
-       │                 ┌──────────────┐
+  └────┬────┘ deal()     └──────┬───────┘
+       │                        │ contains
+       │                 ┌──────▼───────┐
        └─────────────────►  AnimalCard  │
             snap(Card)   └──────────────┘
 
@@ -147,63 +147,34 @@ Increased time. Took 1hr45m last time, but hopefully less this time.
 
 --
 
-## Abstracting cards and decks
+## Abstracting cards and decks reduces coupling
 
 ```text
   ┌─────────┐ getCards() ┌──────────────┐
-  │  Snap   ├────────────►     Deck     │
+  │  Snap   ├────────────►     Deck»    │
   └────┬────┘ deal()     └──────────────┘
        │                        
        │                 ┌──────────────┐
-       └─────────────────►     Card     │
+       └─────────────────►     Card»    │
             snap(Card)   └──────────────┘
 
 ```
 
 --
 
-### Abstract and concrete decks
+### Abstract and concrete decks and cards
 
 ```text
-                    ┌──────────────────────┐
-                    │        Deck          │
-                    ├──────────────────────┤
-                    │  getCards() : Card[] │
-                    │                      │
-                    │  deal() : Card       │
-                    │                      │
-                    └────▲───────────▲─────┘
-                         │           │
-           ┌─────────────┴───┐   ┌───┴─────────────┐
-           │   AnimalDeck    │   │ PlayingCardDeck │
-           └─────────────────┘   └─────────────────┘
-
-
-
-```
-
---
-
-### Abstract and concrete cards
-
-```text
-     
-                   ┌──────────────────────┐
-                   │         Card         │
-                   ├──────────────────────┤
-                   │ snap(Card) : boolean │
-                   │                      │
-                   └─────▲───────────▲────┘
-                         │           │
-                         │           │
-                         │           │
-           ┌─────────────┴───┐   ┌───┴─────────────┐
-           │                 │   │                 │
-           │   AnimalCard    │   │   PlayingCard   │
-           │                 │   │                 │
-           └─────────────────┘   └─────────────────┘
-
-
+     ┌────────────────────┐            ┌──────────────────────┐
+     │      «Deck»        │            │        «Card»        │
+     ├────────────────────┤            ├──────────────────────┤
+     │ getCards() : Card[]│            │ snap(Card) : boolean │
+     │ deal() : Card      │            │                      │
+     └───▲─────────▲──────┘            └───────▲────▲─────────┘
+         │         │                           │    │
+┌────────┴───┐ ┌───┴─────────────┐ ┌───────────┴┐ ┌─┴───────────┐
+│ AnimalDeck │ │ PlayingCardDeck │ │ AnimalCard │ │ PlayingCard │
+└────────────┘ └─────────────────┘ └────────────┘ └─────────────┘
 ```
 
 --
