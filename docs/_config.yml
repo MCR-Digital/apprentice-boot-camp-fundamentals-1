@@ -17,7 +17,8 @@ reveal_transition: default
 reveal_theme_path: assets/reveal.js/css/theme/ 
 
 # Additional custom CSS paths
-extra_css: 
+extra_css:
+  - extra.css
 
 # Custom CSS for highlighting (defaults to reveal.js/lib/css/zenburn.css)
 highlight_style_sheet: 
