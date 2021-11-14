@@ -1,6 +1,6 @@
 package cards;
 
-public class PlayingCard implements Card {
+public class PlayingCard extends Card {
     private final Suit suit;
     private final int faceValue;
 
