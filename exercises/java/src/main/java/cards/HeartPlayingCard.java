@@ -1,13 +1,9 @@
 package cards;
 
-public class HeartPlayingCard extends AbstractPlayingCard {
-
-    public HeartPlayingCard(int faceValue) {
-        super(faceValue);
-    }
+public abstract class HeartPlayingCard extends AbstractPlayingCard {
 
     @Override
-    Suit getSuit() {
+    final Suit getSuit() {
         return Suit.HEARTS;
     }
 }

@@ -1,13 +1,9 @@
 package cards;
 
-public class SpadePlayingCard extends AbstractPlayingCard {
-
-    public SpadePlayingCard(int faceValue) {
-        super(faceValue);
-    }
+public abstract class SpadePlayingCard extends AbstractPlayingCard {
 
     @Override
-    Suit getSuit() {
+    final Suit getSuit() {
         return Suit.SPADES;
     }
 }
