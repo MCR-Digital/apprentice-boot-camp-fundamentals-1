@@ -142,6 +142,46 @@ Discuss commonalities / differences.
 
 ### Possible solutions - 20+ Classes
 
+<span style="font-size:50%;">
+
+```text
+AbstractPlayingCard
+    HeartPlayingCard              ClubPlayingCard
+        AceOfHeartsPlayingCard        AceOfClubsPlayingCard    
+        TwoOfHeartsPlayingCard        TwoOfClubsPlayingCard    
+        ThreeOfHeartsPlayingCard      ThreeOfClubsPlayingCard  
+        FourOfHeartsPlayingCard       FourOfClubsPlayingCard   
+        FiveOfHeartsPlayingCard       FiveOfClubsPlayingCard   
+        SixOfHeartsPlayingCard        SixOfClubsPlayingCard    
+        SevenOfHeartsPlayingCard      SevenOfClubsPlayingCard  
+        EightOfHeartsPlayingCard      EightOfClubsPlayingCard  
+        NineOfHeartsPlayingCard       NineOfClubsPlayingCard   
+        TenOfHeartsPlayingCard        TenOfClubsPlayingCard    
+        JackOfHeartsPlayingCard       JackOfClubsPlayingCard   
+        QueenOfHeartsPlayingCard      QueenOfClubsPlayingCard  
+        KingOfHeartsPlayingCard       KingOfClubsPlayingCard   
+    SpadePlayingCard              DiamondPlayingCard
+        AceOfSpadesPlayingCard        AceOfDiamondsPlayingCard    
+        TwoOfSpadesPlayingCard        TwoOfDiamondsPlayingCard    
+        ThreeOfSpadesPlayingCard      ThreeOfDiamondsPlayingCard  
+        FourOfSpadesPlayingCard       FourOfDiamondsPlayingCard   
+        FiveOfSpadesPlayingCard       FiveOfDiamondsPlayingCard   
+        SixOfSpadesPlayingCard        SixOfDiamondsPlayingCard    
+        SevenOfSpadesPlayingCard      SevenOfDiamondsPlayingCard  
+        EightOfSpadesPlayingCard      EightOfDiamondsPlayingCard  
+        NineOfSpadesPlayingCard       NineOfDiamondsPlayingCard   
+        TenOfSpadesPlayingCard        TenOfDiamondsPlayingCard    
+        JackOfSpadesPlayingCard       JackOfDiamondsPlayingCard   
+        QueenOfSpadesPlayingCard      QueenOfDiamondsPlayingCard  
+        KingOfSpadesPlayingCard       KingOfDiamondsPlayingCard   
+```
+
+</span>
+
+--
+
+### Possible solutions - 20+ Classes
+
 <img src="{{ "/images/Cards3.png" | absolute_url }}" alt="Class diagram where every Suit and every FaceValue is a class in its own right">
 
 --
