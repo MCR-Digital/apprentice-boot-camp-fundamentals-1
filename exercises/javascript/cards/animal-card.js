@@ -1,6 +1,6 @@
-const { CardInDeck } = require('./card-in-deck.js');
+const { CardStock } = require('./card-stock');
 
-class AnimalCard extends CardInDeck {
+class AnimalCard extends CardStock {
   constructor(faceValue) {
     super(faceValue);
   }

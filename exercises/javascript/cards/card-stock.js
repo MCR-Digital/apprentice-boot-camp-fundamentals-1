@@ -1,4 +1,4 @@
-class CardInDeck {
+class CardStock {
     constructor(faceValue) {
         this.faceValue = faceValue;
     }
@@ -9,5 +9,5 @@ class CardInDeck {
 }
 
 module.exports = {
-    CardInDeck
+    CardStock
 };
