@@ -1,14 +1,12 @@
-class AnimalCard {
-  constructor(animal) {
-    this.animal = animal;
-  }
+const { CardInDeck } = require('./card-in-deck.js');
 
-  snap(otherCard) {
-    return otherCard && this.animal === otherCard.animal;
+class AnimalCard extends CardInDeck {
+  constructor(faceValue) {
+    super(faceValue);
   }
 
   toString() {
-    return this.animal.toString();
+    return this.faceValue.toString();
   }
 };
 
