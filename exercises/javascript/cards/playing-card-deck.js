@@ -2,8 +2,7 @@
 // `node cards/cards.js` from the command line positioned at
 // the project's root directory.
 const PlayingCard = require('./playing-card.js').PlayingCard;
-
-const suits = ["clubs", "diamonds", "hearts", "spades"];
+const Suits = require('./suits').Suits;
 
 class PlayingCardDeck {
   constructor() {
@@ -13,9 +12,9 @@ class PlayingCardDeck {
   setCards() {
     var cards = [];
 
-    for (var i = 0; i < suits.length; i++) {
-      for (var j = 1; j < 14; j++) {
-        var card = new PlayingCard(suits[i], j);
+    for (var i = 0; i < Suits.length; i++) {
+      for (var j = 1; j <= 13; j++) {
+        var card = new PlayingCard(Suits[i], j);
         cards.push(card);
       }
     }
@@ -25,10 +24,12 @@ class PlayingCardDeck {
 
   getCards() {
     var result = [];
+
     for (var i = 0; i < this.cards.length; i++) {
       const card = this.cards[i];
       result.push(card.toString());
     }
+
     return result;
   }
 };
