@@ -1,3 +1,4 @@
+const { PlayingCardDeck } = require('./playing-card-deck.js');
 const { AnimalDeck } = require('./animal-deck.js');
 const readline = require('readline');
 
@@ -63,6 +64,15 @@ class Snap {
   };
 }
 
-const animalDeck = new AnimalDeck();
-const snap = new Snap(animalDeck);
-snap.play();
+var myArgs = process.argv.slice(2);
+console.log(myArgs);
+if (myArgs.includes("animal")) {
+  const animalDeck = new AnimalDeck();
+  const snap = new Snap(animalDeck);
+  snap.play();
+}
+else {
+  const deck = new PlayingCardDeck();
+  const snap = new Snap(deck);
+  snap.play();
+}
