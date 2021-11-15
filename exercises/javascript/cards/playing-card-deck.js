@@ -24,35 +24,11 @@ class PlayingCardDeck {
   }
 
   getCards() {
-    var result = [];
-
-    for (var i = 0; i < this.cards.length; i++) {
-      var faceValueName = ""
-      switch (this.cards[i].faceValue) {
-        case 1:
-          faceValueName = "ace";
-          break;
-
-        case 11:
-          faceValueName = "jack";
-          break;
-        
-        case 12:
-          faceValueName = "queen";
-          break;
-
-        case 13:
-          faceValueName = "king";
-          break;
-
-        default:
-          faceValueName = this.cards[i].faceValue;
-          break;
-      }
-
-      result.push(faceValueName + " of " + this.cards[i].suit);
+    const result = [];    
+    for (let i = 0; i < this.cards.length; i++) {
+      const card = this.cards[i];
+      result.push(`${card.faceValue} of ${card.suit}`);
     }
-
     return result;
   }
 
