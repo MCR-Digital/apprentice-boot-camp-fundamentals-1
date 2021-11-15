@@ -1,11 +1,11 @@
 // to execute the runnable code in this file, use the command
-// `node cards/cards.js` from the command line positioned at
+// `node cards/playing-card-deck.js` from the command line positioned at
 // the project's root directory.
-const Card = require('./card.js').Card;
+const PlayingCard = require('./playing-card.js').PlayingCard;
 
 const suits = ["clubs", "diamonds", "hearts", "spades"];
 
-class Cards {
+class PlayingCardDeck {
   constructor() {
     this.cards = this.setCards();
   }
@@ -15,7 +15,7 @@ class Cards {
 
     for (var i = 0; i < suits.length; i++) {
       for (var j = 1; j < 14; j++) {
-        var card = new Card(suits[i], j);
+        var card = new PlayingCard(suits[i], j);
         cards.push(card);
       }
     }
@@ -57,12 +57,12 @@ class Cards {
   }
 };
 
-const cards = new Cards();
-const deckInOrder = cards.getCards();
+const playingCards = new PlayingCardDeck();
+const deckInOrder = playingCards.getCards();
 for (const card of deckInOrder) {
   console.log(card);
 }
 
 module.exports = {
-  Cards
+  PlayingCardDeck
 };
