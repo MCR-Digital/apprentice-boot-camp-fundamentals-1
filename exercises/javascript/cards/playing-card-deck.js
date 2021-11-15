@@ -1,7 +1,6 @@
 const { PlayingCard } = require('./playing-card.js');
 const { DeckOfCards } = require('./deck-of-cards.js');
-
-const suits = ["clubs", "diamonds", "hearts", "spades"];
+const { Suits } = require('./suits.js');
 
 class PlayingCardDeck extends DeckOfCards {
   constructor() {
@@ -12,9 +11,9 @@ class PlayingCardDeck extends DeckOfCards {
   setCards() {
     var cards = [];
 
-    for (var i = 0; i < suits.length; i++) {
+    for (var i = 0; i < Suits.length; i++) {
       for (var j = 1; j < 14; j++) {
-        var card = new PlayingCard(suits[i], j);
+        var card = new PlayingCard(Suits[i], j);
         cards.push(card);
       }
     }
