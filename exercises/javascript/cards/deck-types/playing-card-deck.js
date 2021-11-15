@@ -1,6 +1,6 @@
-const { PlayingCard } = require('./playing-card.js');
+const { PlayingCard } = require('../card-types/playing-card.js');
 const { DeckOfCards } = require('./deck-of-cards.js');
-const { Suits } = require('./suits.js');
+const { Suits } = require('../card-types/suits.js');
 
 class PlayingCardDeck extends DeckOfCards {
   constructor() {

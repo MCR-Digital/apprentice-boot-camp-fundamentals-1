@@ -1,5 +1,5 @@
-const animals = require('./animal.js').Animal;
-const { AnimalCard } = require('./animal-card.js');
+const animals = require('../animal.js').Animal;
+const { AnimalCard } = require('../animal-card.js');
 const { DeckOfCards } = require('./deck-of-cards.js');
 
 class AnimalDeck extends DeckOfCards {
