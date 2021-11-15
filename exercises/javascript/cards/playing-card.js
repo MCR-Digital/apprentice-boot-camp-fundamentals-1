@@ -1,11 +1,7 @@
-class PlayingCard {
+class PlayingCard extends CardInDeck {
     constructor(suit, faceValue) {
         this.suit = suit;
-        this.faceValue = faceValue;
-    }
-
-    snap(otherCard) {
-        return otherCard && this.faceValue === otherCard.faceValue;
+        super(faceValue);
     }
 }
 

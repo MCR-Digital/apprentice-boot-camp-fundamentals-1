@@ -25,7 +25,7 @@ class Snap {
       });
       rl.prompt();
       currentCard = this.deck.deal();
-      console.log(currentCard.animal);
+      console.log(currentCard.faceValue);
   
       for await (let line of rl) {
         if (line.length > 0 && line.charAt(0).toLowerCase() === 'a') {
