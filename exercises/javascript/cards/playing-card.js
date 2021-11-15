@@ -23,6 +23,10 @@ class PlayingCard extends CardInDeck {
                 break;
         }
     }
+
+    toString() {
+        return `${this.faceValue} of ${this.suit}`;
+    }
 }
 
 module.exports = {
