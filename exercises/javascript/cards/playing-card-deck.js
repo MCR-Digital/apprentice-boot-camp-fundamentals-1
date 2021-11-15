@@ -1,11 +1,11 @@
 // to execute the runnable code in this file, use the command
 // `node cards/cards.js` from the command line positioned at
 // the project's root directory.
-const Card = require('./card.js').Card;
+const PlayingCard = require('./playing-card.js').PlayingCard;
 
 const suits = ["clubs", "diamonds", "hearts", "spades"];
 
-class Cards {
+class PlayingCardDeck {
   constructor() {
     this.cards = this.setCards();
   }
@@ -15,7 +15,7 @@ class Cards {
 
     for (var i = 0; i < suits.length; i++) {
       for (var j = 1; j < 14; j++) {
-        var card = new Card(suits[i], j);
+        var card = new PlayingCard(suits[i], j);
         cards.push(card);
       }
     }
@@ -25,44 +25,20 @@ class Cards {
 
   getCards() {
     var result = [];
-
     for (var i = 0; i < this.cards.length; i++) {
-      var faceValueName = ""
-      switch (this.cards[i].faceValue) {
-        case 1:
-          faceValueName = "ace";
-          break;
-
-        case 11:
-          faceValueName = "jack";
-          break;
-        
-        case 12:
-          faceValueName = "queen";
-          break;
-
-        case 13:
-          faceValueName = "king";
-          break;
-
-        default:
-          faceValueName = this.cards[i].faceValue;
-          break;
-      }
-
-      result.push(faceValueName + " of " + this.cards[i].suit);
+      const card = this.cards[i];
+      result.push(card.toString());
     }
-
     return result;
   }
 };
 
-const cards = new Cards();
+const cards = new PlayingCardDeck();
 const deckInOrder = cards.getCards();
 for (const card of deckInOrder) {
   console.log(card);
 }
 
 module.exports = {
-  Cards
+  PlayingCardDeck
 };

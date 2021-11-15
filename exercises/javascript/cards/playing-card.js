@@ -1,4 +1,4 @@
-class Card {
+class PlayingCard {
     constructor(suit, faceValue) {
         this.suit = suit;
         this.faceValue = this.getFaceValue(faceValue);
@@ -22,8 +22,12 @@ class Card {
                 return faceValue;
         }
     }
+
+    toString() {
+        return `${this.faceValue} of ${this.suit}`;
+    }
 }
 
 module.exports = {
-    Card
+    PlayingCard
 };
