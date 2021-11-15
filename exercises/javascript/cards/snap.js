@@ -1,5 +1,5 @@
-const { PlayingCardDeck } = require('./playing-card-deck.js');
-const { AnimalDeck } = require('./animal-deck.js');
+const { PlayingCardDeck } = require('./deck-types/playing-card-deck.js');
+const { AnimalDeck } = require('./deck-types/animal-deck.js');
 const readline = require('readline');
 
 // to execute the runnable code in this file, use the command
@@ -65,7 +65,6 @@ class Snap {
 }
 
 var myArgs = process.argv.slice(2);
-console.log(myArgs);
 if (myArgs.includes("animal")) {
   const animalDeck = new AnimalDeck();
   const snap = new Snap(animalDeck);

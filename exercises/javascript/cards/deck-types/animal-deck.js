@@ -1,8 +1,8 @@
 const animals = require('../animal.js').Animal;
-const { AnimalCard } = require('../animal-card.js');
-const { DeckOfCards } = require('./deck-of-cards.js');
+const { AnimalCard } = require('../card-types/animal-card.js');
+const { CardStockDeck } = require('./card-stock-deck.js');
 
-class AnimalDeck extends DeckOfCards {
+class AnimalDeck extends CardStockDeck {
   constructor() {
     super();
     this.cards = [];

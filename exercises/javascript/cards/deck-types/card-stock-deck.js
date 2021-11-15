@@ -1,4 +1,4 @@
-class DeckOfCards {
+class CardStockDeck {
   getCards() {
     const result = [];    
     for (let i = 0; i < this.cards.length; i++) {
@@ -28,5 +28,5 @@ class DeckOfCards {
 }
 
 module.exports = {
-  DeckOfCards
+  CardStockDeck
 }
