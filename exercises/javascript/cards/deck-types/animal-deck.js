@@ -13,7 +13,7 @@ class AnimalDeck extends CardStockDeck {
 
     for (const animal in animals) {
       cards.push(new AnimalCard(animal));
-     cards.push(new AnimalCard(animal));
+      cards.push(new AnimalCard(animal));
     }
 
     return cards;

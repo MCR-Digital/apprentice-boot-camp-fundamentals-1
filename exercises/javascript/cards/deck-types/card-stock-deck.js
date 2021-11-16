@@ -1,4 +1,8 @@
 class CardStockDeck {
+  constructor() {
+    this.cards = [];
+  }
+
   getCards() {
     const result = [];    
     for (let i = 0; i < this.cards.length; i++) {
