@@ -1,4 +1,4 @@
-const { PlayingCardDeck } = require('../../cards/playing-card-deck.js');
+const { PlayingCardDeck } = require('../../cards/deck-types/playing-card-deck.js');
 
 describe('getCards', function () {
   test('get deck in order, return 52 cards correctly formatted', function () {
