@@ -1,5 +1,5 @@
-const { PlayingCardDeck } = require('./deck-types/playing-card-deck.js');
-const { AnimalDeck } = require('./deck-types/animal-deck.js');
+const { PlayingCardDeck } = require('./playing-card-deck.js');
+const { AnimalDeck } = require('./animal-deck.js');
 const readline = require('readline');
 
 // to execute the runnable code in this file, use the command

@@ -23,6 +23,10 @@ class PlayingCard {
         }
     }
 
+    snap(otherCard) {
+        return otherCard && this.faceValue === otherCard.faceValue;
+    }
+
     toString() {
         return `${this.faceValue} of ${this.suit}`;
     }

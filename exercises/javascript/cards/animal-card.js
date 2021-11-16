@@ -1,14 +1,14 @@
 class AnimalCard {
-  constructor(animal) {
-    this.animal = animal;
+  constructor(faceValue) {
+    this.faceValue = faceValue;
   }
 
   snap(otherCard) {
-    return otherCard && this.animal === otherCard.animal;
+    return otherCard && this.faceValue === otherCard.faceValue;
   }
 
   toString() {
-    return this.animal.toString();
+    return this.faceValue.toString();
   }
 };
 
