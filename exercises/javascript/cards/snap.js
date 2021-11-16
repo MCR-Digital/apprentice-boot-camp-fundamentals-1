@@ -65,9 +65,6 @@ class Snap {
   };
 }
 
-let animalDeck = new AnimalDeck();
-let snap = new Snap(animalDeck);
-snap.play();
 var myArgs = process.argv.slice(2);
 if (myArgs.includes("animal")) {
   new Snap(new AnimalDeck()).play();
