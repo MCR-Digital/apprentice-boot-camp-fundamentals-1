@@ -5,7 +5,10 @@ const { CardStockDeck } = require('./card-stock-deck.js');
 class AnimalDeck extends CardStockDeck {
   constructor() {
     super();
-    this.cards = [];
+    this.cards = setCards();  
+  }
+
+  setCards() {
     for (const animal in animals) {
       this.cards.push(new AnimalCard(animal));
       this.cards.push(new AnimalCard(animal));
