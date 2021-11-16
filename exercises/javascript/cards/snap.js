@@ -1,4 +1,5 @@
-const { AnimalDeck } = require('./animal-deck.js');
+const { PlayingCardDeck } = require('./deck-types/playing-card-deck.js');
+const { AnimalDeck } = require('./deck-types/animal-deck.js');
 const readline = require('readline');
 
 // to execute the runnable code in this file, use the command
@@ -25,7 +26,7 @@ class Snap {
       });
       rl.prompt();
       currentCard = this.deck.deal();
-      console.log(currentCard.animal);
+      console.log(currentCard.faceValue);
   
       for await (let line of rl) {
         if (line.length > 0 && line.charAt(0).toLowerCase() === 'a') {
@@ -63,6 +64,14 @@ class Snap {
   };
 }
 
-const animalDeck = new AnimalDeck();
-const snap = new Snap(animalDeck);
-snap.play();
+var myArgs = process.argv.slice(2);
+if (myArgs.includes("animal")) {
+  const animalDeck = new AnimalDeck();
+  const snap = new Snap(animalDeck);
+  snap.play();
+}
+else {
+  const deck = new PlayingCardDeck();
+  const snap = new Snap(deck);
+  snap.play();
+}
