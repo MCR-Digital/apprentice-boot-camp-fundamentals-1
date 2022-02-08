@@ -108,3 +108,7 @@ The slides can be viewed from the link at the top of the repository.
 * Cohesion
 * Functional Decomposition
 * Critiquing and adapting poorly implemented checkout kata
+
+# Contributing
+
+If you’d like to contribute changes to the slides or exercises, please see [our contributing guidance](CONTRIBUTING.md).
