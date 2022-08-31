@@ -1,9 +1,27 @@
 package cards;
 
-public interface Deck {
-    void shuffle();
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    String[] getCards();
+public abstract class Deck {
+    protected List<Card> cards = new ArrayList<>();
 
-    Card deal();
+    public void shuffle() {
+        Collections.shuffle(cards);
+    }
+
+    public String[] getCards() {
+        String[] result = new String[cards.size()];
+        int cardNumber = 0;
+        for (Card card : cards) {
+            result[cardNumber] = card.toString();
+            cardNumber++;
+        }
+        return result;
+    }
+
+    public Card deal() {
+        return cards.remove(0);
+    }
 }
