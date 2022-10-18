@@ -1,8 +1,6 @@
 ### Mini-Auto Trader Scenario
 
-<img src="{{ "/images/2cv.png" | absolute_url }}" style="height: 200px;" alt="picture of a 2CV advert">
-
-<font size=3 align='left'>
+<div  align='left' style="font-size: 24px; ">
 
 <p>
 Auto Trader is an organisation which advertises both new and used vehicles for sale.
@@ -30,5 +28,5 @@ such as those run by car dealerships as well as other businesses.
 Customers are billed every month, dealers are billed based on the products they have selected, whereas private individuals are billed for each individual advert.
 </p>
 
-</font>
+</div>
 
