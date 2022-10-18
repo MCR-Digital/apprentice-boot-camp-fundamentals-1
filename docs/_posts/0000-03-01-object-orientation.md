@@ -129,7 +129,7 @@ class Mat {
 
 ## Exercise (30mins)
 
-Here's a simple description of an online car advertising business <a href="#/4/5">Mini AT Scenario</a>
+Here's a simple description of an online car advertising business <a href="#/6/7">Mini AT Scenario</a>
 
 Identify the following:
 
