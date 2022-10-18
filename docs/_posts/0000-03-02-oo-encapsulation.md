@@ -244,15 +244,35 @@ class Deck {
 
 --
 
-## Exercise - moving state (60mins)
+## Exercise - introduce a playing card (20mins)
 
-* Create the following classes one by one
+* Create a playing card class
+* Make the existing code use it
+* The test should still pass
+
+```text
+
+
+                      ___PlayingCard___
+                     | suit : int      |
+                     | faceValue : int | 
+                     |_________________|
+
+```
+
+--
+
+## Exercise - introduce a suit (20mins)
+
+* Create a suit class
+* Make the existing code use it
+* You'll need to change the playing card class to use it
 * The test should still pass
 
 ```text
 
                       ___PlayingCard___
-                     | suit : int      |
+                     | suit : Suit     |
                      | faceValue : int | 
                      |_________________|
                      
@@ -260,13 +280,20 @@ class Deck {
                      | name : String   |
                      |_________________|
                      
- *Once you've introduced Suit you'll need to change PlayingCard
-                     
+
+```
+
+--
+
+## Exercise - introduce a deck (20mins)
+
+* Create a deck class
+* Make the existing code use it
+* The test should still pass
+
+```text
+
                       _PlayingCardDeck_
                      | cards : Card[]  |
                      |_________________|
 ```
-
-
-
-
