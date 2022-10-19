@@ -108,6 +108,8 @@ Note: This will help you avoid getting into a mess and having to throw away lots
 ## Exercise (15 mins)
 
 - What new classes would you introduce to better encapsulate the existing code? 
+- What attributes do those classes have?
+- Don't write any code - this is a pens and paper exercise
 
 Note:
 Get them to work in small groups.  
@@ -120,6 +122,7 @@ Draw designs up at the front as they describe.
 
 + How many classes did you come up with?
 + What were they?
++ What were their attributes?
 
 Note: Conduct a straw poll and see how many classes they came up with.  
   See if there's any commonality, do they come up with the same names / concepts?  
@@ -127,122 +130,27 @@ Note: Conduct a straw poll and see how many classes they came up with.
 
 --
 
-### Possible solutions - 1
+### One possible solution
 
-#### Java
+```text
+                      ___PlayingCard___
+                     | suit : Suit     |
+                     | faceValue : int | 
+                     |_________________|
+                     
+                      ______Suit_______
+                     | name : String   |
+                     |_________________|
+                     
+                      _PlayingCardDeck_
+                     | cards : Card[]  |
+                     |_________________|
 
-```java
-class Card {
-    private int suit;
-    private int value;
-}
 ```
+ 
 
 --
 
-### Possible solutions - 1
-
-#### Javascript
-```javascript
-class Card {
-    constructor(suit, value) {
-        this.suit = suit;
-        this.value = value;
-    }
-}
-```
-
---
-
-
-### Possible solutions - 2
-
-#### Java
-```java
-class Card {
-    private Suit suit;
-    private int value;
-}
-
-class Suit {
-    private String name;
-}
-```
-
---
-
-### Possible solutions - 2
-
-#### Javascript
-
-```javascript
-class Card {
-    constructor(suit, value) {
-        this.suit = suit;
-        this.value = value;
-    }
-}
-
-class Suit {
-  constructor(name) {
-    this.name = name;
-  }
-}
-
-```
-
---
-
-### Possible solutions - 3
-
-#### Java
-
-```java
-class Card {
-    private Suit suit;
-    private int value;
-}
-
-class Suit {
-    private String name;
-}
-
-class Deck {
-    private Card[] cards;
-}
-```
-
-Note:
-Revisit this later - we can go even further if we bring in inheritance.  
-
---
-
-### Possible solutions - 3
-
-#### Javascript
-
-```javascript
-class Card {
-    constructor(suit, value) {
-        this.suit = suit;
-        this.value = value;
-    }
-}
-
-class Suit {
-    constructor(name) {
-        this.name = name;
-    }
-}
-
-class Deck {
-    constructor() {
-        this.cards = [];
-    }
-}
-```
-
---
 
 ## Exercise - introduce a playing card (20mins)
 
@@ -297,3 +205,11 @@ class Deck {
                      | cards : Card[]  |
                      |_________________|
 ```
+
+--
+
+## Exercise - reflection
+
+* How does our code compare to the original version?
+* What's better?
+* What's worse?
