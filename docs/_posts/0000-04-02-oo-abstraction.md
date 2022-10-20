@@ -41,13 +41,11 @@ We achieve ***abstraction*** by hiding
 ***implementation*** behind interfaces
 
 ```text
- ┌──────────┐ Must not know  ┌──────────────────┐
- │  Client  ├───────/────────►  Implementation  │
- └─────┬────┘                └───────┬──────────┘
-       │                             │  Implements
-       │ Calls functions in  ┌───────▼──────────┐
-       └─────────────────────►   «Interface»    │
-                             └──────────────────┘
+┌───────────┐     ┌───────────────┐      ┌────────────────┐
+│           │     │               │      │                │
+│   Client  ├─────► <<Interface>> ◄──────┤ Implementation │
+│           │     │               │      │                │
+└───────────┘     └───────────────┘      └────────────────┘
 ```
 
 --
@@ -77,24 +75,8 @@ Once you learn to write, you can write with any number of instruments.
 
 + How does Abstraction differ from Encapsulation
 + Can you see an overlap?
-+ Encapsulation relates to hiding data
-+ Abstraction relates to hiding knowledge/implementation
-
---
-
-### Tenuous example: How do you make a cup of tea?
-
-<backgroundimage>https://live.staticflickr.com/352/19746179658_cd852be093_b.jpg</backgroundimage>
-<backgroundimageopacity>0.5</backgroundimageopacity>
-
-
-
-<p style="float:bottom;font-size:15px"><a href="https://www.flickr.com/photos/49694447@N00/19746179658">Bed of Tea Plant</a> by <a href="https://www.flickr.com/photos/49694447@N00">Kumaravel</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a></p>
-
-Note: Ask one or more people  
-  Question them further on details they missed  
-  Ask them how various parts of the process work  
-  Highlight that their language changes as they become more detailed  
++ Encapsulation relates to hiding data and behaviour within classes
++ Abstraction relates to hiding **classes**
 
 --
 
@@ -117,65 +99,121 @@ Walk through the Snap example
 
 --
 
-### Exercise (1hr)
+### Exercise - Introduce a Card interface (20mins)
 
-+ Abstract away functionality 
-+ Make the snap game work with either deck of cards (one at a time) from the previous exercise
-+ Decks should be interchangeable (by changing one line of code)
-+ Cards with the same face-value are a valid _Snap!_
-+ Let’s discuss the change first as a group
-
-Note:
-Use interfaces (in dotnet and Java) to represent Cards and Decks  
-ES6 doesn’t support interfaces natively, but they should make sure the snap game will work with either deck. They’ll need to make decks have the same functions so that they are interchangeable.  
-Increased time. Took 1hr45m last time, but hopefully less this time.
+* What methods does Snap call on the AnimalCard?
+* Put these methods in a new Card interface
+* Make the AnimalCard implement the Card interface
+* Make the Snap game refer to the new interface **not** the AnimalCard class
+* The game should still work...
 
 --
 
-## Snap coupled to deck and card implementations
+### What have we done?
 
 ```text
-  ┌─────────┐ getCards() ┌──────────────┐
-  │  Snap   ├────────────►  AnimalDeck  │
-  └────┬────┘ deal()     └──────┬───────┘
-       │                        │ contains
-       │                 ┌──────▼───────┐
-       └─────────────────►  AnimalCard  │
-            snap(Card)   └──────────────┘
+Before:
+
+┌────────┐
+│        │  snap(Card) ┌────────────┐
+│  Snap  ├─────────────► AnimalCard │
+│        │             └────────────┘
+└────────┘
+
+After:
+
+┌────────┐
+│        │  snap(Card) ┌────────────┐ implements ┌────────────┐
+│  Snap  ├─────────────►  <<Card>>  ◄────────────┤ AnimalCard │
+│        │             └────────────┘            └────────────┘
+└────────┘
+```
+
+--
+
+### Exercise - Introduce a Deck interface (40mins)
+
+* What methods does Snap call on the AnimalDeck?
+* Put these methods in a new Deck interface
+* Make the AnimalDeck implement the Deck interface
+* Make the Snap game refer to the new interface **not** the AnimalDeck class
+* The game should still work...
+
+--
+
+### What have we done?
+
+```text
+Before:
+
+┌────────────┐  getCards()  ┌────────────┐
+│            ├─────────────►│            │
+│            │              │            │
+│            │  deal()      │            │
+│    Snap    ├─────────────►│ AnimalDeck │
+│            │              │            │
+│            │  shuffle()   │            │
+│            ├─────────────►│            │
+└────────────┘              └────────────┘
 
 ```
 
 --
 
-## Abstracting cards and decks reduces coupling
+### What have we done?
 
 ```text
-  ┌─────────┐ getCards() ┌──────────────┐
-  │  Snap   ├────────────►    «Deck»    │
-  └────┬────┘ deal()     └──────────────┘
-       │                        
-       │                 ┌──────────────┐
-       └─────────────────►    «Card»    │
-            snap(Card)   └──────────────┘
+After:
+
+┌──────────┐  getCards()  ┌──────────┐
+│          ├─────────────►│          │
+│          │              │          │
+│          │  deal()      │          │ implements ┌────────────┐
+│   Snap   ├─────────────►│ <<Deck>> ◄────────────┤ AnimalDeck │
+│          │              │          │            └────────────┘
+│          │  shuffle()   │          │
+│          ├─────────────►│          │
+└──────────┘              └──────────┘
 
 ```
 
 --
 
-### Abstract and concrete decks and cards
+### Exercise - Make your playing card classes implement the interfaces (30 mins)
+
+* Make your PlayingCard class implement the Card interface
+  * Cards with the same face-value are a snap (ignore the suit)
+* Make your PlayingCardDeck class implement the Deck interface
+* Make the Snap game use your PlayingCardDeck
+  * You should only need to change one line of code in Snap
+* The game should still work...
+
+
+
+--
+
+### What have we ended up with?
 
 ```text
-     ┌────────────────────┐            ┌──────────────────────┐
-     │      «Deck»        │            │        «Card»        │
-     ├────────────────────┤            ├──────────────────────┤
-     │ getCards():String[]│            │ snap(Card) : boolean │
-     │ deal() : Card      │            │                      │
-     └───▲─────────▲──────┘            └───────▲────▲─────────┘
-         │         │                           │    │
-┌────────┴───┐ ┌───┴─────────────┐ ┌───────────┴┐ ┌─┴───────────┐
-│ AnimalDeck │ │ PlayingCardDeck │ │ AnimalCard │ │ PlayingCard │
-└────────────┘ └─────────────────┘ └────────────┘ └─────────────┘
+                                      implements  ┌────────────┐
+┌────────┐                                 ┌──────┤ AnimalCard │
+│        │  snap(Card)  ┌───────────┐      │      └────────────┘
+│        ├──────────────►  <<Card>> ◄──────┤
+│        │              └───────────┘      │      ┌────────────┐
+│        │                                 └──────┤PlayingCard │
+│        │  getCards()  ┌────────────┐            └────────────┘
+│  Snap  ├──────────────►            │
+│        │              │            │            ┌────────────┐
+│        │  deal()      │            │    ┌───────┤ AnimalDeck │
+│        ├──────────────►  <<Deck>>  ◄────┤       └────────────┘
+│        │              │            │    │
+│        │  shuffle()   │            │    │  ┌─────────────────┐
+│        ├──────────────►            │    └──┤ PlayingCardDeck │
+└────────┘              └────────────┘       └─────────────────┘
 ```
+Notes:
+Emphasise that we can now toggle between different types of card without making significant changes to Snap.
+We could even let the user decide at runtime.
 
 --
 
