@@ -211,3 +211,33 @@ Note: Explain idiomatic: using, containing, or denoting expressions that are nat
 Note: Different because most languages only have one way to do this  
   Class based mechanism uses prototypical inheritance behind the scenes, but adds additional features  
   This means there is confusion about what is idiomatic in JS, but class based / prototypical inheritance may be rarer than module based composition  
+
+--
+
+## Class Diagrams
+
+* Useful to have a standard way of drawing designs
+* Unified Modelling Language
+* Simplified version
+
+
+--
+
+### A simplified class diagram
+
+```text
+                    ┌──────────────┐
+                    │  Class Name  │
+                    │              │
+                    │  Attributes  │
+                    │              │
+                    │  Methods     │
+                    └──────▲───────┘
+                           │
+                           │inheritance
+                     ┌─────┴──────┐
+                     │Child Class │
+                     │            │
+                     └────────────┘
+```
+
