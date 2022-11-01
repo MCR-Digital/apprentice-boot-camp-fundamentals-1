@@ -129,7 +129,7 @@ class Mat {
 
 ## Exercise (30mins)
 
-Here's a simple description of an online car advertising business <a href="#/4/5">Mini AT Scenario</a>
+Here's a simple description of an online car advertising business <a href="#/6/7">Mini AT Scenario</a>
 
 Identify the following:
 
@@ -171,14 +171,10 @@ Needs a better diagram, but the point is here that these concepts are not distin
 
 ## Discussion: What is Object Orientation trying to achieve?
 
-Add stickies to Miro to give us your thoughts, and we will summarise people’s thoughts
-
 * What is hard to do without OOP?
 * What are the potential benefits?
 * If we didn’t use OOP, what might happen to our code?
 * In short: what is the point?
-
-Note: Using Miro for this (need to set up worksheet) where they can add stickies 
 
 --
 

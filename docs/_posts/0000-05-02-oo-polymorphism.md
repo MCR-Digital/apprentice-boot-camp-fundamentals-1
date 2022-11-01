@@ -33,26 +33,19 @@ Interfaces not really required in JS, but there are mechanisms.
 --
 
 ```java
-class Light {
+abstract class Light {
     void turnOn(){}
     void turnOff(){}
 }
-
 class Headlight extends Light {}
 class Indicator extends Light {}
 class FogLight extends Light {}
-
 class Car {
     Light[] lights = {
-        new Headlight(),
-        new Indicator(),
-        new FogLight()
+        new Headlight(), new Indicator(), new FogLight()
     };
-
     Car(){
-        for (Light light : lights) {
-            light.turnOn();
-        }
+        lights.forEach(l -> l.turnOn());
     }
 }
 ```

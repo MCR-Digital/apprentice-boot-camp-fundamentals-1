@@ -37,10 +37,10 @@ class PlayingCardDeck {
     for (let i = 0; i < this.cards.length; i++) {
       const indexA = Math.floor(Math.random() * i);
       const indexB = i;
-  
+
       const valueA = this.cards[indexA];
       const valueB = this.cards[indexB];
-  
+
       this.cards[indexA] = valueB;
       this.cards[indexB] = valueA;
     }
@@ -51,6 +51,12 @@ class PlayingCardDeck {
     return card;
   }
 };
+
+const cards = new PlayingCardDeck();
+const deckInOrder = cards.getCards();
+for (const card of deckInOrder) {
+  console.log(card);
+}
 
 module.exports = {
   PlayingCardDeck
