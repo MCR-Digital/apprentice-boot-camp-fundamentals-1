@@ -6,6 +6,10 @@
 
 # Fundamentals One Boot Camp
 
+This is the first of the boot camps, and we aim to introduce them to the concept of Object Orientated code and given time, the Single Responsibility Principal. While getting them set up with the exercises, we talk briefly about version control. They will work with an existing code base in the language they are focussing on. The code base models a deck of cards, with an interactive game of snap. They will attempt to improve the way the code is structured along the lines of the four OO principals, as we discuss them.
+
+Although the primary focus is around OOP, we want to make sure they get plenty of experience writing code, as apprentices can sometimes find themselves not having written much by this point.
+
 ## Competencies, Behaviours and Knowledge units
 
 * TC1 Logic: writes good quality code (logic) with sound syntax in at least one language 
