@@ -1,5 +1,6 @@
 const { PlayingCardDeck } = require('./deck-types/playing-card-deck.js');
 const { AnimalDeck } = require('./deck-types/animal-deck.js');
+const { MixedDeck } = require('./deck-types/mixed-deck.js');
 const readline = require('readline');
 
 // to execute the runnable code in this file, use the command
@@ -67,6 +68,13 @@ class Snap {
 var myArgs = process.argv.slice(2);
 if (myArgs.includes("animal")) {
   new Snap(new AnimalDeck()).play();
+}
+else if (myArgs.includes("mixed")) {
+  const animalDeck = new AnimalDeck();
+  const playingCardDeck = new PlayingCardDeck();
+  const cards = animalDeck.cards;
+  cards.push(...playingCardDeck.cards);
+  new Snap(new MixedDeck(cards)).play();
 }
 else {
   new Snap(new PlayingCardDeck()).play();
