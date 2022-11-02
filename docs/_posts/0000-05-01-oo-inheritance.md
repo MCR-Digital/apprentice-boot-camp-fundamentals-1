@@ -4,6 +4,7 @@
     + Some notion of linking types together
         + Super classes and subclasses
         + Parents and children
+        + Prototypical inheritance
     + Sharing functionality between classes
     + Extending functionality
 + Why do we do it?
