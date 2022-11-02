@@ -1,26 +1,27 @@
 namespace McrDigital.Bootcamp1.Cards
 {
     using System;
+    using System.Collections.Generic;
 
-    public class PlayingCardDeck
+    public class PlayingCardDeck : IDeck
     {
-        private PlayingCard[] _cards;
+        private readonly List<PlayingCard> _cards;
 
         public PlayingCardDeck()
         {
-            _cards = new PlayingCard[52];
+            _cards = new List<PlayingCard>();
             foreach (Suit suit in Enum.GetValues(typeof(Suit)))
             {
                 for (var faceValue = 0; faceValue < 13; faceValue++)
                 {
-                    _cards[(int)suit * 13 + faceValue] = new PlayingCard(suit, faceValue);
+                    _cards.Add(new PlayingCard(suit, faceValue));
                 }
             }
         }
 
         public string[] GetCards()
         {
-            var result = new String[_cards.Length];
+            var result = new String[_cards.Count];
 
 
             var cardNumber = 0;
@@ -31,6 +32,18 @@ namespace McrDigital.Bootcamp1.Cards
             }
 
             return result;
+        }
+
+        public ICard Deal()
+        {
+            var card = _cards[0];
+            _cards.RemoveAt(0);
+            return card;
+        }
+
+        public void Shuffle()
+        {
+            _cards.KnuthShuffle();
         }
 
         static void Main(string[] args)
