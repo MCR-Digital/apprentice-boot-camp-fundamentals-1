@@ -77,25 +77,15 @@ Interfaces not really required in JS, but there are mechanisms.
 
 ### The design
 
-```text
-
-      
-                        ┌──────────────┐
-                        │  Deck        │
-                        │              │
-                        │  shuffle()   │
-                        │  deal()      │
-                        │  getCards()  │
-                        └──────▲───────┘
-                               │
-                               │
-                               │
-                        ┌──────┴───────┐
-                        │  MixedDeck   │
-                        └──────────────┘
-
-
-```
+<mermaid>
+classDiagram
+    Deck <|-- MixedDeck : implements
+    class Deck {
+        getCards()
+        deal()
+        shuffle()
+    }
+</mermaid>
 
 --
 

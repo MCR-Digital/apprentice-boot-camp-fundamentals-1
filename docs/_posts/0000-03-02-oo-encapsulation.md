@@ -22,16 +22,14 @@ object is the main one.
 We achieve ***encapsulation*** by wrapping
 ***state*** and ***behaviour*** inside objects
 
-```text
 
-                          ____Object____
-                         |              |
-          state ---------------->       |
-          behaviour ------------>       |
-                         |              |
-                          -------------- 
-                
-```
+<mermaid>
+classDiagram
+    class Object {
+        state
+        behaviour()
+    }
+</mermaid>
 
 --
 
@@ -41,7 +39,6 @@ We achieve ***encapsulation*** by wrapping
 + Maintainability
 + Safety
 + Reuse
-
 
 Note:
 
@@ -62,10 +59,6 @@ Note:
 - There are four suits
 - Cards have a value of ace through to king
 - There are 4 * 13 = 52 cards in a pack
-
-
-
-
 
 <small><a href="https://commons.wikimedia.org/wiki/File:AcetoFive.JPG">Ron Maijen</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</small>
 
@@ -132,25 +125,21 @@ Note: Conduct a straw poll and see how many classes they came up with.
 
 ### One possible solution
 
-```text
-                      ___PlayingCard___
-                     | suit : Suit     |
-                     | faceValue : int | 
-                     |_________________|
-                     
-                      ______Suit_______
-                     | name : String   |
-                     |_________________|
-                     
-                      _PlayingCardDeck_
-                     | cards : Card[]  |
-                     |_________________|
-
-```
- 
+<mermaid>
+classDiagram
+    class PlayingCard {
+        Suit suit
+        int faceValue
+    }
+    class Suit {
+        String name
+    }
+    class PlayingCardDeck {
+        Card[] cards
+    }
+</mermaid>
 
 --
-
 
 ## Exercise - introduce a playing card (20mins)
 
@@ -158,15 +147,13 @@ Note: Conduct a straw poll and see how many classes they came up with.
 * Make the existing code use it
 * The test should still pass
 
-```text
-
-
-                      ___PlayingCard___
-                     | suit : int      |
-                     | faceValue : int | 
-                     |_________________|
-
-```
+<mermaid>
+classDiagram
+    class PlayingCard {
+        int suit
+        int faceValue
+    }
+</mermaid>
 
 --
 
@@ -177,19 +164,19 @@ Note: Conduct a straw poll and see how many classes they came up with.
 * You'll need to change the playing card class to use it
 * The test should still pass
 
-```text
+<mermaid>
+classDiagram
+    PlayingCard *-- Suit
+    class PlayingCard {
+        Suit suit
+        int faceValue
+    }
+    class Suit {
+        String name
+    }
+</mermaid>
 
-                      ___PlayingCard___
-                     | suit : Suit     |
-                     | faceValue : int | 
-                     |_________________|
-                     
-                      ______Suit_______
-                     | name : String   |
-                     |_________________|
-                     
-
-```
+Note: The relationship shown here is composition. PlayCard is composed of a Suit.
 
 --
 
@@ -199,12 +186,12 @@ Note: Conduct a straw poll and see how many classes they came up with.
 * Make the existing code use it
 * The test should still pass
 
-```text
-
-                      _PlayingCardDeck_
-                     | cards : Card[]  |
-                     |_________________|
-```
+<mermaid>
+classDiagram
+    class PlayingCardDeck {
+        Card[] cards
+    }
+</mermaid>
 
 --
 
