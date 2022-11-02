@@ -48,6 +48,8 @@ We achieve ***abstraction*** by hiding
 └───────────┘     └───────────────┘      └────────────────┘
 ```
 
+Note: Point out that the client has no knowledge of / interaction with the implementation.   
+
 --
 
 ### Example
