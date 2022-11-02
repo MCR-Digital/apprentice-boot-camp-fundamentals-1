@@ -168,7 +168,7 @@ Increased time. Took 1hr45m last time, but hopefully less this time.
      ┌────────────────────┐            ┌──────────────────────┐
      │      «Deck»        │            │        «Card»        │
      ├────────────────────┤            ├──────────────────────┤
-     │ getCards() : Card[]│            │ snap(Card) : boolean │
+     │ getCards():String[]│            │ snap(Card) : boolean │
      │ deal() : Card      │            │                      │
      └───▲─────────▲──────┘            └───────▲────▲─────────┘
          │         │                           │    │
