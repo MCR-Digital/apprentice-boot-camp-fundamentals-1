@@ -57,16 +57,18 @@ Interfaces not really required in JS, but there are mechanisms.
 
 ### Where's the polymorphism?
 
-         ┌───────────────────────────────────────────────┐
-         │  MixedDeck                                    │
-         │                                               │
-         │  Card[] cards = { "The ace of spades",        │
-         │                   "Gorilla",                  │
-         │                   "Cheeta",                   │
-         │                   "The seven of diamonds" };  │
-         │                                               │
-         │                                               │
-         └───────────────────────────────────────────────┘
+```
+ ┌───────────────────────────────────────────────┐
+ │  MixedDeck                                    │
+ │                                               │
+ │  Card[] cards = { "The ace of spades",        │
+ │                   "Gorilla",                  │
+ │                   "Cheeta",                   │
+ │                   "The seven of diamonds" };  │
+ │                                               │
+ │                                               │
+ └───────────────────────────────────────────────┘
+ ```
 
 
 +As well as the existing ways in which the Snap game interacts with the Card and Deck classes
