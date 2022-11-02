@@ -1,15 +1,14 @@
 ## Inheritance
 
 + What is it?
-    + Sharing functionality
-+ How do we achieve it?
     + Some notion of linking types together
-        + Classes and subclasses
-        + Proto-typical inheritance
-    + Composition (sharing functionality without inheritance)
+        + Super classes and subclasses
+        + Parents and children
+        + Prototypical inheritance
+    + Sharing functionality between classes
+    + Extending functionality
 + Why do we do it?
     + Code reuse, save duplication
-
 
 {% include background-image.html file="spoons.jpg" %}
 <p style="float:bottom;font-size:15px">
@@ -20,6 +19,193 @@ by <a href="https://www.flickr.com/photos/twintiger/">twintiger007</a> is licens
 
 Note:
 Ask these questions to the group and whiteboard their answers.  
+
+--
+
+### Inheritance an example
+```text
+
+                     ┌──────────────┐
+                     │   Vehicle    │
+                     │              │
+                     │              │
+                     │              │
+                     └────▲─────▲───┘
+                          │     │ extends
+                          │     │
+          ┌─────────┬─────┘     └────┬───────────┐
+          │   Car   │                │ Motorbike │
+          └─────────┘                └───────────┘
+
+```
+
+Note:
+Point out which class is the parent/super class and which is the child/sub class
+
+
+--
+
+
+### Inheritance - sharing functionality
+```text
+
+                     ┌──────────────┐
+                     │   Vehicle    │
+                     │              │
+                     │  getPrice()  │
+                     │              │
+                     └────▲─────▲───┘
+                          │     │ 
+                          │     │
+          ┌─────────┬─────┘     └────┬───────────┐
+          │   Car   │                │ Motorbike │
+          └─────────┘                └───────────┘
+
+```
+Note:
+The benefit of inheritance is it saves us from having to implement getPrice in both sub classes - duplication
+
+
+--
+
+### Inheritance - extending functionality
+```text
+                     ┌──────────────┐
+                     │   Vehicle    │
+                     │              │
+                     │  getPrice()  │
+                     │              │
+                     └────▲─────▲───┘
+                          │     │
+                          │     │
+        ┌───────────┬─────┘     └────┬───────────┐
+        │    Car    │                │ Motorbike │
+        │           │                └───────────┘
+        │ getDoors()│
+        │           │
+        └───────────┘
+
+```
+
+Note:
+We can add different behaviours to sub classes as appropriate
+
+--
+
+### Inheritance - altering functionality
+
+```text
+ 
+                     ┌──────────────┐
+                     │   Vehicle    │
+                     │              │
+                     │  getPrice()  │
+                     │              │
+                     └────▲─────▲───┘
+                          │     │
+                          │     │
+        ┌───────────┬─────┘     └────┬───────────┐
+        │    Car    │                │ Motorbike │
+        │           │                │           │
+        │ getDoors()│                │ getPrice()│
+        │           │                │           │
+        └───────────┘                └───────────┘
+```
++ This technique is called overriding
+
+Note:
+We can replace implementations in sub classes if we need different functionality - overriding
+
+--
+
+## Exercise - modelling cards with inheritance (15mins)
+
+* How might you use inheritance to model the classes in your card code?
+  * Consider all your card and deck classes
+* Draw a class diagram to show how the classes would relate to one another
+
+Note:
+Work in language groups to collaboratively come up with a diagram
+
+--
+
+## Exercise Review and Implementation
+
+```text
+
+
+        ┌──────────┐                       ┌──────┐
+        │   Card   │                       │ Deck │
+        │          │                       └───▲──┘
+        │          │                           │
+        └────▲─────┘        ┌─────────────────┬┴┬──────────────┐
+             │              │ PlayingCardDeck │ │AnimalCardDeck│
+┌───────────┬┴┬──────────┐  │                 │ │              │
+│PlayingCard│ │AnimalCard│  │  shuffle()      │ │ shuffle()    │
+│           │ │          │  │  deal()         │ │ deal()       │
+│snap(Card) │ │snap(Card)│  │  getCards()     │ │ getCards()   │
+└───────────┘ └──────────┘  └─────────────────┘ └──────────────┘
+
+
+
+```
++ Now change your code to use inheritance as shown above (15mins)
+
+--
+
+## Exercise remove duplication (30mins)
+
+* Remove duplication from your code by moving common functionality into the parent classes
+* Your code should resemble the diagram below:
+
+```text
+        ┌────────────┐                   ┌───────────┐
+        │    Card    │                   │   Deck    │
+        │            │                   │           │
+        │            │                   │ shuffle() │
+        │            │                   │           │
+        │            │                   │ deal()    │
+        └──▲─────▲───┘                   │           │
+           │     │                       │ getCards()│
+           │     │                       └──▲──────▲─┘
+           │     │                          │      │
+ ┌─────────┴─┐ ┌─┴─────────┐ ┌──────────────┴──┐ ┌─┴────────────┐
+ │PlayingCard│ │AnimalCard │ │ PlayingCardDeck │ │AnimalCardDeck│
+ │           │ │           │ │                 │ │              │
+ │snap(Card) │ │ snap(Card)│ │                 │ │              │
+ └───────────┘ └───────────┘ └─────────────────┘ └──────────────┘
+```
+
+--
+
+## Exercise review
+
++ How does the code compare to before?
++ What's the difference between this version and the interface based one?
+  + It's subtle and depends upon your language
+  + Inheritance is a form of abstraction 
+
+--
+
+## Inheritance is hard to get right
+
++ It tends to come with a rigid set of rules
++ A more common way to model relationships between objects is via _associations_
++ An _association_ is just when one class references another
+
+--
+
+### Associations between our card classes
+
+```java
+class PlayingCard extends Card {  //inheritance
+    private Suit suit;  //association
+}
+
+class Deck {
+    protected Card[] cards;  //association
+}
+```
 
 --
 
@@ -50,186 +236,7 @@ _"A steering wheel **is not** a kind of car"_ - **X**
 </p>
 </div>
 
---
-
-### Example
-
-```java
-class Vehicle {
-    void accelerate(){
-        System.out.println("Getting faster");
-    }
-}
-
-class Car extends Vehicle {
-    private SteeringWheel steeringWheel;
-}
-```
-
-Note:
-Ask what Car inherits from Vehicle - i.e. the fact that it can accelerate.  
-Ask what a Car has that a Vehicle doesn't - namely a SteeringWheel.  
-
---
-
-### Suggested approach
-
-```text
-                          ┌────────┐
-                          │  Card  │
-                          └────▲───┘
-                               │ Extends
-                    ┌──────────┴──────────┐
-                    │ AbstractPlayingCard │
-                    └──────────▲──────────┘
-                               │ Extends
-         ┌──────────────────┐  │  ┌─────────────────┐
-         │ HeartPlayingCard ├──┼──┤ ClubPlayingCard │
-         └──────────────────┘  │  └─────────────────┘
-        ┌───────────────────┐  │  ┌────────────────────┐
-        │ SpadePlayingCard  ├──┴──┤ DiamondPlayingCard │
-        └───────────────────┘     └────────────────────┘
-```
-
---
-
-## Exercise (30mins)
-
-* Re-write your card classes to use inheritance.
-* How many classes can you come up with?
-
-Note: Might be worth discussing a solution here  
-  If necessary can skip two slides to the diagrams of potential inheritance models
-
---
-
-## Exercise review
-
-+ How many classes did you come up with?
-+ What were they?
-
-Note:
-Poll them to see what classes they came up with.  
-Maybe draw some class diagrams.  
-Discuss commonalities / differences.  
-
---
-
-## Class Diagrams
-
-* Useful to have a standard way of drawing designs
-* Unified Modelling Language
-* Simplified version
-
---
-
-<img src="{{ "/images/class-diagrams.png" | absolute_url }}" alt="Components of a class diagram">
-
---
-
-### Possible solutions - 3+ Classes
-
-<img src="{{ "/images/Cards1.png" | absolute_url }}" alt="Class diagram showing a PlayingCard and an AnimalCard extending a Card class">
-
---
-
-### Possible solutions - 6+ Classes
-
-<img src="{{ "/images/Cards2.png" | absolute_url }}" alt="Class diagram which introduces the notion of a Deck extended by AnimalDeck and PlayingCardDeck">
 
 
---
 
-### Possible solutions - 20+ Classes
 
-<span style="font-size:50%;">
-
-```text
-AbstractPlayingCard
-    HeartPlayingCard              ClubPlayingCard
-        AceOfHeartsPlayingCard        AceOfClubsPlayingCard    
-        TwoOfHeartsPlayingCard        TwoOfClubsPlayingCard    
-        ThreeOfHeartsPlayingCard      ThreeOfClubsPlayingCard  
-        FourOfHeartsPlayingCard       FourOfClubsPlayingCard   
-        FiveOfHeartsPlayingCard       FiveOfClubsPlayingCard   
-        SixOfHeartsPlayingCard        SixOfClubsPlayingCard    
-        SevenOfHeartsPlayingCard      SevenOfClubsPlayingCard  
-        EightOfHeartsPlayingCard      EightOfClubsPlayingCard  
-        NineOfHeartsPlayingCard       NineOfClubsPlayingCard   
-        TenOfHeartsPlayingCard        TenOfClubsPlayingCard    
-        JackOfHeartsPlayingCard       JackOfClubsPlayingCard   
-        QueenOfHeartsPlayingCard      QueenOfClubsPlayingCard  
-        KingOfHeartsPlayingCard       KingOfClubsPlayingCard   
-    SpadePlayingCard              DiamondPlayingCard
-        AceOfSpadesPlayingCard        AceOfDiamondsPlayingCard    
-        TwoOfSpadesPlayingCard        TwoOfDiamondsPlayingCard    
-        ThreeOfSpadesPlayingCard      ThreeOfDiamondsPlayingCard  
-        FourOfSpadesPlayingCard       FourOfDiamondsPlayingCard   
-        FiveOfSpadesPlayingCard       FiveOfDiamondsPlayingCard   
-        SixOfSpadesPlayingCard        SixOfDiamondsPlayingCard    
-        SevenOfSpadesPlayingCard      SevenOfDiamondsPlayingCard  
-        EightOfSpadesPlayingCard      EightOfDiamondsPlayingCard  
-        NineOfSpadesPlayingCard       NineOfDiamondsPlayingCard   
-        TenOfSpadesPlayingCard        TenOfDiamondsPlayingCard    
-        JackOfSpadesPlayingCard       JackOfDiamondsPlayingCard   
-        QueenOfSpadesPlayingCard      QueenOfDiamondsPlayingCard  
-        KingOfSpadesPlayingCard       KingOfDiamondsPlayingCard   
-```
-
-</span>
-
---
-
-### Possible solutions - 20+ Classes
-
-<img src="{{ "/images/Cards3.png" | absolute_url }}" alt="Class diagram where every Suit and every FaceValue is a class in its own right">
-
---
-
-### Composition: the other way
-
-+ Another way to achieve code-reuse
-+ Classes are compose of (contain instances of) other classes
-+ These instances implement the desired reusable functionality
-+ Composition avoids brittle inheritance trees
-+ Another way to achieve the same thing—composition is still OO
-
---
-
-### Our Vehicle example
-
-```java
-class Vehicle {
-    void accelerate(){
-        System.out.println("Getting faster");
-    }
-}
-
-class Car extends Vehicle {
-    private SteeringWheel steeringWheel;
-}
-```
-
-Note: Car contains a steering wheel  
-  Go karts and boats also require a steering wheel  
-  Car doesn’t attempt to inherit the steering wheel behaviour by inheriting it from some AbstractSteerableVehicle
-
---
-
-## Another example: Pizza
-
-<img src="{{ "images/pizza-inheritance-composition.webp" | absolute_url }}">
-
-Note: Who likes pineapple on a pizza?  
-  Inheritance approach left, composition right  
-  Discuss pros/cons  
-  What if you want to stop serving margherita?  
-
---
-
-## Composition powers OO-CSS
-
-+ Caution: CSS
-+ OO-CSS splits structure and skin into separate CSS blocks
-+ Skin can be reused, being applied to all sorts of different elements
-+ Classes are applied to elements to ‘import’ the bits of reusable style
