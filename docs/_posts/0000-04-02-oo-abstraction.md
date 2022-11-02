@@ -40,13 +40,12 @@ Note: These definitions are not complete, but are dictionary definitions and hav
 We achieve ***abstraction*** by hiding
 ***implementation*** behind interfaces
 
-```text
-┌───────────┐     ┌───────────────┐      ┌────────────────┐
-│           │     │               │      │                │
-│   Client  ├─────► <<Interface>> ◄──────┤ Implementation │
-│           │     │               │      │                │
-└───────────┘     └───────────────┘      └────────────────┘
-```
+
+<mermaid>
+classDiagram
+    Client --> Interface : uses
+    Interface <|-- Implementation : implements
+</mermaid>
 
 Note: Point out that the client has no knowledge of / interaction with the implementation.   
 
@@ -56,20 +55,14 @@ Note: Point out that the client has no knowledge of / interaction with the imple
 
 Once you learn to write, you can write with any number of instruments.
 
-```text
- ┌──────────┐ Writes with    ┌──────────────────────┐
- │  Person  ├────────────────► «Writing Instrument» │
- └──────────┘                └──────────▲───────────┘
-                                        │
-                                        │Implements
-                             ┌───────┐  │  ┌─────────┐
-                             │  Pen  ├──┼──┤  Quill  │
-                             └───────┘  │  └─────────┘
-                                        │
-                          ┌──────────┐  │  ┌─────────┐
-                          │  Pencil  ├──┴──┤  Chalk  │
-                          └──────────┘     └─────────┘
-```
+<mermaid>
+classDiagram
+    Person --> Writing Instrument : writes with
+    Writing Instrument <|-- Pen : implements
+    Writing Instrument <|-- Quill : implements
+    Writing Instrument <|-- Pencil : implements
+    Writing Instrument <|-- Chalk : implements
+</mermaid>
 
 --
 
@@ -111,25 +104,22 @@ Walk through the Snap example
 
 --
 
-### What have we done?
+### What have we done? Before…
 
-```text
-Before:
+<mermaid>
+classDiagram
+  Snap --> AnimalCard : snap(Card)
+</mermaid>
 
-┌────────┐
-│        │  snap(Card) ┌────────────┐
-│  Snap  ├─────────────► AnimalCard │
-│        │             └────────────┘
-└────────┘
+--
 
-After:
+### What have we done? After…
 
-┌────────┐
-│        │  snap(Card) ┌────────────┐ implements ┌────────────┐
-│  Snap  ├─────────────►  <<Card>>  ◄────────────┤ AnimalCard │
-│        │             └────────────┘            └────────────┘
-└────────┘
-```
+<mermaid>
+classDiagram
+  Snap --> Card : snap(Card)
+  Card <|-- AnimalCard : implements
+</mermaid>
 
 --
 
@@ -143,41 +133,27 @@ After:
 
 --
 
-### What have we done?
+### What have we done? Before…
 
-```text
-Before:
+<mermaid>
+classDiagram
+  Snap --> AnimalDeck : getCards()
+  Snap --> AnimalDeck : deal()
+  Snap --> AnimalDeck : shuffle()
+</mermaid>
 
-┌────────────┐  getCards()  ┌────────────┐
-│            ├─────────────►│            │
-│            │              │            │
-│            │  deal()      │            │
-│    Snap    ├─────────────►│ AnimalDeck │
-│            │              │            │
-│            │  shuffle()   │            │
-│            ├─────────────►│            │
-└────────────┘              └────────────┘
-
-```
 
 --
 
-### What have we done?
+### What have we done? After…
 
-```text
-After:
-
-┌──────────┐  getCards()  ┌──────────┐
-│          ├─────────────►│          │
-│          │              │          │
-│          │  deal()      │          │ implements ┌────────────┐
-│   Snap   ├─────────────►│ <<Deck>> ◄────────────┤ AnimalDeck │
-│          │              │          │            └────────────┘
-│          │  shuffle()   │          │
-│          ├─────────────►│          │
-└──────────┘              └──────────┘
-
-```
+<mermaid>
+classDiagram
+  Snap --> Deck : getCards()
+  Snap --> Deck : deal()
+  Snap --> Deck : shuffle()
+  Deck <|-- AnimalDeck : implements
+</mermaid>
 
 --
 
@@ -196,23 +172,18 @@ After:
 
 ### What have we ended up with?
 
-```text
-                                      implements  ┌────────────┐
-┌────────┐                                 ┌──────┤ AnimalCard │
-│        │  snap(Card)  ┌───────────┐      │      └────────────┘
-│        ├──────────────►  <<Card>> ◄──────┤
-│        │              └───────────┘      │      ┌────────────┐
-│        │                                 └──────┤PlayingCard │
-│        │  getCards()  ┌────────────┐            └────────────┘
-│  Snap  ├──────────────►            │
-│        │              │            │            ┌────────────┐
-│        │  deal()      │            │    ┌───────┤ AnimalDeck │
-│        ├──────────────►  <<Deck>>  ◄────┤       └────────────┘
-│        │              │            │    │
-│        │  shuffle()   │            │    │  ┌─────────────────┐
-│        ├──────────────►            │    └──┤ PlayingCardDeck │
-└────────┘              └────────────┘       └─────────────────┘
-```
+<mermaid>
+classDiagram
+  Snap --> Card : snap(Card)
+  Card <|-- AnimalCard : implements
+  Card <|-- PlayingCard : implements
+  Snap --> Deck : getCards()
+  Snap --> Deck : deal()
+  Snap --> Deck : shuffle()
+  Deck <|-- AnimalDeck : implements
+  Deck <|-- PlayingCardDeck : implements
+</mermaid>
+
 Notes:
 Emphasise that we can now toggle between different types of card without making significant changes to Snap.
 We could even let the user decide at runtime.

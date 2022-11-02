@@ -225,19 +225,14 @@ Note: Different because most languages only have one way to do this
 
 ### A simplified class diagram
 
-```text
-                    ┌──────────────┐
-                    │  Class Name  │
-                    │              │
-                    │  Attributes  │
-                    │              │
-                    │  Methods     │
-                    └──────▲───────┘
-                           │
-                           │inheritance
-                     ┌─────┴──────┐
-                     │Child Class │
-                     │            │
-                     └────────────┘
-```
-
+<mermaid>
+classDiagram
+    Parent Class <|-- Child Class 
+    class Parent Class {
+        attribute1
+        attribute2
+        method1()
+        method2()
+    }
+    class Child Class
+</mermaid>

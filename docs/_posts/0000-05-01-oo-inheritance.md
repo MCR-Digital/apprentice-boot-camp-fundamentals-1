@@ -23,21 +23,12 @@ Ask these questions to the group and whiteboard their answers.
 --
 
 ### Inheritance an example
-```text
 
-                     ┌──────────────┐
-                     │   Vehicle    │
-                     │              │
-                     │              │
-                     │              │
-                     └────▲─────▲───┘
-                          │     │ extends
-                          │     │
-          ┌─────────┬─────┘     └────┬───────────┐
-          │   Car   │                │ Motorbike │
-          └─────────┘                └───────────┘
-
-```
+<mermaid>
+classDiagram
+  Vehicle <|-- Car : extends
+  Vehicle <|-- Motorbike : extends
+</mermaid>
 
 Note:
 Point out which class is the parent/super class and which is the child/sub class
@@ -47,21 +38,16 @@ Point out which class is the parent/super class and which is the child/sub class
 
 
 ### Inheritance - sharing functionality
-```text
 
-                     ┌──────────────┐
-                     │   Vehicle    │
-                     │              │
-                     │  getPrice()  │
-                     │              │
-                     └────▲─────▲───┘
-                          │     │ 
-                          │     │
-          ┌─────────┬─────┘     └────┬───────────┐
-          │   Car   │                │ Motorbike │
-          └─────────┘                └───────────┘
+<mermaid>
+classDiagram
+  Vehicle <|-- Car : extends
+  Vehicle <|-- Motorbike : extends
+  class Vehicle {
+    getPrice()
+  }
+</mermaid>
 
-```
 Note:
 The benefit of inheritance is it saves us from having to implement getPrice in both sub classes - duplication
 
@@ -69,23 +55,18 @@ The benefit of inheritance is it saves us from having to implement getPrice in b
 --
 
 ### Inheritance - extending functionality
-```text
-                     ┌──────────────┐
-                     │   Vehicle    │
-                     │              │
-                     │  getPrice()  │
-                     │              │
-                     └────▲─────▲───┘
-                          │     │
-                          │     │
-        ┌───────────┬─────┘     └────┬───────────┐
-        │    Car    │                │ Motorbike │
-        │           │                └───────────┘
-        │ getDoors()│
-        │           │
-        └───────────┘
 
-```
+<mermaid>
+classDiagram
+  Vehicle <|-- Car : extends
+  Vehicle <|-- Motorbike : extends
+  class Vehicle {
+    getPrice()
+  }
+  class Car {
+    getDoors()
+  }
+</mermaid>
 
 Note:
 We can add different behaviours to sub classes as appropriate
@@ -94,23 +75,21 @@ We can add different behaviours to sub classes as appropriate
 
 ### Inheritance - altering functionality
 
-```text
- 
-                     ┌──────────────┐
-                     │   Vehicle    │
-                     │              │
-                     │  getPrice()  │
-                     │              │
-                     └────▲─────▲───┘
-                          │     │
-                          │     │
-        ┌───────────┬─────┘     └────┬───────────┐
-        │    Car    │                │ Motorbike │
-        │           │                │           │
-        │ getDoors()│                │ getPrice()│
-        │           │                │           │
-        └───────────┘                └───────────┘
-```
+<mermaid>
+classDiagram
+  Vehicle <|-- Car : extends
+  Vehicle <|-- Motorbike : extends
+  class Vehicle {
+    getPrice()
+  }
+  class Motorbike {
+    getPrice()
+  }
+  class Car {
+    getDoors()
+  }
+</mermaid>
+
 + This technique is called overriding
 
 Note:
@@ -131,24 +110,30 @@ Work in language groups to collaboratively come up with a diagram
 
 ## Exercise Review and Implementation
 
-```text
+<mermaid>
+classDiagram
+    Card <|-- AnimalCard : implements
+    Card <|-- PlayingCard : implements
+    class PlayingCard {
+        snap(Card)
+    }
+    class AnimalCard {
+        snap(Card)
+    }
+    Deck <|-- AnimalDeck : implements
+    Deck <|-- PlayingCardDeck : implements
+    class PlayingCardDeck {
+        getCards()
+        deal()
+        shuffle()
+    }
+    class AnimalDeck {
+        getCards()
+        deal()
+        shuffle()
+    }
+</mermaid>
 
-
-        ┌──────────┐                       ┌──────┐
-        │   Card   │                       │ Deck │
-        │          │                       └───▲──┘
-        │          │                           │
-        └────▲─────┘        ┌─────────────────┬┴┬──────────────┐
-             │              │ PlayingCardDeck │ │AnimalCardDeck│
-┌───────────┬┴┬──────────┐  │                 │ │              │
-│PlayingCard│ │AnimalCard│  │  shuffle()      │ │ shuffle()    │
-│           │ │          │  │  deal()         │ │ deal()       │
-│snap(Card) │ │snap(Card)│  │  getCards()     │ │ getCards()   │
-└───────────┘ └──────────┘  └─────────────────┘ └──────────────┘
-
-
-
-```
 + Now change your code to use inheritance as shown above (15mins)
 
 --
@@ -158,23 +143,24 @@ Work in language groups to collaboratively come up with a diagram
 * Remove duplication from your code by moving common functionality into the parent classes
 * Your code should resemble the diagram below:
 
-```text
-        ┌────────────┐                   ┌───────────┐
-        │    Card    │                   │   Deck    │
-        │            │                   │           │
-        │            │                   │ shuffle() │
-        │            │                   │           │
-        │            │                   │ deal()    │
-        └──▲─────▲───┘                   │           │
-           │     │                       │ getCards()│
-           │     │                       └──▲──────▲─┘
-           │     │                          │      │
- ┌─────────┴─┐ ┌─┴─────────┐ ┌──────────────┴──┐ ┌─┴────────────┐
- │PlayingCard│ │AnimalCard │ │ PlayingCardDeck │ │AnimalCardDeck│
- │           │ │           │ │                 │ │              │
- │snap(Card) │ │ snap(Card)│ │                 │ │              │
- └───────────┘ └───────────┘ └─────────────────┘ └──────────────┘
-```
+<mermaid>
+classDiagram
+    Card <|-- AnimalCard : implements
+    Card <|-- PlayingCard : implements
+    class PlayingCard {
+        snap(Card)
+    }
+    class AnimalCard {
+        snap(Card)
+    }
+    Deck <|-- AnimalDeck : implements
+    Deck <|-- PlayingCardDeck : implements
+    class Deck {
+        getCards()
+        deal()
+        shuffle()
+    }
+</mermaid>
 
 --
 
