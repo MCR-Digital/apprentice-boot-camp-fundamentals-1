@@ -9,7 +9,7 @@ public class Cards {
         }
     }
 
-    String[] getCards() {
+    public String[] getCards() {
         String[] result = new String[52];
         int[][] deck = new int[52][2];
 

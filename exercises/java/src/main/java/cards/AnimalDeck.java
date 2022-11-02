@@ -8,7 +8,7 @@ class AnimalDeck {
 
     private List<AnimalCard> cards;
 
-    AnimalDeck() {
+    public AnimalDeck() {
         cards = new ArrayList<>();
         for (Animal animal : Animal.values()) {
             cards.add(new AnimalCard(animal));
@@ -16,11 +16,11 @@ class AnimalDeck {
         }
     }
 
-    void shuffle() {
+    public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    String[] getCards() {
+    public String[] getCards() {
         String[] result = new String[cards.size()];
         for (int i = 0; i < cards.size(); i++) {
             AnimalCard card = cards.get(i);
@@ -29,7 +29,7 @@ class AnimalDeck {
         return result;
     }
 
-    AnimalCard deal() {
+    public AnimalCard deal() {
         return cards.remove(0);
     }
 }
