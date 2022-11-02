@@ -71,7 +71,7 @@ Interfaces not really required in JS, but there are mechanisms.
  ```
 
 
-+As well as the existing ways in which the Snap game interacts with the Card and Deck classes
++ As well as the existing ways in which the Snap game interacts with the Card and Deck classes
 
 --
 
