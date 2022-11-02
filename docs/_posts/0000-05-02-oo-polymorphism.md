@@ -101,8 +101,8 @@ Interfaces not really required in JS, but there are mechanisms.
 
 ### Questions?
 
-+How are you going to build your MixedDeck?
-+You may struggle to get access to the cards in the existing AnimalDeck and PlayingCardDeck classes
++ How are you going to build your MixedDeck?
++ You may struggle to get access to the cards in the existing AnimalDeck and PlayingCardDeck classes
 
 
 Notes:
