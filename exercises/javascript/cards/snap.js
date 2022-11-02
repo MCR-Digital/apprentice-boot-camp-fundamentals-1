@@ -66,12 +66,8 @@ class Snap {
 
 var myArgs = process.argv.slice(2);
 if (myArgs.includes("animal")) {
-  const animalDeck = new AnimalDeck();
-  const snap = new Snap(animalDeck);
-  snap.play();
+  new Snap(new AnimalDeck()).play();
 }
 else {
-  const deck = new PlayingCardDeck();
-  const snap = new Snap(deck);
-  snap.play();
+  new Snap(new PlayingCardDeck()).play();
 }

@@ -1,5 +1,8 @@
-class PlayingCard {
+const { CardStock } = require('./card-stock.js');
+
+class PlayingCard extends CardStock {
     constructor(suit, faceValue) {
+        super(faceValue);
         this.suit = suit;
         this.faceValue = this.getFaceValue(faceValue);
     }
@@ -8,23 +11,19 @@ class PlayingCard {
         switch(faceValue) {
             case 1:
                 return "ace";
-      
+
             case 11:
                 return "jack";
-            
+                
             case 12:
                 return "queen";
-    
+
             case 13:
                 return "king";
 
             default:
                 return faceValue;
         }
-    }
-
-    snap(otherCard) {
-        return otherCard && this.faceValue === otherCard.faceValue;
     }
 
     toString() {
