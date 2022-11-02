@@ -1,4 +1,4 @@
-const animals = require('../animal.js').Animal;
+const animals = require('../card-types/animal.js').Animal;
 const { AnimalCard } = require('../card-types/animal-card.js');
 const { CardStockDeck } = require('./card-stock-deck.js');
 
