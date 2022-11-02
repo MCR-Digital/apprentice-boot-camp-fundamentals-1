@@ -1,47 +1,48 @@
-# Boot-camp
-## Fundamentals 1
-# Day Two
-
----
-
-# Quick Recap
-
-+ Positioned OO alongside other programming styles
-+ Encapsulation
-+ Abstraction
-+ Inheritance
-+ Polymorphism
+# Single Responsibility Principle
 
 --
 
 So… Object Orientation makes your code good?
 
-Note: Danger of thinking OO == good code
+Note: Danger of thinking OO == good code  
+    Frequently terrible code written in the name of OO  
+    Hard to do which impacts success  
 
 --
 
-# Objects make sense in the real world
+## Objects make sense in the real world
 
 Note: Think in terms of objects  
-Very natural
+    Very natural
 
 --
 
-# Sometimes less so in software
+## Technical concepts can be hard to imagine
 
-Note: e.g. Car, Advert, Customer    
-Real life things  
-OOP attempts to model the tangible real world  
-Technology (DB/events etc) often not tangible
+This can make it hard to decide how to represent them with objects.
+
+Note: e.g. Car, Advert, Customer  
+    Real life things  
+    OOP attempts to model the tangible real world  
+    Tech concepts (search, update etc) not as tangible  
 
 --
 
-## There are some principles to help!
+## This makes it hard to build a good OO design
+
+Much of the behaviour in an application ends up not belonging to the objects it relates to.
+
+Note: Basically no one manages to do this  
+    e.g. AbstractSingletonProxyFactoryBean  
+
+--
+
+## There are some principles to help you design!
 
 Note: Many principles in software  
-Explain principles vs practices  
-Usually hold true across most examples  
-Not always easy to apply  
+    Explain principles vs practices  
+    Usually hold true across most examples  
+    Not always easy to apply  
 
 ---
 
@@ -65,24 +66,26 @@ Note: every module or class should have responsibility over a single part of the
 
 --
 
-# Robert C Martin
+## Robert C Martin
 
 (Uncle Bob)
 
++ Co-author of the Agile Manifesto
++ Also introduced ‘Clean Code’ term
++ Done some good stuff…
+
 Note:
   Term introduced by Robert C Martin / Uncle Bob  
-  Co-author of the Agile Manifesto  
-  Also introduced ‘Clean Code’ term  
   Position these contributions  
 
 --
 
-“A class should have only one reason to change.”  
+> “A class should have only one reason to change.”  
 —Robert C Martin in ‘Agile Software Development, Principles, Patterns, and Practices’
 
 --
 
-# Good code is organised
+## Good code is organised
 
 Organisation more important as code base grows
 
@@ -92,7 +95,7 @@ Note: Discuss importance with 50k+ LOC across thousands of classes
 
 --
 
-# Cohesion
+## Cohesion
 
 “degree to which the elements inside a module belong together.”  
 —Edward Yourdon & Larry L. Constantine in ‘Structured Design: Fundamentals of a Discipline of Computer Program and Systems Design’
@@ -102,25 +105,26 @@ Note: Cohesion is a good quality
 
 --
 
-# Classic Examples
+### Classic example of things with one responsibility
 
 Shout them out
 
-+ Gaffa tape: stops things moving
-+ Hammer: hammers things
-+ Mug: holds liquid
++ 🗜 Clamp: stops things moving
++ 🔨 Hammer: hammers things
++ ☕️ Mug: holds liquid
 
 --
 
-# Classic Counter-Examples
+### Classic Counter-Examples
+(things with multiple responsibilities)
 
-+ Food processor: chops, mixes, whips, grates, slices
-+ Swiss army knife: cuts, screws, unpicks, de-corks
-+ Spork: cuts, spoons
++ 🔪🥒 Food processor: chops, mixes, whips, grates, slices
++ 🔪🔩🍾 Swiss army knife: cuts, screws, unpicks, de-corks
++ 🍴🥄 Spork: cuts, spoons
 
 --
 
-# Consider Fizz Buzz…
+## Consider Fizz Buzz…
 
 How many responsibilities?
 
@@ -129,7 +133,7 @@ Note: Hard to say
 
 --
 
-# Responsibility is hard
+## Responsibility is hard
 
 It’s not always black and white
 
@@ -137,11 +141,10 @@ Note: There’s more than one correct answer
 
 --
 
-<backgroundimage>{{ site.github.url }}/images/car-diagram.jpg</backgroundimage>
+<backgroundimage>{{ "/images/car-diagram.jpg" | absolute_url }}</backgroundimage>
 <backgroundimageopacity>0.25</backgroundimageopacity>
 
-
-# What about a car?
+## What about a car?
 
 Is it one responsiblity or more?
 
@@ -156,7 +159,7 @@ Is it one responsiblity or more?
 
 ---
 
-# Functional Decomposition
+## Functional Decomposition
 
 “… the process of taking a complex process and breaking it down into its smaller, simpler parts.”  
 —[Stack Overflow](https://stackoverflow.com/questions/947874/what-is-functional-decomposition)
@@ -167,20 +170,20 @@ Note: FD critical skill when designing systems
 
 --
 
-# How deep?
+## How deep?
 
 You can keep decomposing the functions into smaller components:
 
-- Car
-  - Dashboard
-    - Speed indicator
-      - Speedometer
-        - Magnet
-          - Atoms
++ 🚘 Car
+  + 🎛 Dashboard
+    + Speed indicator
+      + Speedometer
+        + 🧲 Magnet
+          + ⚛️ Atoms
 
 --
 
-# Keep it sensible
+## Keep it sensible
 
 Don’t decompose too far.
 
@@ -191,31 +194,31 @@ Don’t decompose too far.
 Trading off cohesion and reduced responsibility
 
 Note: When responsibility too small you lose cohesion  
-  May need to perform shotgun surgery across many components to make a single change
+  May need to make multiple code changes across the codebase to make a single functional change
 
 --
 
-# Aim for sensible outcomes
+## Aim for sensible outcomes
 
-When requirements change, should have one change to make
+One change to the requirements should result in one change to the code
 
-Note: E.g. choice of using set or list
+Note: E.g. choice of using set or list  
   Should be able to swap out in one place  
   This is the thing that is responsible for storing that thing  
 
 --
 
-# Abstraction
-
-(not the OO principle)
+## Abstraction
 
 Stay at one level of abstraction within a component
 
-Note: Don’t describe a bathroom as a toilet, a bath and a flow control valve—you call it a tap. 
+Note: Don’t describe a bathroom as a toilet, a bath and a flow control valve—you call it a tap.  
+    Inside a component diff lower abstraction to outside  
+    Encapsulation protects code outside from lower level of abstraction  
 
 --
 
-# General rules
+## General rules
 
 Stuff inside a class should change together
 
@@ -228,26 +231,25 @@ Note: We want to make changes carefully
 
 --
 
-# Negative Indicators
+## Negative Indicators
 
 Visual signs that a class might have multiple responsibilities:
 
 + It’s massive
 + Multiple constructors
 + Name doesn’t match contents
-+ Name is confusing/too generic
++ Name is confusing/too generic/contains ‘And’
 + People are scared to change it
 
 Note: Generally classes grow as extra responsibility creeps in  
   Classes generally need one set of collaborators  
   Bad names are like a bad foundation  
   Multiple responsibilities can cause surprises when changing things  
+  Think at the method level too.  
 
 ---
 
-# Checkout Kata
-
-[Checkout kata](http://codekata.com/kata/kata09-back-to-the-checkout/)
+### Exercise: [Checkout Kata](http://codekata.com/kata/kata09-back-to-the-checkout/) (80 mins)
 
 ```plain
   Item   Unit      Special
@@ -259,24 +261,20 @@ Note: Generally classes grow as extra responsibility creeps in
     D     15
 ```
 
-Note: Kata requires code to handle running total and offers  
-  This is all done (badly)
-
---
-
-# Coding Exercise (20 mins)
-
-* Split into groups
 * Make some changes:
   + Change it so that you can have 4 ‘C’ for 70
   + Change it so that you can have 5 ‘D’ for 60
   + Change it so that you can have 4 ‘A’ for 180
+    * Existing tests must pass with the same scenarios
+    * Your code will need to pass the discounts into the Checkout object to achieve this
 
-Note: Do changes one by one as you don't want them to know that ‘A’ will change
+Note: Kata requires code to handle running total and offers  
+  This is all done (badly)
+  Do changes one by one as you don't want them to know that ‘A’ will change
 
 --
 
-# Reflection Exercise (10 mins)
+## Reflection Exercise (10 mins)
 
 * Discuss our crude Checkout implementation
 * Write three sets of post-its:
@@ -286,9 +284,9 @@ Note: Do changes one by one as you don't want them to know that ‘A’ will cha
 
 --
 
-# Review post-its
+## Review post-its
 
-## What responsibility does Checkout have?
+### What responsibility does Checkout have?
 
 + Pricing
 + Tracking running total
@@ -298,17 +296,17 @@ Note: Where would you add new functionality?
 
 --
 
-# Review post-its
+## Review post-its
 
-## How could you split it up?
+### How could you split it up?
 
 Note: May need to prompt: Scanner, Item, Offer Rule  
 
 --
 
-# Review post-its
+## Review post-its
 
-## What problems will this design face?
+### What problems will this design face?
 
 Note: Was it readable?  
   Was it clear where to add new functionality?  
@@ -318,7 +316,7 @@ Note: Was it readable?
 
 --
 
-# Exercise (30 mins)
+## Exercise (30 mins)
 
 Improve the design by separating responsibility
 

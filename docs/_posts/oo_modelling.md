@@ -1,11 +1,9 @@
 ### Mini-Auto Trader Scenario
 
-<img src="{{ site.github.url }}/images/2cv.png" style="height: 200px;" alt="picture of a 2CV advert">
-
-<font size=3 align='left'>
+<div  align='left' style="font-size: 24px; ">
 
 <p>
-AutoTrader is an organisation which advertises both new and used vehicles for sale.
+Auto Trader is an organisation which advertises both new and used vehicles for sale.
 Vehicles are advertised by both private individuals and dealers, and can be of many
 different types, including cars, motorbikes and vans.
 An advert, as displayed on the website, includes a price, a description, a make, a model and a registration.
@@ -30,5 +28,5 @@ such as those run by car dealerships as well as other businesses.
 Customers are billed every month, dealers are billed based on the products they have selected, whereas private individuals are billed for each individual advert.
 </p>
 
-</font>
+</div>
 

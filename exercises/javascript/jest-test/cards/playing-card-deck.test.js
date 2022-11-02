@@ -1,9 +1,9 @@
-const { Encapsulation } = require('../../cards/encapsulation.js');
+const { PlayingCardDeck } = require('../../cards/deck-types/playing-card-deck.js');
 
 describe('getCards', function () {
   test('get deck in order, return 52 cards correctly formatted', function () {
-    let encapsulation = new Encapsulation();
-    expect(encapsulation.getCards()).toStrictEqual([
+    let playingCards = new PlayingCardDeck();
+    expect(playingCards.getCards()).toStrictEqual([
       "ace of clubs",
       "2 of clubs",
       "3 of clubs",

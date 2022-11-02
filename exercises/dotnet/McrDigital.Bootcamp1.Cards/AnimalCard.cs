@@ -1,21 +1,27 @@
-namespace McrDigital.Bootcamp1.Cards {
-  public class AnimalCard {
-    private readonly Animal _animal;
+namespace McrDigital.Bootcamp1.Cards
+{
+    public class AnimalCard : Card
+    {
+        private readonly Animal _animal;
 
-    public AnimalCard(Animal animal) {
-      this._animal = animal;
-    }
+        public AnimalCard(Animal animal)
+        {
+            _animal = animal;
+        }
 
-    public Animal Animal {
-      get => this._animal;
-    }
+        public Animal Animal
+        {
+            get => _animal;
+        }
 
-    public bool Snap(AnimalCard other) {
-      return this._animal == other._animal;
-    }
+        public override bool Snap(Card other)
+        {
+            return _animal == ((AnimalCard) other)._animal;
+        }
 
-    public override string ToString() {
-      return this._animal.ToString();
+        public override string ToString()
+        {
+            return _animal.ToString();
+        }
     }
-  }
 }

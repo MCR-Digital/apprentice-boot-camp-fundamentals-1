@@ -1,0 +1,11 @@
+.reveal kbd kbd {
+    color: black;
+    display: inline-block;
+    border-radius: .2em;
+    padding: .1em;
+    background-color: #ddd;
+    font-size: 80%;
+    box-shadow: 0 2px 0 2px #aaa, inset 0 1px 0 0 white;
+    min-width: 1em;
+    text-align: center;
+}

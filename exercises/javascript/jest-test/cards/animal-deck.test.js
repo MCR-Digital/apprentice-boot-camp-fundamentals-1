@@ -1,4 +1,4 @@
-const { AnimalDeck } = require('../../cards/animal-deck.js');
+const { AnimalDeck } = require('../../cards/deck-types/animal-deck.js');
 
 describe('AnimalDeck', function () {
   test('get deck in order, return 52 cards correctly formatted', function () {

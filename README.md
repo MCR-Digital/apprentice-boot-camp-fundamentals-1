@@ -24,30 +24,39 @@
 
 ## Mentors / Languages
  
-Two–three mentors required in addition to leads. These should be able to cover support for the required languages.
+One mentor required per three apprentices (leads can act as mentors). These should be able to cover support for the required languages.
 
-Several exercises (katas and code starters) will need to be ported to required languages.
+Several exercises (katas and code starters) will need to be ported to required languages if not already done.
 
 ## Prep-work for apprentices
 
-None
+* Make sure you can sign in to github.com with your own account
+* **Fork** this repo (so you can push your changes later)
+* Clone your fork: `git clone https://github.com/[your-username]/apprentice-boot-camp-fundamentals-1.git`
+* Follow the instructions in the README for your language under the `exercises` directory, **making sure you can run the tests**
+  * [Java](exercises/java/README.md)
+  * [JavaScript](exercises/javascript/README.md)
+  * [C#](exercises/dotnet/README.md)
+* It’s normal to have problems with this, so just let us know! :) 
 
 ## Follow-on tasks
 
 Organisation mentors should look to exercise the knowledge we’ve covered in the boot camp. Below are suggestions for tasks that would do this, but please use your own judgement to work out what to do. There is no need for anything to be returned to MD or the presenters—it’s just a learning exercise.
 
 * Draw a diagram showing how the classes interact in some code you have been working on
-* We’d like them to recognise Encapsulation, Abstraction, Inheritance, Polymorphism
+* They should identify Encapsulation, Abstraction, Inheritance, Polymorphism (this might require some discussion)
 * Take a look at one of your codebases and find examples of classes with multiple responsibilities
+* Try to improve some existing classes or methods with multiple responsibilities by using some of the OO principals
+* Finish off the exercises started at the boot camp (checkout kata for example)
 
 ## Further reading / learning resources
 
 <!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
 
 * [Supermarket Kata](http://codekata.com/kata/kata09-back-to-the-checkout/)
-* [Duplicate Code ‘Code Smell’](https://refactoring.guru/smells/duplicate-code)
 * [The Secret behind the Single Responsibility Principle](https://hackernoon.com/the-secret-behind-the-single-responsibility-principle-e2f3692bae25) on Hacker Noon
 * [Clean Code](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C Martin
+* [Duplicate Code ‘Code Smell’](https://refactoring.guru/smells/duplicate-code)
  
 ## Slides
 
@@ -99,3 +108,7 @@ The slides can be viewed from the link at the top of the repository.
 * Cohesion
 * Functional Decomposition
 * Critiquing and adapting poorly implemented checkout kata
+
+# Contributing
+
+If you’d like to contribute changes to the slides or exercises, please see [our contributing guidance](CONTRIBUTING.md).
