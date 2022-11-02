@@ -2,7 +2,7 @@
 
 namespace McrDigital.Bootcamp1.Cards
 {
-    public class PlayingCard : ICard
+    public class PlayingCard : Card
     {
         public readonly int FaceValue;
         public readonly Suit Suit;
@@ -13,7 +13,7 @@ namespace McrDigital.Bootcamp1.Cards
             FaceValue = faceValue;
         }
 
-        public bool Snap(ICard card)
+        public override bool Snap(Card card)
         {
             return ((PlayingCard) card).FaceValue == FaceValue;
         }
