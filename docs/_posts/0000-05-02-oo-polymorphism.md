@@ -106,9 +106,9 @@ Interfaces not really required in JS, but there are mechanisms.
 
 
 Notes:
-Building the deck feels like a job for the constructor which could be a useful conversation.
-The Deck interface doesn't have a handy way to get access to the cards which gives you a chance to talk about encapsulation.
-With a bit of lateral thinking you can deal() cards from the existing decks into a new MixedDeck without having to change the api.
+Building the deck feels like a job for the constructor which could be a useful conversation.  
+The Deck interface doesn't have a handy way to get access to the cards which gives you a chance to talk about encapsulation.  
+With a bit of lateral thinking you can deal() cards from the existing decks into a new MixedDeck without having to change the API.  
 
 --
 
