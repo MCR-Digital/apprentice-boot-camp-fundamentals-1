@@ -11,7 +11,7 @@ remote_delivery: false
 reveal_theme: league.css
 
 # The Reveal transition
-reveal_transition: default
+reveal_transition: none
 
 # Path to the used theme (defaults to the Reveal.js standard theme path)
 reveal_theme_path: assets/reveal.js/css/theme/ 
@@ -30,6 +30,8 @@ reveal_notes_server: false
 reveal_options:
   slideNumber: 'c/t'
   fragmentInURL: true
+  
+mermaid_diagrams: true
 
 # Additional reveal.js dependencies
 reveal_dependencies: 
