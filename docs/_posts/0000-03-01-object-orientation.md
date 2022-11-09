@@ -227,12 +227,13 @@ Note: Different because most languages only have one way to do this
 
 <mermaid>
 classDiagram
-    Parent Class <|-- Child Class 
+    Parent Class <|-- Child Class : implements / extends
     class Parent Class {
         attribute1
         attribute2
         method1()
         method2()
     }
+    ParentClass --> SomeOtherClass : callSomeMethod()
     class Child Class
 </mermaid>
