@@ -166,7 +166,7 @@ classDiagram
 
 <mermaid>
 classDiagram
-    PlayingCard *-- Suit
+    PlayingCard *-- Suit : Composition
     class PlayingCard {
         Suit suit
         int faceValue
@@ -176,7 +176,7 @@ classDiagram
     }
 </mermaid>
 
-Note: The relationship shown here is composition. PlayCard is composed of a Suit.
+Note: The relationship shown here is composition. PlayingCard is composed of a Suit.
 
 --
 
