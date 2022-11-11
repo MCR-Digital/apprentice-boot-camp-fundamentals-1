@@ -1,5 +1,5 @@
 export class AnimalCard {
-  private readonly animal: string
+  public readonly animal: string
 
   constructor(animal: string) {
     this.animal = animal
