@@ -1,8 +1,8 @@
-const { Cards } = require('./cards.js')
+import { Cards } from "./cards"
 
 describe('getCards', function () {
-  test('get deck in order, return 52 cards correctly formatted', function () {
-    let cards = new Cards()
+  test('get deck in order, return 52 cards correctly formatted', () => {
+    const cards = new Cards()
     expect(cards.getCards()).toStrictEqual([
       "ace of clubs",
       "2 of clubs",
