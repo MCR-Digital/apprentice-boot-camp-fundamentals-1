@@ -1,6 +1,6 @@
 # Unit Specification
 
-This diagram shows how the **_U_**nits, **_A_**ssessments and **_L_**earning outcomes described in the unit specification Word document relate to the KSBs.
+This diagram shows how the ***U***nits, ***A***ssessments and ***L***earning outcomes described in the unit specification Word document relate to the KSBs.
 
 ```mermaid
 graph LR
