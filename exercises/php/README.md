@@ -30,7 +30,7 @@ ala `npm`). To do this:
 cd excercises/php/
 ```
 
-- Run the following `PHP` command
+- Run the following `PHP` command:
 
 ```shell
 php composer.phar install
@@ -38,4 +38,18 @@ php composer.phar install
 
 ## Running tests
 
-> TODO
+- Open a new terminal prompt pointing to this repository
+- Navigate to `exercises/php`, e.g.
+
+```shell
+cd excercises/php/
+```
+
+- Run the following command:
+
+```shell
+./vendor/bin/phpunit --testdox tests
+```
+
+You should see an output with the tests that have run and how many passed/failed, _no_ tests should fail so let someone
+know if they do!
