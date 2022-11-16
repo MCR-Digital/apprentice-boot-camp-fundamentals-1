@@ -1,0 +1,7 @@
+{
+    "name": "mcr-digital/php-fundamentals-1",
+    "type": "project",
+    "require": {
+        "adhocore/cli": "^1.2"
+    }
+}
