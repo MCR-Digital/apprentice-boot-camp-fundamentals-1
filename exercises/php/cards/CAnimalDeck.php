@@ -21,14 +21,14 @@ class CAnimalDeck
     {
         $result = [];
         foreach ($this->cards as $card) {
-            $result[] = $card;
+            $result[] = strval($card);
         }
         return $result;
     }
 
     public function shuffle(): void
     {
-        for($i = 0; $i < count($this->cards); ++$i) {
+        for ($i = 0; $i < count($this->cards); ++$i) {
             $indexA = rand(0, $i);
             $indexB = $i;
 
