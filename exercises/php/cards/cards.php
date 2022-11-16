@@ -1,6 +1,6 @@
 <?php
 
-class Cards
+class CCards
 {
     public function getCards(): array
     {
@@ -71,7 +71,7 @@ class Cards
 
 }
 
-$cards = new Cards();
+$cards = new CCards();
 $deckInOrder = $cards->getCards();
 
 foreach ($deckInOrder as $card) {

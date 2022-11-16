@@ -65,7 +65,7 @@ class CardsTest extends TestCase
     {
         $expectedCards = $this->testCards;
 
-        $cards = new Cards();
+        $cards = new CCards();
 
         $this->assertEquals($expectedCards, $cards->getCards());
     }
