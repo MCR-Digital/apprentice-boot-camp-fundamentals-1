@@ -166,7 +166,7 @@ classDiagram
 
 <mermaid>
 classDiagram
-    PlayingCard *-- Suit : Composition
+    PlayingCard
     class PlayingCard {
         Suit suit
         int faceValue
@@ -200,3 +200,80 @@ classDiagram
 * How does our code compare to the original version?
 * What's better?
 * What's worse?
+
+--
+
+## A note on constructors
+
++ Constructors are special methods used to create new objects
++ They're especially useful to set properties which won't change or default values
+
+--
+
+### Exercise - constructors (15mins)
+
+* If you haven't already, add constructors to your PlayingCard and PlayingCardDeck classes
+* You shouldn't need to write new code, but simply shift existing logic into the constructors
+
+<mermaid>
+classDiagram
+    PlayingCard
+    class PlayingCard {
+        Suit suit
+        int faceValue
+        PlayingCard(Suit suit, int faceValue)
+    }
+    class PlayingCardDeck {
+        Card[] cards
+        PlayingCardDeck()
+    }
+</mermaid>
+
+
+--
+
+### Behaviours
+
++ So far we have only moved state into classes - what about behaviours?
++ Each of our classes can be turned into a String so that we can show them to the user
++ Our classes should be able to provide a String representation of themselves
++ We can express this behaviour as a method on the classes
+
+--
+
+### Exercise - behaviours (20mins)
+
+* Implement a method on your PlayingCard PlayingCardDeck and Suit classes which provides this String representation
+* Again you shouldn't need to write new code, just move existing logic into these new methods
+
+<mermaid>
+classDiagram
+    PlayingCard
+    class PlayingCard {
+        Suit suit
+        int faceValue
+        PlayingCard(Suit suit, int faceValue)
+        toString() String
+    }
+    class PlayingCardDeck {
+        Card[] cards
+        PlayingCardDeck() 
+        toString() String
+    }
+    class Suit {
+        String name
+        toString() String
+    }
+</mermaid>
+
+Note: Point out that toString() is a Java convention, your language may be different
+
+The test should still pass, make sure they actually call the new method
+
+--
+
+## Exercise - Reflection
+
+* How does our code look now compared to the original?
+
+
