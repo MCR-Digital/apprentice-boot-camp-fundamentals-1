@@ -61,7 +61,7 @@ class CardsTest extends TestCase
         "king of spades"
     ];
 
-    public function testCanReturn52CorrectlyFormattedCards(): void
+    public function testShouldReturn52CorrectlyFormattedCards(): void
     {
         $expectedCards = $this->testCards;
 

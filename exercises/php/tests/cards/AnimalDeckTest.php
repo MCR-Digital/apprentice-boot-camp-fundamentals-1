@@ -8,7 +8,7 @@ class AnimalDeckTest extends TestCase
 {
     private array $testCards;
 
-    public function testCanReturn52CorrectlyFormattedCards(): void
+    public function testShouldReturn52CorrectlyFormattedCards(): void
     {
         $expectedCards = $this->testCards;
 
@@ -18,7 +18,7 @@ class AnimalDeckTest extends TestCase
         $this->assertEquals($expectedCards, $cards);
     }
 
-    public function testCanShuffleCardsInAnyOrder(): void
+    public function testShouldShuffleCardsInAnyOrder(): void
     {
         $expectedCards = $this->testCards;
 
