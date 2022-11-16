@@ -1,10 +1,10 @@
-class Encapsulation:
+class Cards:
     def __init__(self):
         pass
 
     def runner(self):
-        encapsulation = Encapsulation()
-        deck_in_order = encapsulation.get_cards()
+        cards = Cards()
+        deck_in_order = cards.get_cards()
         for card in deck_in_order:
             print(card)
 
@@ -46,5 +46,5 @@ class Encapsulation:
 
         return result
 
-encapsulation = Encapsulation()
-encapsulation.runner()
+cards = Cards()
+cards.runner()

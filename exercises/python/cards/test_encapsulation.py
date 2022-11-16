@@ -1,12 +1,12 @@
 import unittest
-from encapsulation import Encapsulation
+from cards import Cards
 
 
-class EncapsulationTest(unittest.TestCase):
+class CardsTest(unittest.TestCase):
 
     def test_get_deck_in_order_return_52_cards_correctly_formatted(self):
-        encapsulation = Encapsulation()
-        self.assertEqual(encapsulation.get_cards(), [
+        cards = Cards()
+        self.assertEqual(cards.get_cards(), [
             "ace of clubs",
             "2 of clubs",
             "3 of clubs",
