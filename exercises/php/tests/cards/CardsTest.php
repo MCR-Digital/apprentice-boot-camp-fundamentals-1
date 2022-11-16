@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../cards/cards.php';
+include 'cards/cards.php';
 
 use PHPUnit\Framework\TestCase;
 
