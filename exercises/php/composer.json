@@ -1,7 +1,12 @@
 {
     "name": "mcr-digital/php-fundamentals-1",
     "type": "project",
+    "autoload": {
+        "psr-4": {
+            "McrDigital\\PhpFundamentals1\\Cards\\": "cards/"
+        }
+    },
     "require": {
-        "adhocore/cli": "^1.2"
+        "php": ">=8.0"
     }
 }
