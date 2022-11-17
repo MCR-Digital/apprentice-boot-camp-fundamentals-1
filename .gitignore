@@ -19,5 +19,7 @@ node_modules
 package-lock.json
 
 *.pyc
+.phpunit.*
+vendor/
 
 .DS_Store
