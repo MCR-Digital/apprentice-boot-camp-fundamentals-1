@@ -1,13 +1,37 @@
-## Setting Up
+## Setting up
 
-You will need npm and node v14.15.0 or later. There are many different ways to install it https://nodejs.dev/learn/how-to-install-nodejs
+You will need npm and node v14.15.0 or later. 
 
-Windows setup instructions are here : https://phoenixnap.com/kb/install-node-js-npm-on-windows
+There are many ways to install it: https://nodejs.dev/en/learn/how-to-install-nodejs/
+
+Windows setup instructions are here: https://phoenixnap.com/kb/install-node-js-npm-on-windows
+
+Once you have node and npm installed, you will need to navigate into the typescript project using the command line: 
+- `cd exercises/typescript`
+
+You will then need to install the dependencies required by the project, this is done by running: 
+- `npm install`
 
 ## Running tests
 
-On the command line, navigate to this directory (`cd exercises/javascript`) and run `npm install` followed by `npm test`.
+On the command line, make sure you are within the typescript project (`exercises/typescript`) 
 
-If you would like the tests to run continuously in watch mode, run `npm run test:watch`. To cancel watch mode, press `q` to quit.
+To run the tests you can use either of the commands below:
 
-If you have any problems, let one of the people running the boot camp know and we will happily help! :) 
+- `npm test` - this will run all the tests in the project once
+- `npm run test:watch` - this will run all the tests continuously in watch mode, everytime you make a change, your tests will automatically run
+
+To exit out of watch mode, press `q`.
+
+If you have any problems, let one of the people running the boot camp know, we will happily help! :)
+
+## Running exercises
+
+On the command line, make sure you are within the typescript project (`exercises/typescript`).
+
+You can then run each of the exercises using the following commands: 
+
+- `npm run cards` - run the cards exercise
+- `npm run snap` - run the snap exercise
+
+If you would like to see how these work, take a peek at the `scripts` section in the `package.json` file.
