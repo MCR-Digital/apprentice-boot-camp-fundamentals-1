@@ -2,7 +2,9 @@
 
 namespace McrDigital\PhpFundamentals1\Cards;
 
-class AnimalCard
+use Exception;
+
+class AnimalCard implements Card
 {
     private string $animal;
 
@@ -16,9 +18,17 @@ class AnimalCard
         return $this->animal;
     }
 
-    public function snap(AnimalCard|null $card): bool
+    public function snap(?Card $card): bool
     {
-        return !!$card && $this->animal === $card->animal;
+        if (is_null($card)) {
+            return false;
+        }
+
+        if (!($card instanceof AnimalCard)) {
+            throw new Exception("Cannot compare mismatched card types!");
+        }
+
+        return $this->animal === $card->animal;
     }
 
 }
