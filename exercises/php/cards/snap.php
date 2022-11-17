@@ -7,7 +7,7 @@
  */
 
 
-use McrDigital\PhpFundamentals1\Cards\CAnimalDeck;
+use McrDigital\PhpFundamentals1\Cards\AnimalDeck;
 
 require_once '../vendor/autoload.php';
 
@@ -15,9 +15,9 @@ class CSnap
 {
     private int $player1Score;
     private int $player2Score;
-    private CAnimalDeck $deck;
+    private AnimalDeck $deck;
 
-    public function __construct(CAnimalDeck $deck)
+    public function __construct(AnimalDeck $deck)
     {
         $this->player1Score = 0;
         $this->player2Score = 0;
@@ -69,6 +69,6 @@ class CSnap
     }
 }
 
-$animalDeck = new CAnimalDeck();
+$animalDeck = new AnimalDeck();
 $snap = new CSnap($animalDeck);
 $snap->play();

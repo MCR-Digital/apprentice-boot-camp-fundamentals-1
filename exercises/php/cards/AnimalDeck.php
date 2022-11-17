@@ -2,7 +2,7 @@
 
 namespace McrDigital\PhpFundamentals1\Cards;
 
-class CAnimalDeck
+class AnimalDeck
 {
     private array $cards;
 
@@ -10,10 +10,10 @@ class CAnimalDeck
     {
         $this->cards = [];
 
-        $cAnimal = new CAnimal();
+        $cAnimal = new Animal();
         foreach ($cAnimal->animal as $animal) {
-            $this->cards[] = new CAnimalCard($animal);
-            $this->cards[] = new CAnimalCard($animal);
+            $this->cards[] = new AnimalCard($animal);
+            $this->cards[] = new AnimalCard($animal);
         }
     }
 
@@ -40,7 +40,7 @@ class CAnimalDeck
         }
     }
 
-    public function deal(): CAnimalCard
+    public function deal(): AnimalCard
     {
         $card = array_splice($this->cards, 0, 1)[0];
         return $card;

@@ -12,7 +12,7 @@ class AnimalDeckTest extends TestCase
     {
         $expectedCards = $this->testCards;
 
-        $animalDeck = new CAnimalDeck();
+        $animalDeck = new AnimalDeck();
         $cards = $animalDeck->getCards();
 
         $this->assertEquals($expectedCards, $cards);
@@ -22,7 +22,7 @@ class AnimalDeckTest extends TestCase
     {
         $expectedCards = $this->testCards;
 
-        $animalDeck = new CAnimalDeck();
+        $animalDeck = new AnimalDeck();
         $animalDeck->shuffle();
         $cards = $animalDeck->getCards();
 
@@ -32,10 +32,10 @@ class AnimalDeckTest extends TestCase
 
     protected function setUp(): void
     {
-        $cAnimal = new CAnimal();
+        $cAnimal = new Animal();
         foreach ($cAnimal->animal as $animal) {
-            $this->testCards[] = new CAnimalCard($animal);
-            $this->testCards[] = new CAnimalCard($animal);
+            $this->testCards[] = new AnimalCard($animal);
+            $this->testCards[] = new AnimalCard($animal);
         }
     }
 

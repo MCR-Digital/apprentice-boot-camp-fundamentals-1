@@ -2,7 +2,7 @@
 
 namespace McrDigital\PhpFundamentals1\Cards;
 
-class CAnimal
+class Animal
 {
     public array $animal = [
         "AARDVARK",
