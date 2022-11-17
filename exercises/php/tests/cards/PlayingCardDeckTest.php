@@ -1,10 +1,10 @@
 <?php
 
-include 'cards/cards.php';
+namespace McrDigital\PhpFundamentals1\Cards;
 
 use PHPUnit\Framework\TestCase;
 
-class CardsTest extends TestCase
+class PlayingCardDeckTest extends TestCase
 {
     private array $testCards = [
         "ace of clubs",
@@ -65,7 +65,7 @@ class CardsTest extends TestCase
     {
         $expectedCards = $this->testCards;
 
-        $cards = new CCards();
+        $cards = new PlayingCardDeck();
 
         $this->assertEquals($expectedCards, $cards->getCards());
     }
