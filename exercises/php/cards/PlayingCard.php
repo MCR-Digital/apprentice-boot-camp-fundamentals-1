@@ -66,11 +66,7 @@ class PlayingCard implements Card
             return false;
         }
 
-        if (!($card instanceof PlayingCard)) {
-            throw new Exception("Cannot compare mismatched card types!");
-        }
-
-        return $this->getFaceValue() === $card->getFaceValue();
+        return $card instanceof PlayingCard && $this->getFaceValue() === $card->getFaceValue();
     }
 
 }

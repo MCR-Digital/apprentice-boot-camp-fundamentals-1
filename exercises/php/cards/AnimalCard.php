@@ -2,8 +2,6 @@
 
 namespace McrDigital\PhpFundamentals1\Cards;
 
-use Exception;
-
 class AnimalCard implements Card
 {
     private string $animal;
@@ -24,11 +22,7 @@ class AnimalCard implements Card
             return false;
         }
 
-        if (!($card instanceof AnimalCard)) {
-            throw new Exception("Cannot compare mismatched card types!");
-        }
-
-        return $this->animal === $card->animal;
+        return $card instanceof AnimalCard && $this->animal === $card->animal;
     }
 
 }

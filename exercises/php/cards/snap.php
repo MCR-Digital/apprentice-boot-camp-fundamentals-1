@@ -6,9 +6,8 @@
  * E.g. cd cards/ && php snap.php
  */
 
-use McrDigital\PhpFundamentals1\Cards\AnimalDeck;
 use McrDigital\PhpFundamentals1\Cards\Deck;
-use McrDigital\PhpFundamentals1\Cards\PlayingCardDeck;
+use McrDigital\PhpFundamentals1\Cards\MixedDeck;
 
 require_once '../vendor/autoload.php';
 
@@ -70,10 +69,5 @@ class CSnap
     }
 }
 
-if (in_array("animal", $argv)) {
-    $snap = new CSnap(new AnimalDeck());
-} else {
-    $snap = new CSnap(new PlayingCardDeck());
-}
-
+$snap = new CSnap(new MixedDeck());
 $snap->play();
