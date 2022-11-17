@@ -3,7 +3,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "McrDigital\\PhpFundamentals1\\Cards\\": "cards/"
+            "McrDigital\\PhpFundamentals1\\Cards\\": "cards/",
+            "McrDigital\\PhpFundamentals1\\Checkout\\": "checkout/"
         }
     },
     "require": {
