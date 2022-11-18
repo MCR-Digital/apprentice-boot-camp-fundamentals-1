@@ -166,7 +166,7 @@ classDiagram
 
 <mermaid>
 classDiagram
-    PlayingCard
+    PlayingCard *-- Suit : Composition
     class PlayingCard {
         Suit suit
         int faceValue
