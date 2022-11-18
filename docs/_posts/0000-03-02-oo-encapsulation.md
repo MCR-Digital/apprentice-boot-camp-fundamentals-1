@@ -108,6 +108,7 @@ Note:
 Get them to work in small groups.  
 Once complete get them to describe their designs.  
 Draw designs up at the front as they describe.  
+Prompt them not to use inheritance at this stage.  
 
 --
 
