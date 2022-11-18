@@ -22,3 +22,7 @@ package-lock.json
 
 vendor/
 .phpunit.*
+
+exercises/kotlin/out
+exercises/kotlin/.gradle
+exercises/kotlin/build/
