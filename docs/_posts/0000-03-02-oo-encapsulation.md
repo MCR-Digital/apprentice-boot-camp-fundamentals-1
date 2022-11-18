@@ -208,6 +208,7 @@ classDiagram
 
 + Constructors are special methods used to create new objects
 + They're especially useful to set properties which won't change or default values
++ Once an object is constructed it should be ready for action
 
 --
 
