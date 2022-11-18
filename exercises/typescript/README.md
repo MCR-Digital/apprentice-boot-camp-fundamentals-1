@@ -2,9 +2,9 @@
 
 You will need npm and node v14.15.0 or later. 
 
-There are many ways to install it: https://nodejs.dev/en/learn/how-to-install-nodejs/
+There are [many ways to install it](https://nodejs.dev/en/learn/how-to-install-nodejs/) but running `nvm install 14` should do the trick. 
 
-Windows setup instructions are here: https://phoenixnap.com/kb/install-node-js-npm-on-windows
+There are also some [Windows setup instructions](https://phoenixnap.com/kb/install-node-js-npm-on-windows).
 
 Once you have node and npm installed, you will need to navigate into the typescript project using the command line: 
 - `cd exercises/typescript`
