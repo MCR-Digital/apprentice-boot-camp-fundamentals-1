@@ -3,7 +3,7 @@ using FluentAssertions;
 namespace McrDigital.Bootcamp1.Cards.Tests
 {
     using Xunit;
-    using McrDigital.Bootcamp1.Cards;
+    using Cards;
 
     public class AnimalDeckTest
     {
