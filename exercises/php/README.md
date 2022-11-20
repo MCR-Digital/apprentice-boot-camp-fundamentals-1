@@ -27,7 +27,7 @@ ala `npm`). To do this:
 - Navigate to `exercises/php`, e.g.
 
 ```shell
-cd excercises/php/
+cd exercises/php/
 ```
 
 - Run the following `PHP` command:
@@ -42,7 +42,7 @@ php composer.phar install
 - Navigate to `exercises/php`, e.g.
 
 ```shell
-cd excercises/php/
+cd exercises/php/
 ```
 
 - Run the following command:
