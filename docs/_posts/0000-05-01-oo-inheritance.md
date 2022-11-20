@@ -178,6 +178,9 @@ classDiagram
 + It tends to come with a rigid set of rules
 + A more common way to model relationships between objects is via _associations_
 + An _association_ is just when one class references another
++ A special type of _association_ is `composition`
+
+Note: similarly aggregation is also association where many objects are aggregated (stored in a collection) by another object.   
 
 --
 
@@ -185,11 +188,11 @@ classDiagram
 
 ```java
 class PlayingCard extends Card {  //inheritance
-    private Suit suit;  //association
+    private Suit suit;  //association (composition)
 }
 
 class Deck {
-    protected Card[] cards;  //association
+    protected Card[] cards;  //association (composition)
 }
 ```
 
@@ -222,7 +225,72 @@ _"A steering wheel **is not** a kind of car"_ - **X**
 </p>
 </div>
 
+--
 
+> Favor object composition over class inheritance.
 
+—[Design Patterns: Elements of Reusable Object-Oriented Software](https://uk.bookshop.org/books/design-patterns-elements-of-reusable-object-oriented-software/9780201633610)  
+by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides  
+(AKA the ‘Gang of Four’ book)
 
+--
 
+> **Tight coupling**. Classes that are tightly coupled are hard to reuse in isolation, since they depend on each other. Tight coupling leads to monolithic systems, where you can’t change or remove a class without understanding and changing many other classes. The system becomes a dense mass that’s hard to learn, port, and maintain.
+
+—[Design Patterns: Elements of Reusable Object-Oriented Software](https://uk.bookshop.org/books/design-patterns-elements-of-reusable-object-oriented-software/9780201633610)  
+
+--
+
+### Class Inheritance vs Object Composition
+
++ **Class Inheritance**: Classes inherit behaviour from parent class <span style="color:red">(tightest coupling)</span>
+  + **White-box reuse**—often the internals of parent classes are visible to subclasses
++ **Object Composition**: Classes are composed of objects whose behaviour they can access <span style="color:green">(looser coupling)</span>
+  + **Black-box reuse**—objects are ‘black boxes’ and only see what is explicitly exposed of each other
++ Both achieve code reuse, both are OO
+
+--
+
+### Playing Card Example
+
+<mermaid>
+classDiagram
+    PlayingCardDeck o-- PlayingCard : Aggregation
+    PlayingCard <-- Suit : Composition
+    PlayingCard <-- FaceValue : Composition
+</mermaid>
+
++ Lets compare composition and inheritance
++ This is a simple example—our Playing Card isn’t very complex
++ Playing Cards composed of a Suit and a FaceValue
+
+--
+
+### Doing the same without composition
+
+<mermaid>
+classDiagram
+    AbstractPlayingCard <|-- HeartPlayingCard
+    AbstractPlayingCard <|-- ClubPlayingCard
+    AbstractPlayingCard <|-- SpadePlayingCard
+    AbstractPlayingCard <|-- DiamondPlayingCard
+    HeartPlayingCard <|-- AceOfHeartsPlayingCard
+    HeartPlayingCard <|-- TwoOfHeartsPlayingCard
+    HeartPlayingCard <|-- ThreeOfHeartsPlayingCard
+    HeartPlayingCard <|-- FourOfHeartsPlayingCard
+    HeartPlayingCard <|-- FiveOfHeartsPlayingCard
+    HeartPlayingCard <|-- SixOfHeartsPlayingCard
+    HeartPlayingCard <|-- SevenOfHeartsPlayingCard
+    HeartPlayingCard <|-- EightOfHeartsPlayingCard
+    HeartPlayingCard <|-- NineOfHeartsPlayingCard
+    HeartPlayingCard <|-- TenOfHeartsPlayingCard
+    HeartPlayingCard <|-- JackOfHeartsPlayingCard
+    HeartPlayingCard <|-- QueenOfHeartsPlayingCard
+    HeartPlayingCard <|-- KingOfHeartsPlayingCard
+</mermaid>
+
++ Without using composition we have to rely on inheritance
++ 57 tightly coupled classes
++ Hard to reuse these classes elsewhere
+
+Note: There was only space for one of the suits!  
