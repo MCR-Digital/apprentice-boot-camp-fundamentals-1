@@ -145,16 +145,16 @@ classDiagram
 
 <mermaid>
 classDiagram
-    Card <|-- AnimalCard : implements
-    Card <|-- PlayingCard : implements
+    Card <|-- AnimalCard : extends
+    Card <|-- PlayingCard : extends
     class PlayingCard {
         snap(Card)
     }
     class AnimalCard {
         snap(Card)
     }
-    Deck <|-- AnimalDeck : implements
-    Deck <|-- PlayingCardDeck : implements
+    Deck <|-- AnimalDeck : extends
+    Deck <|-- PlayingCardDeck : extends
     class Deck {
         getCards()
         deal()
