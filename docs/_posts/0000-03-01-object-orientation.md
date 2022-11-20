@@ -65,7 +65,8 @@ For a given scenario:
 ## Nouns and Verbs?
 
 * Basis of Object Orientated languages
-* Apollo astronauts used noun & verb combinations to interact with the Apollo Guidance Computer
+* Apollo astronauts used [verb & noun combinations](https://github.com/chrislgarry/Apollo-11/blob/a13539c7c5c482ffbbebf099ad3aada7d0f54fdf/Luminary099/ASSEMBLY_AND_OPERATION_INFORMATION.agc#L163-L481) to interact with the Apollo Guidance Computer
+  * e.g. verb 50 (PLEASE PERFORM), noun 18 (AUTO MANEUVER BALL ANGLES) to request maneuver angles
 
 <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/7153479@N07/2522175629">"Apollo guidance computer UI"</a><span> by <a href="https://www.flickr.com/photos/7153479@N07">csixty4</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"></a></p>
 
