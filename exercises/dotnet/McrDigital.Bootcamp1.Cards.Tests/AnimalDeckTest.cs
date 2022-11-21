@@ -1,8 +1,9 @@
+using FluentAssertions;
+
 namespace McrDigital.Bootcamp1.Cards.Tests
 {
-    using System.Linq;
     using Xunit;
-    using McrDigital.Bootcamp1.Cards;
+    using Cards;
 
     public class AnimalDeckTest
     {
@@ -10,63 +11,64 @@ namespace McrDigital.Bootcamp1.Cards.Tests
         public void ShouldGetDeckInOrderAndReturn52CardsCorrectlyFormatted()
         {
             var deck = new AnimalDeck();
-            Assert.Equal(
-                new string[]
-                {
-                    "Aardvark",
-                    "Aardvark",
-                    "Baboon",
-                    "Baboon",
-                    "Camel",
-                    "Camel",
-                    "Deer",
-                    "Deer",
-                    "Elephant",
-                    "Elephant",
-                    "Frog",
-                    "Frog",
-                    "Gorilla",
-                    "Gorilla",
-                    "Hare",
-                    "Hare",
-                    "Impala",
-                    "Impala",
-                    "Jaguar",
-                    "Jaguar",
-                    "Kangaroo",
-                    "Kangaroo",
-                    "Lion",
-                    "Lion",
-                    "Moose",
-                    "Moose",
-                    "Newt",
-                    "Newt",
-                    "Octopus",
-                    "Octopus",
-                    "Penguin",
-                    "Penguin",
-                    "Quetzal",
-                    "Quetzal",
-                    "Rabbit",
-                    "Rabbit",
-                    "Salmon",
-                    "Salmon",
-                    "Tortoise",
-                    "Tortoise",
-                    "Uakaris",
-                    "Uakaris",
-                    "Vaquita",
-                    "Vaquita",
-                    "Whale",
-                    "Whale",
-                    "XRayTetra",
-                    "XRayTetra",
-                    "Yak",
-                    "Yak",
-                    "Zebra",
-                    "Zebra"
-                },
-                deck.GetCards());
+            var expectedCards = new string[]
+            {
+                "Aardvark",
+                "Aardvark",
+                "Baboon",
+                "Baboon",
+                "Camel",
+                "Camel",
+                "Deer",
+                "Deer",
+                "Elephant",
+                "Elephant",
+                "Frog",
+                "Frog",
+                "Gorilla",
+                "Gorilla",
+                "Hare",
+                "Hare",
+                "Impala",
+                "Impala",
+                "Jaguar",
+                "Jaguar",
+                "Kangaroo",
+                "Kangaroo",
+                "Lion",
+                "Lion",
+                "Moose",
+                "Moose",
+                "Newt",
+                "Newt",
+                "Octopus",
+                "Octopus",
+                "Penguin",
+                "Penguin",
+                "Quetzal",
+                "Quetzal",
+                "Rabbit",
+                "Rabbit",
+                "Salmon",
+                "Salmon",
+                "Tortoise",
+                "Tortoise",
+                "Uakaris",
+                "Uakaris",
+                "Vaquita",
+                "Vaquita",
+                "Whale",
+                "Whale",
+                "XRayTetra",
+                "XRayTetra",
+                "Yak",
+                "Yak",
+                "Zebra",
+                "Zebra"
+            };
+
+            var actualCards = deck.GetCards();
+            actualCards.Should().BeEquivalentTo(expectedCards, options => options.WithStrictOrdering());
         }
 
         [Fact]
@@ -74,63 +76,65 @@ namespace McrDigital.Bootcamp1.Cards.Tests
         {
             var deck = new AnimalDeck();
             deck.Shuffle();
-            Assert.Equal(
-                new string[]
-                {
-                    "Aardvark",
-                    "Aardvark",
-                    "Baboon",
-                    "Baboon",
-                    "Camel",
-                    "Camel",
-                    "Deer",
-                    "Deer",
-                    "Elephant",
-                    "Elephant",
-                    "Frog",
-                    "Frog",
-                    "Gorilla",
-                    "Gorilla",
-                    "Hare",
-                    "Hare",
-                    "Impala",
-                    "Impala",
-                    "Jaguar",
-                    "Jaguar",
-                    "Kangaroo",
-                    "Kangaroo",
-                    "Lion",
-                    "Lion",
-                    "Moose",
-                    "Moose",
-                    "Newt",
-                    "Newt",
-                    "Octopus",
-                    "Octopus",
-                    "Penguin",
-                    "Penguin",
-                    "Quetzal",
-                    "Quetzal",
-                    "Rabbit",
-                    "Rabbit",
-                    "Salmon",
-                    "Salmon",
-                    "Tortoise",
-                    "Tortoise",
-                    "Uakaris",
-                    "Uakaris",
-                    "Vaquita",
-                    "Vaquita",
-                    "Whale",
-                    "Whale",
-                    "XRayTetra",
-                    "XRayTetra",
-                    "Yak",
-                    "Yak",
-                    "Zebra",
-                    "Zebra"
-                },
-                deck.GetCards().OrderBy((animal) => animal));
+
+            var fullCardSetInAlphabeticalOrder = new string[]
+            {
+                "Aardvark",
+                "Aardvark",
+                "Baboon",
+                "Baboon",
+                "Camel",
+                "Camel",
+                "Deer",
+                "Deer",
+                "Elephant",
+                "Elephant",
+                "Frog",
+                "Frog",
+                "Gorilla",
+                "Gorilla",
+                "Hare",
+                "Hare",
+                "Impala",
+                "Impala",
+                "Jaguar",
+                "Jaguar",
+                "Kangaroo",
+                "Kangaroo",
+                "Lion",
+                "Lion",
+                "Moose",
+                "Moose",
+                "Newt",
+                "Newt",
+                "Octopus",
+                "Octopus",
+                "Penguin",
+                "Penguin",
+                "Quetzal",
+                "Quetzal",
+                "Rabbit",
+                "Rabbit",
+                "Salmon",
+                "Salmon",
+                "Tortoise",
+                "Tortoise",
+                "Uakaris",
+                "Uakaris",
+                "Vaquita",
+                "Vaquita",
+                "Whale",
+                "Whale",
+                "XRayTetra",
+                "XRayTetra",
+                "Yak",
+                "Yak",
+                "Zebra",
+                "Zebra"
+            };
+            var actualCards = deck.GetCards();
+
+            actualCards.Should().BeEquivalentTo(fullCardSetInAlphabeticalOrder).And.NotContainInOrder(fullCardSetInAlphabeticalOrder);
         }
     }
 }

@@ -7,6 +7,11 @@ namespace McrDigital.Bootcamp1.Cards
     {
         protected List<Card> _cards;
 
+        protected Deck()
+        {
+            _cards = new List<Card>();
+        }
+
         public string[] GetCards()
         {
             var result = new String[_cards.Count];
