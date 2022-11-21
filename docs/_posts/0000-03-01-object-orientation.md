@@ -1,5 +1,16 @@
 ## Object Orientation
 
+- What do you want to know?
+  - Do you already have questions?
+  - Is there something that confuses you about OO?
+  - Is there something specific that you want to get out of the boot camp?
+
+Note: Record these somewhere and come back to them at the end of the day.
+
+--
+
+## Object Orientation
+
 <img src="{{ "/images/programmingParadigms.png" | absolute_url }}" style="height: 450px;" alt="diagram of different programming paradigms">
 
 \*[Van Roy](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)
