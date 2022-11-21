@@ -8,12 +8,11 @@ class PlayingCardDeck implements Deck
 
     public function __construct()
     {
-        $cSuits = new Suit();
         $this->cards = [];
 
-        foreach ($cSuits->suit as $suit) {
+        foreach (Suits::SUITS as $suit) {
             for ($faceValue = 0; $faceValue < 13; $faceValue++) {
-                $this->cards[] = new PlayingCard($suit, $faceValue);
+                $this->cards[] = new PlayingCard(new Suit($suit), $faceValue);
             }
         }
     }

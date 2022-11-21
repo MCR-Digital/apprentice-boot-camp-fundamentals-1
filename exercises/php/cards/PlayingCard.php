@@ -6,10 +6,10 @@ use Exception;
 
 class PlayingCard implements Card
 {
-    private string $suit;
+    private Suit $suit;
     private int $faceValue;
 
-    public function __construct(string $suit, int $faceValue)
+    public function __construct(Suit $suit, int $faceValue)
     {
         $this->suit = $suit;
         $this->faceValue = $faceValue;
@@ -57,7 +57,7 @@ class PlayingCard implements Card
 
     public function getSuit(): string
     {
-        return $this->suit;
+        return strval($this->suit);
     }
 
     public function snap(?Card $card): bool

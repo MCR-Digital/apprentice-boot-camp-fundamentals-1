@@ -6,16 +6,16 @@ use Exception;
 
 class AnimalCard implements Card
 {
-    private string $animal;
+    private Animal $animal;
 
-    public function __construct(string $animal)
+    public function __construct(Animal $animal)
     {
         $this->animal = $animal;
     }
 
     public function __toString(): string
     {
-        return $this->animal;
+        return strval($this->animal);
     }
 
     public function snap(?Card $card): bool

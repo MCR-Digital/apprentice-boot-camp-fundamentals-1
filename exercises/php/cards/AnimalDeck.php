@@ -10,10 +10,9 @@ class AnimalDeck implements Deck
     {
         $this->cards = [];
 
-        $cAnimal = new Animal();
-        foreach ($cAnimal->animal as $animal) {
-            $this->cards[] = new AnimalCard($animal);
-            $this->cards[] = new AnimalCard($animal);
+        foreach (Animals::ANIMALS as $animal) {
+            $this->cards[] = new AnimalCard(new Animal($animal));
+            $this->cards[] = new AnimalCard(new Animal($animal));
         }
     }
 
