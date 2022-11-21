@@ -32,10 +32,9 @@ class AnimalDeckTest extends TestCase
 
     protected function setUp(): void
     {
-        $cAnimal = new Animal();
-        foreach ($cAnimal->animal as $animal) {
-            $this->testCards[] = new AnimalCard($animal);
-            $this->testCards[] = new AnimalCard($animal);
+        foreach (Animals::ANIMALS as $animal) {
+            $this->testCards[] = new AnimalCard(new Animal($animal));
+            $this->testCards[] = new AnimalCard(new Animal($animal));
         }
     }
 
