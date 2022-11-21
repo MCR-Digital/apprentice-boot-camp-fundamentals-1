@@ -136,7 +136,7 @@ classDiagram
         String name
     }
     class PlayingCardDeck {
-        Card[] cards
+        PlayingCard[] cards
     }
 </mermaid>
 
