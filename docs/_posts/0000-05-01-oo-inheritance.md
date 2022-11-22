@@ -179,26 +179,27 @@ classDiagram
 + A more common way to model relationships between objects is via _associations_
 + An _association_ is just when one class references another
 + A special type of _association_ is `composition`
+  + We can use composition as an alternative way to reuse code
 
 Note: similarly aggregation is also association where many objects are aggregated (stored in a collection) by another object.   
 
 --
 
-### Associations between our card classes
+### Composition between our card classes
 
 ```java
 class PlayingCard extends Card {  //inheritance
-    private Suit suit;  //association (composition)
+    private Suit suit;  // composition
 }
 
 class Deck {
-    protected Card[] cards;  //association (composition)
+    protected Card[] cards; // aggregation
 }
 ```
 
 --
 
-## Association vs. Inheritance
+## Composition vs. Inheritance
 
 <div align="left">
 <p>
@@ -213,7 +214,7 @@ kind of vehicle"_
 _"A car
 <span class="fragment highlight-green" data-fragment-index="4">**has a**</span>
 steering wheel"_
-<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **association**</span>
+<span class="fragment fade-in" data-fragment-index="5" style="color:lime"> - **composition**</span>
 </span>
 </p>
 
