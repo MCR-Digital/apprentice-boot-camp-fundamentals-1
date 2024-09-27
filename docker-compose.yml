@@ -1,8 +1,7 @@
-version: "3"
 services:
-    github-pages:
-        volumes:
-            - "$PWD/docs:/usr/src/app/"
-        ports:
-            - "4000:4000"
-        image: starefossen/github-pages
+  github-pages:
+    volumes:
+      - '${PWD}/docs/:/src/site/'
+    ports:
+      - '4000:4000'
+    image: markcrossfield/pages-gem:231-alpine
