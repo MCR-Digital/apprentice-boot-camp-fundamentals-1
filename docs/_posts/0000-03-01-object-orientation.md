@@ -128,7 +128,7 @@ class Mat {
 
 --
 
-## Exercise (30mins)
+## Exercise (15 mins)
 
 Here's a simple description of an online car advertising business <a href="#/6/7">Mini AT Scenario</a>
 
