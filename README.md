@@ -27,6 +27,8 @@ Although the primary focus is around OOP, we want to make sure they get plenty o
 * Whiteboard (or flipcharts if this is not possible)
 
 ## Mentors / Languages
+
+We need mentors to assist with the exercises from encapsulation onwards. These probably start on the afternoon of the first day, or late in the morning of the first day.
  
 One mentor required per three apprentices (leads can act as mentors). These should be able to cover support for the required languages.
 
