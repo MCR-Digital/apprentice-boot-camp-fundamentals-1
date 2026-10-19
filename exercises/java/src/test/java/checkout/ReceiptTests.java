@@ -1,20 +1,22 @@
 package checkout;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class ReceiptTests {
+class ReceiptTests {
 
     @Test
     public void singleItem() {
         Checkout checkout = new Checkout();
         checkout.scan("A");
-        assertThat(checkout.receipt()).containsSequence(
-                "A: 50\n",
-                "Total: 50");
+        assertTrue(
+                checkout.receipt().contains(
+                "A: 50\n" +
+                "Total: 50")
+        );
     }
-    
+
     @Test
     public void oneOfEach() {
         Checkout checkout = new Checkout();
@@ -22,12 +24,14 @@ public class ReceiptTests {
         checkout.scan("B");
         checkout.scan("C");
         checkout.scan("D");
-        assertThat(checkout.receipt()).containsSequence(
-                "A: 50\n",
-                "B: 30\n",
-                "C: 20\n",
-                "D: 15\n",
-                "Total: 115");
+        assertTrue(
+                checkout.receipt().contains(
+                "A: 50\n" +
+                "B: 30\n" +
+                "C: 20\n" +
+                "D: 15\n" +
+                "Total: 115")
+        );
     }
 
     @Test
@@ -40,14 +44,16 @@ public class ReceiptTests {
         checkout.scan("C");
         checkout.scan("D");
         checkout.scan("B");
-        assertThat(checkout.receipt()).containsSequence(
-                "A: 50\n",
-                "A: 50\n",
-                "B: 30\n",
-                "A: 50 - 20 (3 for 130)\n",
-                "C: 20\n",
-                "D: 15\n",
-                "B: 30 - 15 (2 for 45)\n",
-                "Total: 210");
+        assertTrue(
+                checkout.receipt().contains(
+                "A: 50\n" +
+                "A: 50\n" +
+                "B: 30\n" +
+                "A: 50 - 20 (3 for 130)\n" +
+                "C: 20\n" +
+                "D: 15\n" +
+                "B: 30 - 15 (2 for 45)\n" +
+                "Total: 210")
+        );
     }
 }
