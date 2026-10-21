@@ -2,7 +2,7 @@ package cards;
 
 public class Cards {
     public static void main(String[] args) {
-        Deck deck = new Deck();
+        PlayingCardDeck deck = new PlayingCardDeck();
 
         for(PlayingCard card: deck.cards){
             System.out.println(card);
@@ -10,7 +10,7 @@ public class Cards {
     }
 
     public String[] getCards() {
-        Deck deck = new Deck();
+        PlayingCardDeck deck = new PlayingCardDeck();
 
         return deck.deckToString();
     }

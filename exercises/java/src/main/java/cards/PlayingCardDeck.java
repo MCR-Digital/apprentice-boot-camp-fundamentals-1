@@ -1,19 +1,19 @@
 package cards;
 
-public class Deck {
+public class PlayingCardDeck {
     final PlayingCard[] cards;
 
-    public Deck() {
+    public PlayingCardDeck() {
         this.cards = createDeck();
     }
 
     public PlayingCard[] createDeck() {
-        PlayingCard[] tempCards = new PlayingCard[52];
+        PlayingCard[] cards = new PlayingCard[52];
 
         int playingCard = 0;
         for (Suit.SUITS suit : Suit.SUITS.values()) {
             for (int faceValue = 0; faceValue < 13; faceValue++) {
-                tempCards[playingCard] = new PlayingCard(
+                cards[playingCard] = new PlayingCard(
                         faceValue,
                         new Suit(suit)
                 );
@@ -22,7 +22,7 @@ public class Deck {
             }
         }
 
-        return tempCards;
+        return cards;
     }
 
     public String[] deckToString() {
