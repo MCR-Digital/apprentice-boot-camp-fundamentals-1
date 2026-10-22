@@ -2,16 +2,15 @@ package cards;
 
 public class Cards {
     public static void main(String[] args) {
-        PlayingCardDeck deck = new PlayingCardDeck();
+        Cards cards = new Cards();
+        String[] deckInOrder = cards.getCards();
 
-        for(PlayingCard card: deck.cards){
+        for(String card: deckInOrder){
             System.out.println(card);
         }
     }
 
     public String[] getCards() {
-        PlayingCardDeck deck = new PlayingCardDeck();
-
-        return deck.deckToString();
+        return new PlayingCardDeck().getCards();
     }
 }
