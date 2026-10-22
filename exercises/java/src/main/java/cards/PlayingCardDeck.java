@@ -1,37 +1,53 @@
 package cards;
 
-public class PlayingCardDeck {
-    final PlayingCard[] cards;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    public PlayingCardDeck() {
-        this.cards = createDeck();
-    }
+public class PlayingCardDeck implements Deck {
+    List<PlayingCard> cards;
 
-    public PlayingCard[] createDeck() {
-        PlayingCard[] cards = new PlayingCard[52];
+    PlayingCardDeck() {
+        this.cards = new ArrayList<>();
 
-        int playingCard = 0;
-        for (Suit.SUITS suit : Suit.SUITS.values()) {
+        Suit[] suits = {
+                new Suit("clubs"),
+                new Suit("diamonds"),
+                new Suit("hearts"),
+                new Suit("spades")
+        };
+
+        for (Suit suit : suits) {
             for (int faceValue = 0; faceValue < 13; faceValue++) {
-                cards[playingCard] = new PlayingCard(
-                        faceValue,
-                        new Suit(suit)
-                );
-
-                playingCard++;
+                this.cards.add(new PlayingCard(faceValue, suit));
             }
         }
-
-        return cards;
     }
 
-    public String[] deckToString() {
-        String[] cards = new String[52];
+    @Override
+    public void shuffle() {
+        Collections.shuffle(cards);
+    }
 
-        for (int i = 0; i < 52; i++) {
-            cards[i] = this.cards[i].toString();
+    @Override
+    public String[] getCards() {
+        String[] result = new String[cards.size()];
+
+        for (int i = 0; i < cards.size(); i++) {
+            PlayingCard card = cards.get(i);
+            result[i] = card.toString();
         }
 
-        return cards;
+        return result;
+    }
+
+    @Override
+    public PlayingCard deal() {
+        return cards.removeFirst();
+    }
+
+    @Override
+    public String toString() {
+        return this.cards.toString();
     }
 }
