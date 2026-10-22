@@ -11,7 +11,7 @@ public class PlayingCard implements Card {
 
     @Override
     public boolean snap(Card otherCard) {
-        return otherCard != null && Integer.toString(this.faceValue).equals(otherCard.toString());
+        return otherCard instanceof PlayingCard other && this.faceValue == other.faceValue;
     }
 
     @Override

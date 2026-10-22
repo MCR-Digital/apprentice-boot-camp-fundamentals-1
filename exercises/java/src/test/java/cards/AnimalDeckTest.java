@@ -80,5 +80,4 @@ class AnimalDeckTest {
         assertEquals(expected.size(), result.size());
         assertTrue(result.containsAll(expected));
     }
-
 }

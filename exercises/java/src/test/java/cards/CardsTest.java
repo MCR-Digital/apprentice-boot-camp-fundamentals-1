@@ -65,5 +65,4 @@ class CardsTest {
         Cards cards = new Cards();
         assertArrayEquals(expectedCardArray, cards.getCards());
     }
-
 }
