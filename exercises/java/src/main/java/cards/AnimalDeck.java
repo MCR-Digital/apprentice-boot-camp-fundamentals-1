@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 class AnimalDeck implements Deck {
-    private List<AnimalCard> cards;
+    List<AnimalCard> cards;
 
     public AnimalDeck() {
         cards = new ArrayList<>();
