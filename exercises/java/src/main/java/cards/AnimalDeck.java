@@ -2,7 +2,7 @@ package cards;
 
 import java.util.ArrayList;
 
-class AnimalDeck extends Deck<AnimalCard> {
+class AnimalDeck extends Deck {
     public AnimalDeck() {
         super(new ArrayList<>());
 

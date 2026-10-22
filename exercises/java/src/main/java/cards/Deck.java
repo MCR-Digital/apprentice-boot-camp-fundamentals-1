@@ -3,10 +3,10 @@ package cards;
 import java.util.Collections;
 import java.util.List;
 
-public class Deck<T extends Card> {
-    protected final List<T> cards;
+public class Deck {
+    protected final List<Card> cards;
 
-    public Deck(List<T> cards) {
+    public Deck(List<Card> cards) {
         this.cards = cards;
     }
 
@@ -18,14 +18,14 @@ public class Deck<T extends Card> {
         String[] result = new String[this.cards.size()];
 
         for (int i = 0; i < this.cards.size(); i++) {
-            T card = this.cards.get(i);
+            Card card = this.cards.get(i);
             result[i] = card.toString();
         }
 
         return result;
     }
 
-    public T deal() {
+    public Card deal() {
         return cards.removeFirst();
     }
 }
