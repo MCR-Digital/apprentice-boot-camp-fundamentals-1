@@ -27,6 +27,7 @@ class AnimalDeck {
             AnimalCard card = cards.get(i);
             result[i] = card.toString();
         }
+
         return result;
     }
 
