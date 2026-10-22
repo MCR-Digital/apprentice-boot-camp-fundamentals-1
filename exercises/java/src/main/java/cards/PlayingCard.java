@@ -1,26 +1,30 @@
 package cards;
 
-public class PlayingCard {
-    int faceValue;
+public class PlayingCard implements Card {
     Suit suit;
+    int faceValue;
 
-    public PlayingCard(int faceValue, Suit suit) {
+    PlayingCard(int faceValue, Suit suit) {
         this.faceValue = faceValue;
         this.suit = suit;
     }
 
-    private String getFaceValue() {
-        return switch (faceValue) {
-            case 0 -> "ace";
-            case 10 -> "jack";
-            case 11 -> "queen";
-            case 12 -> "king";
-            default -> String.valueOf(faceValue + 1);
-        };
+    @Override
+    public boolean snap(Card otherCard) {
+        return otherCard != null && Integer.toString(this.faceValue).equals(otherCard.toString());
     }
 
     @Override
     public String toString() {
-        return "%s of %s".formatted(getFaceValue(), this.suit);
+        String face = switch (faceValue) {
+            case 0 -> "ace";
+            case 1, 2, 3, 4, 5, 6, 7, 8, 9 -> Integer.toString(faceValue + 1);
+            case 10 -> "jack";
+            case 11 -> "queen";
+            case 12 -> "king";
+            default ->
+                    throw new IllegalArgumentException("Something went wrong " + faceValue + " is not a valid face value");
+        };
+        return face + " of " + suit;
     }
 }
