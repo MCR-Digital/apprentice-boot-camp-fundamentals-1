@@ -9,6 +9,7 @@ class AnimalDeck {
 
     public AnimalDeck() {
         cards = new ArrayList<>();
+
         for (Animal animal : Animal.values()) {
             cards.add(new AnimalCard(animal));
             cards.add(new AnimalCard(animal));
@@ -21,6 +22,7 @@ class AnimalDeck {
 
     public String[] getCards() {
         String[] result = new String[cards.size()];
+
         for (int i = 0; i < cards.size(); i++) {
             AnimalCard card = cards.get(i);
             result[i] = card.toString();
