@@ -5,24 +5,24 @@ import java.util.Scanner;
 class Snap {
     private int player1Score;
     private int player2Score;
-    private AnimalDeck deck;
+    private final Deck deck;
 
-    Snap(AnimalDeck deck) {
+    Snap(Deck deck) {
         this.deck = deck;
         deck.shuffle();
     }
 
     public static void main(String[] args) {
-        Snap snap = new Snap(new AnimalDeck());
+        Snap snap = new Snap(new PlayingCardDeck());
         snap.play();
     }
 
     void play() {
         Scanner scanner = new Scanner(System.in);
-        AnimalCard previousCard = null;
+        Card previousCard = null;
 
         while (deck.getCards().length > 0) {
-            AnimalCard currentCard = deck.deal();
+            Card currentCard = deck.deal();
             System.out.println(currentCard);
 
             String input = scanner.nextLine();
