@@ -1,21 +1,14 @@
 package cards;
 
 public class Suit {
-    public enum SUITS {
-        CLUBS,
-        DIAMONDS,
-        HEARTS,
-        SPADES
-    }
+    String suit;
 
-    SUITS suit;
-
-    public Suit(SUITS suit) {
-        this.suit = suit;
+    Suit(String theSuit) {
+        this.suit = theSuit;
     }
 
     @Override
     public String toString() {
-        return this.suit.toString().toLowerCase();
+        return this.suit;
     }
 }
